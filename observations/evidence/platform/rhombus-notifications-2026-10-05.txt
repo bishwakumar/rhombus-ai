@@ -1,0 +1,59 @@
+Rhombus notification log, 5 Oct 2026 (AEDT, UTC+11), newest first. Copied from the Logs panel.
+Account email redacted as b***@gmail.com.
+
+01:38:54 PM  Applied transformation: Custom: code: "import re from datetime import datetime # Start with input dataframe df = in..." · mode: "code" · prompt: "Clean this orders dataset (v2). The expected output columns are: order_id, cu..." · visualise: false · output_columns: "". Impact: 466 row(s) affected, 1316 cell(s) modified.
+01:38:54 PM  Pipeline completed successfully
+01:38:54 PM  Pipeline execution completed successfully.
+01:38:50 PM  Pipeline execution started.
+01:38:19 PM  Applied transformation: Custom: … prompt: "Clean this orders dataset (v2). …" … Impact: 466 row(s) affected, 1316 cell(s) modified.
+01:38:19 PM  Pipeline completed successfully
+01:38:19 PM  Pipeline execution completed successfully.
+01:38:15 PM  Pipeline execution started.
+01:38:10 PM  Pipeline failed at GCS Target: A destination is required when remote export is selected.
+01:38:10 PM  Pipeline execution completed successfully.
+01:38:07 PM  Pipeline execution started.
+01:38:06 PM  Pipeline execution started.
+01:33:48 PM  Pipeline failed at orders: No Dataset matches the given criteria: {'id': 948200491, 'project_id': 5248, 'user_id': <CustomUser: b***@gmail.com>}
+01:33:48 PM  Pipeline execution completed successfully.
+01:33:47 PM  Pipeline execution started.
+01:32:47 PM  Applied transformation: Custom: … prompt: "Clean this orders dataset (v2). …" … Impact: 466 row(s) affected, 1316 cell(s) modified.
+01:32:47 PM  Pipeline completed successfully
+01:32:47 PM  Pipeline execution completed successfully.
+01:32:43 PM  Pipeline execution started.
+01:32:11 PM  Applied transformation: Custom: … prompt: "Clean this orders dataset (v2). …" … Impact: 466 row(s) affected, 1316 cell(s) modified.
+01:32:11 PM  Pipeline completed successfully
+01:32:11 PM  Pipeline execution completed successfully.
+01:32:07 PM  Pipeline execution started.
+01:31:59 PM  Pipeline failed at GCS Target: A destination is required when remote export is selected.
+01:31:59 PM  Pipeline execution completed successfully.
+01:31:56 PM  Pipeline execution started.
+01:22:30 PM  Applied transformation: Custom: … prompt: "Clean this orders dataset (v2). …" … Impact: 470 row(s) affected, 1534 cell(s) modified.
+01:22:30 PM  Pipeline completed successfully
+01:22:30 PM  Pipeline execution completed successfully.
+01:22:25 PM  Pipeline execution started.
+01:21:49 PM  Applied transformation: Custom: … prompt: "Clean this orders dataset (v2). …" … Impact: 470 row(s) affected, 1534 cell(s) modified.
+01:21:49 PM  Pipeline completed successfully
+01:21:49 PM  Pipeline execution completed successfully.
+01:21:45 PM  Pipeline execution started.
+01:21:40 PM  Pipeline failed at GCS Target: A destination is required when remote export is selected.
+01:21:40 PM  Pipeline execution completed successfully.
+01:21:37 PM  Pipeline execution started.
+01:16:44 PM  Pipeline failed at orders: No Dataset matches the given criteria: {'id': 2362407589, 'project_id': 5248, 'user_id': <CustomUser: b***@gmail.com>}
+01:16:44 PM  Pipeline execution completed successfully.
+01:16:43 PM  Pipeline execution started.
+01:04:37 PM  Pipeline failed at clean_orders: LLM execution failed (code_sha=3ca80b148200): 'email' --- Generated code --- import pandas as pd import numpy as np def _safe_to_timedelta_wrapper(arg, *args, **kwargs): try: arg_series = pd.Series(arg) except Exception: arg_series = a…
+01:04:37 PM  Pipeline execution completed successfully.
+01:04:35 PM  Pipeline execution started.
+01:04:32 PM  Pipeline failed at clean_orders: LLM execution failed (code_sha=3ca80b148200): 'email' --- Generated code --- …
+01:04:32 PM  Pipeline execution completed successfully.
+01:04:29 PM  Pipeline execution started.
+01:04:20 PM  Pipeline failed at clean_orders: LLM execution failed (code_sha=3ca80b148200): 'email' --- Generated code --- …
+01:04:20 PM  Pipeline execution completed successfully.
+01:04:17 PM  Pipeline execution started.
+
+What to read from it:
+- 13:04  case 05 after the chatbot's "v2" fix: 3 failures in 18 s, still code_sha 3ca80b148200.
+- 13:21  case 06 (470 rows, 1534 cells): 1 failed + 2 successful runs after one selection.
+- 13:32, 13:38  case 07 (466 rows, 1316 cells): same pattern, twice.
+- Every failure has "Pipeline execution completed successfully." at the same second.
+- "No Dataset matches…" exposes internal IDs and the account email.

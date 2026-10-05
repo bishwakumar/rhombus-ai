@@ -1,0 +1,238 @@
+{
+  "case_id": "00-baseline",
+  "output_file": "00-baseline__run4.csv",
+  "output_md5": "f1a7904a06a099d9097bc420e51a5ca9",
+  "validated_at": "2026-10-05T23:12:15+00:00",
+  "verdict": "PASS (with warnings)",
+  "checks": [
+    {
+      "check": "schema",
+      "status": "PASS",
+      "detail": "All 8 expected columns, correct order, matches input",
+      "missing": [],
+      "extra": [],
+      "dropped_from_input": [],
+      "not_in_input": []
+    },
+    {
+      "check": "freshness",
+      "status": "PASS",
+      "detail": "Baseline is the reference output; not checked",
+      "identical_to": []
+    },
+    {
+      "check": "rows",
+      "status": "PASS",
+      "detail": "input 500 rows (470 unique orders), output 470 rows; every order present once",
+      "input_rows": 500,
+      "unique_orders": 470,
+      "output_rows": 470,
+      "missing_order_ids": [],
+      "duplicate_order_ids": []
+    },
+    {
+      "check": "correct",
+      "status": "WARN",
+      "detail": "amount_usd: 45 format-only; quantity: 405 format-only",
+      "columns": {
+        "customer_name": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "email": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "order_date": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "amount_usd": {
+          "correct": 425,
+          "format_only": 45,
+          "wrong": 0,
+          "examples": []
+        },
+        "quantity": {
+          "correct": 65,
+          "format_only": 405,
+          "wrong": 0,
+          "examples": []
+        },
+        "country": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "status": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        }
+      },
+      "not_recoverable": []
+    },
+    {
+      "check": "rules",
+      "status": "WARN",
+      "detail": "amount_usd: 45 format-only; quantity: 405 format-only",
+      "columns": {
+        "customer_name": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "email": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "order_date": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "amount_usd": {
+          "correct": 425,
+          "format_only": 45,
+          "wrong": 0,
+          "examples": [
+            {
+              "order_id": "10004",
+              "expected": "456.80",
+              "actual": "456.8",
+              "type": "format"
+            },
+            {
+              "order_id": "10023",
+              "expected": "28.80",
+              "actual": "28.8",
+              "type": "format"
+            },
+            {
+              "order_id": "10029",
+              "expected": "835.10",
+              "actual": "835.1",
+              "type": "format"
+            }
+          ]
+        },
+        "quantity": {
+          "correct": 65,
+          "format_only": 405,
+          "wrong": 0,
+          "examples": [
+            {
+              "order_id": "10001",
+              "expected": "1",
+              "actual": "1.0",
+              "type": "format"
+            },
+            {
+              "order_id": "10002",
+              "expected": "2",
+              "actual": "2.0",
+              "type": "format"
+            },
+            {
+              "order_id": "10003",
+              "expected": "4",
+              "actual": "4.0",
+              "type": "format"
+            }
+          ]
+        },
+        "country": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "status": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        }
+      }
+    },
+    {
+      "check": "blanks",
+      "status": "PASS",
+      "detail": "Blank rates in line with the baseline",
+      "blank_percent": {
+        "customer_name": {
+          "output": 3.6,
+          "baseline": 3.6
+        },
+        "email": {
+          "output": 18.5,
+          "baseline": 18.5
+        },
+        "order_date": {
+          "output": 8.7,
+          "baseline": 8.7
+        },
+        "amount_usd": {
+          "output": 9.6,
+          "baseline": 9.6
+        },
+        "quantity": {
+          "output": 13.8,
+          "baseline": 13.8
+        },
+        "country": {
+          "output": 2.3,
+          "baseline": 2.3
+        },
+        "status": {
+          "output": 3.6,
+          "baseline": 3.6
+        }
+      }
+    },
+    {
+      "check": "semantics",
+      "status": "PASS",
+      "detail": "Amounts and dates within expected ranges",
+      "amount": {
+        "count": 425,
+        "max": 1998.49,
+        "above_limit": 0
+      },
+      "order_date": {
+        "count": 429,
+        "outside_window": 0,
+        "in_future": 0,
+        "months_seen": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "check": "determinism",
+      "status": "PASS",
+      "detail": "All 4 runs byte-identical",
+      "runs": 4,
+      "md5": {
+        "00-baseline__run1.csv": "f1a7904a06a099d9097bc420e51a5ca9",
+        "00-baseline__run2.csv": "f1a7904a06a099d9097bc420e51a5ca9",
+        "00-baseline__run3.csv": "f1a7904a06a099d9097bc420e51a5ca9",
+        "00-baseline__run4.csv": "f1a7904a06a099d9097bc420e51a5ca9"
+      }
+    }
+  ]
+}

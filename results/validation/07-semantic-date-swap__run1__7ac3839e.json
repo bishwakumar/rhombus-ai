@@ -1,0 +1,18 @@
+{
+  "case_id": "07-semantic-date-swap",
+  "output_file": "07-semantic-date-swap__run1__7ac3839e",
+  "output_md5": "",
+  "validated_at": "2026-10-05T02:39:20+00:00",
+  "verdict": "STOPPED",
+  "run_status": "rhombus_failed",
+  "rhombus_error": "",
+  "checks": [
+    {
+      "check": "pipeline",
+      "status": "STOPPED",
+      "detail": "Pipeline produced no output (rhombus_failed); no Rhombus error recorded (runner note: no output within 120s and no Rhombus error recorded)",
+      "run_id": "7ac3839e",
+      "triggered_at": "2026-10-05T02:32:52+00:00"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+GCS console, gs://rhombus-source/input/ (4 Oct 2026, AEDT)
+
+orders.csv   28.2 KB   text/csv   4 Oct 2026, 14:48:52   Standard   4 Oct 2026, 14:48:52
+
+Runner record for this upload: generation 1791085732256835, MD5 verified against datasets/01-schema-drop-column.csv.
+Baseline file size for comparison: 39.7 KB (difference = the removed email column).

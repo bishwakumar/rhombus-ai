@@ -1,0 +1,17 @@
+Full UI test run, 5 Oct 2026 (npx playwright test --project=journey), before the Run-button and S3 locator fixes:
+
+  ✓  GCS source bucket is connected (9.5s)
+  ✘  S3 source connects with the generated bucket policy applied (3.0m)         <- stuck on a locator (old version)
+  ✓  canvas has Data Input → Custom (AI cleaning step) → Data Output (4.0s)
+  -  AI Builder adds a cleaning step from a plain-language prompt                 <- opt-in, not run
+  ✘  manual run succeeds and writes a new cleaned file to GCS (10.0m)            <- Run button locator (old version)
+  ✓  Data Output node exports to the GCS destination bucket (22.4s)
+  ✓  an hourly schedule can be created and shows Active with a next run time (10.5s)
+  -  an active */5 schedule actually triggers a run within 7 minutes             <- opt-in, not run
+
+After the fixes (npx playwright test --project=journey --headed -g "manual run|S3 source"), 17:27:
+  ✘  S3 source connects … (39.8s)   expected failure (F8); still stuck on getByText(/amazon s3/i) in the old file version
+  ✓  manual run succeeds and writes a new cleaned file to GCS (2.2m)
+     steps: click ▶ (211 ms) → Logs → "completed successfully" visible (2.9 s)
+            → new file in rhombus-target (polled, 1.9 min) → header equals the 8 cleaned columns
+  2 passed (2.9m)

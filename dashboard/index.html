@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rhombus AI — drift dashboard</title>
+  <style>
+    :root {
+      --ink: #1c1914;
+      --muted: #6b6458;
+      --line: #ddd6c8;
+      --paper: #f4efe6;
+      --card: #fffdf8;
+      --handled: #2f6f4e;
+      --handled-bg: #dceee3;
+      --missed: #9b2c2c;
+      --missed-bg: #f6d9d6;
+      --breaks: #8a5a12;
+      --breaks-bg: #f6e6c8;
+      --drop: #3d4f7c;
+      --drop-bg: #dce4f4;
+      --accent: #4c3d73;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    body {
+      font: 15px/1.5 "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Palatino, "Palatino Linotype", "Iowan Old Style", Georgia, serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    header {
+      padding: 16px 28px 8px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1 {
+      font-size: 26px;
+      margin: 0;
+    }
+
+    header p.lede {
+      max-width: 78ch;
+      color: var(--muted);
+      margin: 6px 0 0;
+      font-size: 14px;
+    }
+
+    .meta {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    nav {
+      display: flex;
+      gap: 4px;
+      padding: 12px 32px;
+      position: sticky;
+      top: 0;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+      z-index: 5;
+    }
+
+    nav button {
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--ink);
+      padding: 8px 12px;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    nav button[aria-current="true"] {
+      border-color: var(--ink);
+      background: var(--card);
+    }
+
+    main {
+      padding: 16px 28px 64px;
+    }
+
+    section {
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .kpi {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 14px 16px;
+    }
+
+    .kpi strong {
+      display: block;
+      font-size: 24px;
+      line-height: 1.1;
+      font-family: Palatino, Georgia, serif;
+    }
+
+    .kpi span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--card);
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      font-size: 13px;
+    }
+
+    th {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 190px minmax(140px, 1fr) 170px;
+      gap: 12px;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .bar {
+      height: 18px;
+      background: #e7e1d4;
+      display: flex;
+      overflow: hidden;
+    }
+
+    .bar i {
+      display: block;
+      height: 100%;
+    }
+
+    .ok {
+      background: var(--handled);
+    }
+
+    .bad {
+      background: var(--missed);
+    }
+
+    .stop {
+      background: var(--breaks);
+    }
+
+    .abort {
+      background: #9a958b;
+    }
+
+    .heat {
+      display: grid;
+      grid-template-columns: 150px repeat(4, 1fr);
+      gap: 6px;
+      margin-top: 12px;
+    }
+
+    .heat div {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      font-size: 13px;
+    }
+
+    .heat .lab {
+      background: transparent;
+      border: 0;
+      color: var(--muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 0;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 1px 8px;
+      font-size: 12px;
+      border: 1px solid currentColor;
+    }
+
+    .c-handled {
+      color: var(--handled);
+      background: var(--handled-bg);
+    }
+
+    .c-missed {
+      color: var(--missed);
+      background: var(--missed-bg);
+    }
+
+    .c-breaks {
+      color: var(--breaks);
+      background: var(--breaks-bg);
+    }
+
+    .c-silent_drop {
+      color: var(--drop);
+      background: var(--drop-bg);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 14px 16px;
+    }
+
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 18px;
+    }
+
+    button.linkish {
+      margin-top: 8px;
+      border: 1px solid var(--ink);
+      background: var(--card);
+      padding: 4px 10px;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    dialog {
+      border: 1px solid var(--ink);
+      background: var(--paper);
+      padding: 0;
+      max-width: min(920px, 96vw);
+      width: 920px;
+    }
+
+    dialog::backdrop {
+      background: rgba(28, 25, 20, 0.45);
+    }
+
+    .dlg {
+      padding: 20px 24px 28px;
+    }
+
+    .diff {
+      width: 100%;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .diff td.chg {
+      background: var(--missed-bg);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 0 0 16px;
+    }
+
+    .filters button {
+      border: 1px solid var(--line);
+      background: var(--card);
+      padding: 4px 10px;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .filters button.on {
+      border-color: var(--ink);
+    }
+
+    footer {
+      padding: 12px 32px 32px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Rhombus AI drift dashboard</h1>
+    <p class="lede">Independent view of the cleaning pipeline under baseline, schema drift, combined drift and semantic
+      drift. Rhombus’s own “success” is shown next to the validator that compares each output with the known right
+      answer.</p>
+    <p class="meta" id="meta"></p>
+  </header>
+  <nav>
+    <button data-tab="health" aria-current="true">Pipeline health</button>
+    <button data-tab="consistency">Output consistency</button>
+    <button data-tab="heat">Capability heat map</button>
+    <button data-tab="time">Time &amp; resources</button>
+  </nav>
+  <main>
+    <section id="health" class="active"></section>
+    <section id="consistency"></section>
+    <section id="heat"></section>
+    <section id="time"></section>
+  </main>
+  <!-- <footer>Data is rebuilt from <code>results/</code> and <code>outputs/</code>. Run <code>python3 dashboard/serve.py</code> to refresh and host.</footer> -->
+  <dialog id="dlg">
+    <div class="dlg" id="dlg-body"></div>
+  </dialog>
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const dlg = $("dlg");
+    let DATA = null;
+    let filter = "all";
+
+    function pill(cap, text) {
+      return `<span class="pill c-${cap}">${text}</span>`;
+    }
+
+    function renderHealth() {
+      const s = DATA.scenarios.filter(sc => filter === "all" || sc.group === filter);
+      const k = DATA.kpis;
+      const rows = s.map(sc => {
+        const n = sc.material_runs || 0;
+        const ok = sc.rhombus_successes || 0;
+        const stop = sc.rhombus_stops || 0;
+        const abort = sc.aborted || 0;
+        const w = n + abort || 1;
+        return `<div class="bar-row">
+          <div>${sc.label}<br><span class="muted">${sc.drift}</span></div>
+          <div class="bar" title="success ${ok} / stopped ${stop} / aborted ${abort}">
+            <i class="ok" style="width:${100 * ok / w}%"></i>
+            <i class="stop" style="width:${100 * stop / w}%"></i>
+            <i class="abort" style="width:${100 * abort / w}%"></i>
+          </div>
+          <div>${sc.success_rate_rhombus ?? "—"}% Rhombus<br><span class="muted">${sc.validator_pass} pass · ${sc.validator_fail} fail · ${sc.validator_stopped} stopped</span></div>
+        </div>`;
+      }).join("");
+      $("health").innerHTML = `
+        <div class="kpis">
+          <div class="kpi"><strong>${k.scenarios}</strong><span>Scenarios</span></div>
+          <div class="kpi"><strong>${k.rhombus_success_rate}%</strong><span>Rhombus-reported success (material runs)</span></div>
+          <div class="kpi"><strong>${k.silent_fail_scenarios}</strong><span>Drift types delivered silently wrong</span></div>
+          <div class="kpi"><strong>${k.captured_outputs}</strong><span>Captured output files</span></div>
+          <div class="kpi"><strong>${DATA.suites.ui.pass}/${DATA.suites.ui.total}</strong><span>UI tests</span></div>
+          <div class="kpi"><strong>${DATA.suites.api.pass}/${DATA.suites.api.total}</strong><span>API tests</span></div>
+        </div>
+        <div class="filters">
+          ${["all", "baseline", "schema", "combined", "semantic"].map(g =>
+        `<button data-g="${g}" class="${filter === g ? "on" : ""}">${g}</button>`).join("")}
+        </div>
+        <p class="muted">Green = Rhombus wrote an output. Amber = pipeline stopped / no output. Grey = aborted setup. Validator counts are independent of Rhombus’s status.</p>
+        ${rows}
+        <h2>Per-run log</h2>
+        <table>
+          <thead><tr><th>Case</th><th>Run</th><th>Rhombus</th><th>Validator</th><th>Seconds</th><th>MD5 / error</th></tr></thead>
+          <tbody>
+            ${DATA.runs.filter(r => filter === "all" || DATA.scenarios.find(sc => sc.id === r.case_id)?.group === filter).map(r => `
+              <tr>
+                <td>${r.case_id}</td>
+                <td>${r.run}</td>
+                <td>${r.pipeline}</td>
+                <td>${r.verdict || "—"}</td>
+                <td>${r.seconds ?? "—"}</td>
+                <td class="muted">${r.output_md5 ? r.output_md5.slice(0, 12) : (r.rhombus_error || r.notes || "—")}</td>
+              </tr>`).join("")}
+          </tbody>
+        </table>`;
+      $("health").querySelectorAll(".filters button").forEach(b => {
+        b.onclick = () => { filter = b.dataset.g; renderHealth(); };
+      });
+    }
+
+    function openDiff(caseId) {
+      const sc = DATA.scenarios.find(x => x.id === caseId);
+      const comps = sc.consistency.comparisons;
+      const body = comps.length ? comps.map(c => `
+        <h3>${c.left} vs ${c.right}</h3>
+        <p>${c.identical ? "Byte-identical." : `<strong>${c.differing_rows}</strong> of ${c.rows_left} rows differ.`}</p>
+        ${c.samples.length ? `<table class="diff">
+          <thead><tr><th>order_id</th><th>column</th><th>${c.left}</th><th>${c.right}</th></tr></thead>
+          <tbody>${c.samples.flatMap(s => s.cells.map(cell =>
+        `<tr><td>${s.order_id}</td><td>${cell.col}</td><td class="chg">${cell.left || "∅"}</td><td class="chg">${cell.right || "∅"}</td></tr>`
+      )).join("")}</tbody>
+        </table>` : ""}
+      `).join("") : "<p>No pair of outputs to compare.</p>";
+      const oracle = sc.oracle_examples.length ? `
+        <h3>Output vs known answer</h3>
+        <table class="diff">
+          <thead><tr><th>order_id</th><th>column</th><th>Expected</th><th>Actual</th></tr></thead>
+          <tbody>${sc.oracle_examples.map(e =>
+        `<tr><td>${e.order_id}</td><td>${e.column}</td><td>${e.expected}</td><td class="chg">${e.actual || "∅"}</td></tr>`
+      ).join("")}</tbody>
+        </table>` : "";
+      $("dlg-body").innerHTML = `<h2>${sc.label}</h2><p class="muted">${sc.detail}</p>${body}${oracle}
+        <p><button class="linkish" id="close-dlg">Close</button></p>`;
+      dlg.showModal();
+      $("close-dlg").onclick = () => dlg.close();
+    }
+
+    function renderConsistency() {
+      $("consistency").innerHTML = `
+        <p class="lede">Protocol: for each configuration, run the same input three times and compare files. Baseline met the protocol (4 identical files). Type-change is the only case with three captured outputs — and they are not identical, because a chatbot patch landed between run 4 and run 6.</p>
+        <div class="cards">
+          ${DATA.scenarios.map(sc => {
+        const c = sc.consistency;
+        const status = c.variance ? pill("missed", "varies") : c.identical ? pill("handled", "identical") : pill("breaks", "incomplete");
+        return `<article class="card">
+              <h3>${sc.label} ${status}</h3>
+              <p>${c.captured_outputs} / ${c.protocol_n} outputs captured · ${c.unique_md5s} unique MD5${c.unique_md5s === 1 ? "" : "s"}</p>
+              <p class="muted">${c.note}${c.capture_note ? " " + c.capture_note : ""}</p>
+              <p class="muted">${(sc.output_md5s || []).map(m => m.slice(0, 10)).join(" · ") || "no file"}</p>
+              <button class="linkish" data-case="${sc.id}">Side-by-side diffs</button>
+            </article>`;
+      }).join("")}
+        </div>`;
+      $("consistency").querySelectorAll("button[data-case]").forEach(b => {
+        b.onclick = () => openDiff(b.dataset.case);
+      });
+    }
+
+    function yn(v, yes, no) {
+      if (v === null || v === undefined) return `<span class="muted">n/a</span>`;
+      return v ? `<span class="pill c-handled">${yes}</span>` : `<span class="pill c-missed">${no}</span>`;
+    }
+
+    function renderHeat() {
+      $("heat").innerHTML = `
+        <p class="lede">Which drift types Rhombus handles cleanly, which stop the job, and which it marks successful while delivering wrong or dropped data.</p>
+        <div class="heat">
+          <div class="lab"></div>
+          <div class="lab">Capability</div>
+          <div class="lab">Stops on error?</div>
+          <div class="lab">Silent “success”?</div>
+          <div class="lab">Data actually correct?</div>
+          ${DATA.heat.map(h => `
+            <div><strong>${h.label}</strong></div>
+            <div>${pill(h.capability, h.headline)}</div>
+            <div>${yn(h.stops, "stops", "no stop")}</div>
+            <div>${yn(!h.silent_success, "no", "yes")}</div>
+            <div>${yn(h.data_correct, "yes", "no")}</div>
+          `).join("")}
+        </div>
+        <h2>Reading</h2>
+        <table>
+          <thead><tr><th>Drift</th><th>What happened</th></tr></thead>
+          <tbody>
+            ${DATA.scenarios.map(sc => `<tr><td>${sc.label}<br>${pill(sc.capability, sc.headline)}</td><td>${sc.detail}</td></tr>`).join("")}
+          </tbody>
+        </table>`;
+    }
+
+    function renderTime() {
+      const max = Math.max(...DATA.scenarios.flatMap(s => s.times_to_output.concat(s.times)).filter(Boolean), 1);
+      $("time").innerHTML = `
+        <p class="lede">Seconds from trigger to a new object in <code>gs://rhombus-target</code> (runner clock). Runs were triggered by hand, so these times include selecting the dataset in Rhombus after the timer started: compare them between cases, not as pure pipeline durations. Failed/aborted runs use wall time start→finish when no output appeared. UI tests also saw the in-app “completed successfully” fire about two minutes before the file existed.</p>
+        <div class="kpis">
+          <div class="kpi"><strong>${DATA.kpis.median_success_seconds}s</strong><span>Median time to output (successful writes)</span></div>
+        </div>
+        ${DATA.scenarios.map(sc => {
+        const times = sc.times_to_output.length ? sc.times_to_output : sc.times;
+        if (!times.length) return `<div class="bar-row"><div>${sc.label}</div><div class="muted">no timing</div><div></div></div>`;
+        return times.map((t, i) => `<div class="bar-row">
+            <div>${i === 0 ? sc.label : ""}<span class="muted"> ${times.length > 1 ? "run " + (i + 1) : ""}</span></div>
+            <div class="bar"><i class="ok" style="width:${100 * t / max}%"></i></div>
+            <div>${t}s · ${(sc.output_bytes[0] || 0).toLocaleString()} B</div>
+          </div>`).join("");
+      }).join("")}
+        <p class="muted">Output size is the saved CSV. Rhombus does not expose CPU/memory; file size and elapsed seconds are the measurable resources from this harness.</p>`;
+    }
+
+    function bindTabs() {
+      document.querySelectorAll("nav button").forEach(btn => {
+        btn.onclick = () => {
+          document.querySelectorAll("nav button").forEach(b => b.setAttribute("aria-current", b === btn ? "true" : "false"));
+          document.querySelectorAll("main section").forEach(s => s.classList.toggle("active", s.id === btn.dataset.tab));
+        };
+      });
+    }
+
+    fetch("data.json", { cache: "no-store" })
+      .then(r => r.json())
+      .then(data => {
+        DATA = data;
+        // $("meta").textContent = `Generated ${data.generated_at} · ${data.source} · ${data.pipeline} · original code_sha=${data.code_sha_original}`;
+        renderHealth();
+        renderConsistency();
+        renderHeat();
+        renderTime();
+        bindTabs();
+      })
+      .catch(err => {
+        $("health").classList.add("active");
+        $("health").innerHTML = `<p>Could not load <code>data.json</code>. Serve this folder with <code>python3 dashboard/serve.py</code>. (${err})</p>`;
+      });
+  </script>
+</body>
+
+</html>

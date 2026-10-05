@@ -1,0 +1,18 @@
+{
+  "case_id": "00-baseline",
+  "output_file": "00-baseline__run4__legacy-00-baseline-4",
+  "output_md5": "",
+  "validated_at": "2026-10-05T23:12:06+00:00",
+  "verdict": "STOPPED",
+  "run_status": "no_output",
+  "rhombus_error": "",
+  "checks": [
+    {
+      "check": "pipeline",
+      "status": "STOPPED",
+      "detail": "Pipeline produced no output (no_output); no Rhombus error recorded (runner note: No new output within 300s; check Rhombus logs)",
+      "run_id": "legacy-00-baseline-4",
+      "triggered_at": "2026-10-04T05:00:48+00:00"
+    }
+  ]
+}

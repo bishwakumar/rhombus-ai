@@ -1,0 +1,268 @@
+{
+  "case_id": "01-schema-drop-column",
+  "output_file": "01-schema-drop-column__run1.csv",
+  "output_md5": "f1a7904a06a099d9097bc420e51a5ca9",
+  "validated_at": "2026-10-05T23:12:18+00:00",
+  "verdict": "FAIL",
+  "checks": [
+    {
+      "check": "schema",
+      "status": "FAIL",
+      "detail": "Output contains data for columns that are not in the input: email (383 values); the output may come from old or cached data",
+      "populated_columns": {
+        "email": 383
+      },
+      "missing": [],
+      "extra": [],
+      "dropped_from_input": [],
+      "not_in_input": [
+        "email"
+      ]
+    },
+    {
+      "check": "freshness",
+      "status": "FAIL",
+      "detail": "Byte-identical to 00-baseline__run1.csv, 00-baseline__run2.csv, 00-baseline__run3.csv \u2026; the pipeline probably did not read this case's input",
+      "identical_to": [
+        "00-baseline__run1.csv",
+        "00-baseline__run2.csv",
+        "00-baseline__run3.csv",
+        "00-baseline__run4.csv"
+      ]
+    },
+    {
+      "check": "rows",
+      "status": "PASS",
+      "detail": "input 500 rows (470 unique orders), output 470 rows; every order present once",
+      "input_rows": 500,
+      "unique_orders": 470,
+      "output_rows": 470,
+      "missing_order_ids": [],
+      "duplicate_order_ids": []
+    },
+    {
+      "check": "correct",
+      "status": "FAIL",
+      "detail": "email: 383 wrong; amount_usd: 45 format-only; quantity: 405 format-only (not recoverable from this input: email)",
+      "columns": {
+        "customer_name": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "email": {
+          "correct": 87,
+          "format_only": 0,
+          "wrong": 383,
+          "examples": [
+            {
+              "order_id": "10001",
+              "correct": "",
+              "actual": "sophia.anderson33@example.com"
+            },
+            {
+              "order_id": "10002",
+              "correct": "",
+              "actual": "james.silva34@example.com"
+            },
+            {
+              "order_id": "10003",
+              "correct": "",
+              "actual": "zoe.smith35@example.com"
+            },
+            {
+              "order_id": "10004",
+              "correct": "",
+              "actual": "amelia.rossi36@example.com"
+            },
+            {
+              "order_id": "10006",
+              "correct": "",
+              "actual": "harper.singh38@example.com"
+            },
+            {
+              "order_id": "10007",
+              "correct": "",
+              "actual": "ruby.novak39@example.com"
+            }
+          ]
+        },
+        "order_date": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "amount_usd": {
+          "correct": 425,
+          "format_only": 45,
+          "wrong": 0,
+          "examples": []
+        },
+        "quantity": {
+          "correct": 65,
+          "format_only": 405,
+          "wrong": 0,
+          "examples": []
+        },
+        "country": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "status": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        }
+      },
+      "not_recoverable": [
+        "email"
+      ]
+    },
+    {
+      "check": "rules",
+      "status": "WARN",
+      "detail": "amount_usd: 45 format-only; quantity: 405 format-only",
+      "columns": {
+        "customer_name": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "email": {
+          "skipped": "column not in both input and output"
+        },
+        "order_date": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "amount_usd": {
+          "correct": 425,
+          "format_only": 45,
+          "wrong": 0,
+          "examples": [
+            {
+              "order_id": "10004",
+              "expected": "456.80",
+              "actual": "456.8",
+              "type": "format"
+            },
+            {
+              "order_id": "10023",
+              "expected": "28.80",
+              "actual": "28.8",
+              "type": "format"
+            },
+            {
+              "order_id": "10029",
+              "expected": "835.10",
+              "actual": "835.1",
+              "type": "format"
+            }
+          ]
+        },
+        "quantity": {
+          "correct": 65,
+          "format_only": 405,
+          "wrong": 0,
+          "examples": [
+            {
+              "order_id": "10001",
+              "expected": "1",
+              "actual": "1.0",
+              "type": "format"
+            },
+            {
+              "order_id": "10002",
+              "expected": "2",
+              "actual": "2.0",
+              "type": "format"
+            },
+            {
+              "order_id": "10003",
+              "expected": "4",
+              "actual": "4.0",
+              "type": "format"
+            }
+          ]
+        },
+        "country": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "status": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        }
+      }
+    },
+    {
+      "check": "blanks",
+      "status": "PASS",
+      "detail": "Blank rates in line with the baseline",
+      "blank_percent": {
+        "customer_name": {
+          "output": 3.6,
+          "baseline": 3.6
+        },
+        "order_date": {
+          "output": 8.7,
+          "baseline": 8.7
+        },
+        "amount_usd": {
+          "output": 9.6,
+          "baseline": 9.6
+        },
+        "quantity": {
+          "output": 13.8,
+          "baseline": 13.8
+        },
+        "country": {
+          "output": 2.3,
+          "baseline": 2.3
+        },
+        "status": {
+          "output": 3.6,
+          "baseline": 3.6
+        }
+      }
+    },
+    {
+      "check": "semantics",
+      "status": "PASS",
+      "detail": "Amounts and dates within expected ranges",
+      "amount": {
+        "count": 425,
+        "max": 1998.49,
+        "above_limit": 0
+      },
+      "order_date": {
+        "count": 429,
+        "outside_window": 0,
+        "in_future": 0,
+        "months_seen": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "check": "determinism",
+      "status": "PASS",
+      "detail": "Only one run; nothing to compare",
+      "runs": 1
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+{
+  "case_id": "07-semantic-date-swap",
+  "output_file": "07-semantic-date-swap__run2.csv",
+  "output_md5": "0d0c4719248e336a64300e35498c566f",
+  "validated_at": "2026-10-05T23:12:34+00:00",
+  "verdict": "FAIL",
+  "checks": [
+    {
+      "check": "schema",
+      "status": "PASS",
+      "detail": "All 8 expected columns, correct order, matches input",
+      "missing": [],
+      "extra": [],
+      "dropped_from_input": [],
+      "not_in_input": []
+    },
+    {
+      "check": "freshness",
+      "status": "PASS",
+      "detail": "Output differs from the baseline and every other case's output",
+      "identical_to": []
+    },
+    {
+      "check": "rows",
+      "status": "PASS",
+      "detail": "input 500 rows (470 unique orders), output 470 rows; every order present once",
+      "input_rows": 500,
+      "unique_orders": 470,
+      "output_rows": 470,
+      "missing_order_ids": [],
+      "duplicate_order_ids": []
+    },
+    {
+      "check": "correct",
+      "status": "FAIL",
+      "detail": "order_date: 252 wrong; amount_usd: 45 format-only; quantity: 405 format-only",
+      "columns": {
+        "customer_name": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "email": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "order_date": {
+          "correct": 218,
+          "format_only": 0,
+          "wrong": 252,
+          "examples": [
+            {
+              "order_id": "10001",
+              "correct": "2026-03-09",
+              "actual": "2026-09-03"
+            },
+            {
+              "order_id": "10002",
+              "correct": "2026-03-08",
+              "actual": "2026-08-03"
+            },
+            {
+              "order_id": "10003",
+              "correct": "2026-03-06",
+              "actual": "2026-06-03"
+            },
+            {
+              "order_id": "10004",
+              "correct": "2026-01-10",
+              "actual": "2026-10-01"
+            },
+            {
+              "order_id": "10005",
+              "correct": "2026-02-09",
+              "actual": "2026-09-02"
+            },
+            {
+              "order_id": "10007",
+              "correct": "2026-02-06",
+              "actual": "2026-06-02"
+            }
+          ]
+        },
+        "amount_usd": {
+          "correct": 425,
+          "format_only": 45,
+          "wrong": 0,
+          "examples": []
+        },
+        "quantity": {
+          "correct": 65,
+          "format_only": 405,
+          "wrong": 0,
+          "examples": []
+        },
+        "country": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "status": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        }
+      },
+      "not_recoverable": []
+    },
+    {
+      "check": "rules",
+      "status": "WARN",
+      "detail": "amount_usd: 45 format-only; quantity: 405 format-only",
+      "columns": {
+        "customer_name": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "email": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "order_date": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "amount_usd": {
+          "correct": 425,
+          "format_only": 45,
+          "wrong": 0,
+          "examples": [
+            {
+              "order_id": "10004",
+              "expected": "456.80",
+              "actual": "456.8",
+              "type": "format"
+            },
+            {
+              "order_id": "10023",
+              "expected": "28.80",
+              "actual": "28.8",
+              "type": "format"
+            },
+            {
+              "order_id": "10029",
+              "expected": "835.10",
+              "actual": "835.1",
+              "type": "format"
+            }
+          ]
+        },
+        "quantity": {
+          "correct": 65,
+          "format_only": 405,
+          "wrong": 0,
+          "examples": [
+            {
+              "order_id": "10001",
+              "expected": "1",
+              "actual": "1.0",
+              "type": "format"
+            },
+            {
+              "order_id": "10002",
+              "expected": "2",
+              "actual": "2.0",
+              "type": "format"
+            },
+            {
+              "order_id": "10003",
+              "expected": "4",
+              "actual": "4.0",
+              "type": "format"
+            }
+          ]
+        },
+        "country": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "status": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        }
+      }
+    },
+    {
+      "check": "blanks",
+      "status": "PASS",
+      "detail": "Blank rates in line with the baseline",
+      "blank_percent": {
+        "customer_name": {
+          "output": 3.6,
+          "baseline": 3.6
+        },
+        "email": {
+          "output": 18.5,
+          "baseline": 18.5
+        },
+        "order_date": {
+          "output": 8.7,
+          "baseline": 8.7
+        },
+        "amount_usd": {
+          "output": 9.6,
+          "baseline": 9.6
+        },
+        "quantity": {
+          "output": 13.8,
+          "baseline": 13.8
+        },
+        "country": {
+          "output": 2.3,
+          "baseline": 2.3
+        },
+        "status": {
+          "output": 3.6,
+          "baseline": 3.6
+        }
+      }
+    },
+    {
+      "check": "semantics",
+      "status": "FAIL",
+      "detail": "208 of 429 dates outside 2026-01-01\u20132026-03-31 (months seen: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]); possible day/month swap",
+      "amount": {
+        "count": 425,
+        "max": 1998.49,
+        "above_limit": 0
+      },
+      "order_date": {
+        "count": 429,
+        "outside_window": 208,
+        "in_future": 42,
+        "months_seen": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "check": "determinism",
+      "status": "PASS",
+      "detail": "All 2 runs byte-identical",
+      "runs": 2,
+      "md5": {
+        "07-semantic-date-swap__run1.csv": "0d0c4719248e336a64300e35498c566f",
+        "07-semantic-date-swap__run2.csv": "0d0c4719248e336a64300e35498c566f"
+      }
+    }
+  ]
+}

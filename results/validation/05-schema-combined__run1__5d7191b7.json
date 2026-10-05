@@ -1,0 +1,18 @@
+{
+  "case_id": "05-schema-combined",
+  "output_file": "05-schema-combined__run1__5d7191b7",
+  "output_md5": "",
+  "validated_at": "2026-10-05T23:12:31+00:00",
+  "verdict": "STOPPED",
+  "run_status": "rhombus_failed",
+  "rhombus_error": "Pipeline failed at clean_orders: LLM execution failed (code_sha=3ca80b148200): 'email' --- Generated code --- import pandas as pd import numpy as np def _safe_to_timedelta_wrapper(arg, *args, **kwargs): try: arg_series = pd.Series(arg) except Exception: arg_series = a\u2026",
+  "checks": [
+    {
+      "check": "pipeline",
+      "status": "STOPPED",
+      "detail": "Pipeline produced no output (rhombus_failed); Rhombus error: Pipeline failed at clean_orders: LLM execution failed (code_sha=3ca80b148200): 'email' --- Generated code --- import pandas as pd import numpy as np def _safe_to_timedelta_wrapper(arg, *args, **kwargs): try: arg_series = pd.Series(arg) except Exception: arg_series = a\u2026",
+      "run_id": "5d7191b7",
+      "triggered_at": "2026-10-05T01:08:20+00:00"
+    }
+  ]
+}

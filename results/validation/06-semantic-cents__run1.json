@@ -1,0 +1,263 @@
+{
+  "case_id": "06-semantic-cents",
+  "output_file": "06-semantic-cents__run1.csv",
+  "output_md5": "43e417b4990720ad8ac2f2102355f465",
+  "validated_at": "2026-10-05T23:12:32+00:00",
+  "verdict": "FAIL",
+  "checks": [
+    {
+      "check": "schema",
+      "status": "PASS",
+      "detail": "All 8 expected columns, correct order, matches input",
+      "missing": [],
+      "extra": [],
+      "dropped_from_input": [],
+      "not_in_input": []
+    },
+    {
+      "check": "freshness",
+      "status": "PASS",
+      "detail": "Output differs from the baseline and every other case's output",
+      "identical_to": []
+    },
+    {
+      "check": "rows",
+      "status": "PASS",
+      "detail": "input 500 rows (470 unique orders), output 470 rows; every order present once",
+      "input_rows": 500,
+      "unique_orders": 470,
+      "output_rows": 470,
+      "missing_order_ids": [],
+      "duplicate_order_ids": []
+    },
+    {
+      "check": "correct",
+      "status": "FAIL",
+      "detail": "amount_usd: 425 wrong; quantity: 405 format-only",
+      "columns": {
+        "customer_name": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "email": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "order_date": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "amount_usd": {
+          "correct": 45,
+          "format_only": 0,
+          "wrong": 425,
+          "examples": [
+            {
+              "order_id": "10001",
+              "correct": "1297.92",
+              "actual": "129792.0"
+            },
+            {
+              "order_id": "10002",
+              "correct": "1361.98",
+              "actual": "136198.0"
+            },
+            {
+              "order_id": "10003",
+              "correct": "733.45",
+              "actual": "73345.0"
+            },
+            {
+              "order_id": "10004",
+              "correct": "456.80",
+              "actual": "45680.0"
+            },
+            {
+              "order_id": "10005",
+              "correct": "1601.61",
+              "actual": "160161.0"
+            },
+            {
+              "order_id": "10006",
+              "correct": "1617.84",
+              "actual": "161784.0"
+            }
+          ]
+        },
+        "quantity": {
+          "correct": 65,
+          "format_only": 405,
+          "wrong": 0,
+          "examples": []
+        },
+        "country": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "status": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        }
+      },
+      "not_recoverable": []
+    },
+    {
+      "check": "rules",
+      "status": "WARN",
+      "detail": "amount_usd: 425 format-only; quantity: 405 format-only",
+      "columns": {
+        "customer_name": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "email": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "order_date": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "amount_usd": {
+          "correct": 45,
+          "format_only": 425,
+          "wrong": 0,
+          "examples": [
+            {
+              "order_id": "10001",
+              "expected": "129792.00",
+              "actual": "129792.0",
+              "type": "format"
+            },
+            {
+              "order_id": "10002",
+              "expected": "136198.00",
+              "actual": "136198.0",
+              "type": "format"
+            },
+            {
+              "order_id": "10003",
+              "expected": "73345.00",
+              "actual": "73345.0",
+              "type": "format"
+            }
+          ]
+        },
+        "quantity": {
+          "correct": 65,
+          "format_only": 405,
+          "wrong": 0,
+          "examples": [
+            {
+              "order_id": "10001",
+              "expected": "1",
+              "actual": "1.0",
+              "type": "format"
+            },
+            {
+              "order_id": "10002",
+              "expected": "2",
+              "actual": "2.0",
+              "type": "format"
+            },
+            {
+              "order_id": "10003",
+              "expected": "4",
+              "actual": "4.0",
+              "type": "format"
+            }
+          ]
+        },
+        "country": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        },
+        "status": {
+          "correct": 470,
+          "format_only": 0,
+          "wrong": 0,
+          "examples": []
+        }
+      }
+    },
+    {
+      "check": "blanks",
+      "status": "PASS",
+      "detail": "Blank rates in line with the baseline",
+      "blank_percent": {
+        "customer_name": {
+          "output": 3.6,
+          "baseline": 3.6
+        },
+        "email": {
+          "output": 18.5,
+          "baseline": 18.5
+        },
+        "order_date": {
+          "output": 8.7,
+          "baseline": 8.7
+        },
+        "amount_usd": {
+          "output": 9.6,
+          "baseline": 9.6
+        },
+        "quantity": {
+          "output": 13.8,
+          "baseline": 13.8
+        },
+        "country": {
+          "output": 2.3,
+          "baseline": 2.3
+        },
+        "status": {
+          "output": 3.6,
+          "baseline": 3.6
+        }
+      }
+    },
+    {
+      "check": "semantics",
+      "status": "FAIL",
+      "detail": "423 of 425 amounts above $2,500 (max 199,849.00); possible unit change such as cents",
+      "amount": {
+        "count": 425,
+        "max": 199849.0,
+        "above_limit": 423
+      },
+      "order_date": {
+        "count": 429,
+        "outside_window": 0,
+        "in_future": 0,
+        "months_seen": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "check": "determinism",
+      "status": "PASS",
+      "detail": "Only one run; nothing to compare",
+      "runs": 1
+    }
+  ]
+}

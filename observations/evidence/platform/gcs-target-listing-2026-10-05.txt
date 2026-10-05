@@ -1,0 +1,17 @@
+$ gcloud storage ls -l gs://rhombus-target/ | sort -k2 | tail -12     (times UTC; AEDT = UTC+11)
+     33362  2026-10-05T00:58:33Z  gs://rhombus-target/RhombusAI_output_1791161912700.csv   11:58 case 03-type output
+     37652  2026-10-05T01:01:25Z  gs://rhombus-target/RhombusAI_output_1791162084475.csv   12:01 case 04 selection: 4 outputs in 18 s
+     37652  2026-10-05T01:01:28Z  gs://rhombus-target/RhombusAI_output_1791162088429.csv
+     37652  2026-10-05T01:01:31Z  gs://rhombus-target/RhombusAI_output_1791162090865.csv
+     37652  2026-10-05T01:01:43Z  gs://rhombus-target/RhombusAI_output_1791162102671.csv
+     38122  2026-10-05T02:21:48Z  gs://rhombus-target/RhombusAI_output_1791166908219.csv   13:21 case 06 (pair)
+     38122  2026-10-05T02:22:29Z  gs://rhombus-target/RhombusAI_output_1791166948755.csv
+     37652  2026-10-05T02:32:11Z  gs://rhombus-target/RhombusAI_output_1791167530500.csv   13:32 case 07 run 1 (pair)
+     37652  2026-10-05T02:32:46Z  gs://rhombus-target/RhombusAI_output_1791167566165.csv
+     37652  2026-10-05T02:38:18Z  gs://rhombus-target/RhombusAI_output_1791167898160.csv   13:38 case 07 run 2 (pair)
+     37652  2026-10-05T02:38:53Z  gs://rhombus-target/RhombusAI_output_1791167932998.csv
+TOTAL: 32 objects, 1151992 bytes (1.10MiB)
+
+Case 07 check: 1791167530500, 1791167566165 and outputs/07-semantic-date-swap__run2.csv all have MD5 0d0c4719248e336a64300e35498c566f
+(baseline output: f1a7904a06a099d9097bc420e51a5ca9).
+32 outputs exist for about 15 runs that were intended.

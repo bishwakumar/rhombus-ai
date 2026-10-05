@@ -1,0 +1,18 @@
+{
+  "name": "rhombus-ui-tests",
+  "private": true,
+  "scripts": {
+    "auth": "playwright test --project=auth --headed",
+    "test": "playwright test --project=journey",
+    "test:all": "RUN_AI_BUILD=1 RUN_SCHEDULER_WAIT=1 playwright test --project=journey",
+    "report": "playwright show-report",
+    "record": "playwright codegen --load-storage=.auth/state.json",
+    "auth:chrome": "node scripts/save-session.mjs",
+    "test:rerecord": "RERECORD=1 playwright test --project=journey"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^20.11.0",
+    "dotenv": "^16.4.5"
+  }
+}

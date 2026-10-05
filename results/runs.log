@@ -1,0 +1,68 @@
+{"at": "2026-10-05T00:48:40+00:00", "run_id": "7f5168d3", "event": "started"}
+{"at": "2026-10-05T00:48:46+00:00", "run_id": "7f5168d3", "event": "source_ready", "source_md5": "af01f8282c0866ca83a6ef9fd0ed3c01", "source_generation": "1791160334616390", "uploaded": "no (already identical)"}
+{"at": "2026-10-05T00:48:49+00:00", "run_id": "7f5168d3", "event": "waiting_for_trigger"}
+{"at": "2026-10-05T00:49:14+00:00", "run_id": "7f5168d3", "event": "waiting_for_output", "triggered_at": "2026-10-05T00:49:14+00:00"}
+{"at": "2026-10-05T00:57:24+00:00", "run_id": "7f5168d3", "event": "finished", "status": "rhombus_failed", "finished_at": "2026-10-05T00:57:24+00:00", "rhombus_error": "", "error": "no output within 120s and no Rhombus error recorded"}
+{"at": "2026-10-05T00:57:34+00:00", "run_id": "5150636f", "event": "started"}
+{"at": "2026-10-05T00:57:39+00:00", "run_id": "5150636f", "event": "source_ready", "source_md5": "af01f8282c0866ca83a6ef9fd0ed3c01", "source_generation": "1791160334616390", "uploaded": "no (already identical)"}
+{"at": "2026-10-05T00:57:42+00:00", "run_id": "5150636f", "event": "waiting_for_trigger"}
+{"at": "2026-10-05T00:57:59+00:00", "run_id": "5150636f", "event": "waiting_for_output", "triggered_at": "2026-10-05T00:57:58+00:00"}
+{"at": "2026-10-05T00:58:45+00:00", "run_id": "5150636f", "event": "downloading", "rhombus_output_file": "RhombusAI_output_1791161912700.csv", "output_detected_at": "2026-10-05T00:58:45+00:00", "seconds_to_output": 34.9}
+{"at": "2026-10-05T00:58:50+00:00", "run_id": "5150636f", "event": "finished", "status": "output_written", "finished_at": "2026-10-05T00:58:50+00:00", "local_copy": "outputs/03-schema-type-change__run3.csv", "output_md5": "6ee5125efdfbd9299ed816460fa3fb63"}
+{"at": "2026-10-05T01:00:28+00:00", "run_id": "35d257a2", "event": "started"}
+{"at": "2026-10-05T01:00:33+00:00", "run_id": "35d257a2", "event": "source_ready", "source_md5": "9647af86623e6274cec7697295cdec1c", "source_generation": "1791160334595069", "uploaded": "no (already identical)"}
+{"at": "2026-10-05T01:00:36+00:00", "run_id": "35d257a2", "event": "waiting_for_trigger"}
+{"at": "2026-10-05T01:01:09+00:00", "run_id": "35d257a2", "event": "waiting_for_output", "triggered_at": "2026-10-05T01:01:08+00:00"}
+{"at": "2026-10-05T01:01:29+00:00", "run_id": "35d257a2", "event": "downloading", "rhombus_output_file": "RhombusAI_output_1791162084475.csv", "output_detected_at": "2026-10-05T01:01:29+00:00", "seconds_to_output": 16.1}
+{"at": "2026-10-05T01:01:34+00:00", "run_id": "35d257a2", "event": "finished", "status": "output_written", "finished_at": "2026-10-05T01:01:34+00:00", "local_copy": "outputs/04-schema-add-column__run2.csv", "output_md5": "f1a7904a06a099d9097bc420e51a5ca9"}
+{"at": "2026-10-05T01:08:02+00:00", "run_id": "5d7191b7", "event": "started"}
+{"at": "2026-10-05T01:08:09+00:00", "run_id": "5d7191b7", "event": "source_ready", "source_md5": "c21e6908bbc237142db79564c71402f2", "source_generation": "1791160334593874", "uploaded": "no (already identical)"}
+{"at": "2026-10-05T01:08:13+00:00", "run_id": "5d7191b7", "event": "waiting_for_trigger"}
+{"at": "2026-10-05T01:08:21+00:00", "run_id": "5d7191b7", "event": "waiting_for_output", "triggered_at": "2026-10-05T01:08:20+00:00"}
+{"at": "2026-10-05T01:11:02+00:00", "run_id": "5d7191b7", "event": "finished", "status": "rhombus_failed", "finished_at": "2026-10-05T01:11:02+00:00", "rhombus_error": "Pipeline failed at clean_orders: LLM execution failed (code_sha=3ca80b148200): 'email' --- Generated code --- import pandas as pd import numpy as np def _safe_to_timedelta_wrapper(arg, *args, **kwargs): try: arg_series = pd.Series(arg) except Exception: arg_series = a\u2026", "error": ""}
+{"at": "2026-10-05T01:20:58+00:00", "run_id": "380eb18f", "event": "started"}
+{"at": "2026-10-05T01:21:05+00:00", "run_id": "380eb18f", "event": "source_ready", "source_md5": "c21e6908bbc237142db79564c71402f2", "source_generation": "1791160334593874", "uploaded": "no (already identical)"}
+{"at": "2026-10-05T01:21:08+00:00", "run_id": "380eb18f", "event": "waiting_for_trigger"}
+{"at": "2026-10-05T01:21:38+00:00", "run_id": "380eb18f", "event": "waiting_for_output", "triggered_at": "2026-10-05T01:21:37+00:00"}
+{"at": "2026-10-05T01:22:18+00:00", "run_id": "380eb18f", "event": "finished", "status": "aborted", "finished_at": "2026-10-05T01:22:18+00:00", "rhombus_error": "", "error": "stopped by user during waiting_for_output"}
+{"at": "2026-10-05T02:02:06+00:00", "run_id": "ca65fee7", "event": "started"}
+{"at": "2026-10-05T02:02:14+00:00", "run_id": "ca65fee7", "event": "source_ready", "source_md5": "c21e6908bbc237142db79564c71402f2", "source_generation": "1791160334593874", "uploaded": "no (already identical)"}
+{"at": "2026-10-05T02:02:18+00:00", "run_id": "ca65fee7", "event": "waiting_for_trigger"}
+{"at": "2026-10-05T02:04:49+00:00", "run_id": "ca65fee7", "event": "waiting_for_output", "triggered_at": "2026-10-05T02:04:48+00:00"}
+{"at": "2026-10-05T02:05:51+00:00", "run_id": "ca65fee7", "event": "finished", "status": "aborted", "finished_at": "2026-10-05T02:05:51+00:00", "rhombus_error": "Pipeline failed at clean_orders: LLM execution failed (code_sha=3ca80b148200): 'email' --- Generated code --- import pandas as", "error": "stopped by user during waiting_for_output"}
+{"at": "2026-10-05T02:22:05+00:00", "run_id": "358609fd", "event": "started"}
+{"at": "2026-10-05T02:22:10+00:00", "run_id": "358609fd", "event": "source_ready", "source_md5": "a494e907b7e8bc45602130e9bda0aff3", "source_generation": "1791160334602421", "uploaded": "no (already identical)"}
+{"at": "2026-10-05T02:22:13+00:00", "run_id": "358609fd", "event": "waiting_for_trigger"}
+{"at": "2026-10-05T02:22:17+00:00", "run_id": "358609fd", "event": "waiting_for_output", "triggered_at": "2026-10-05T02:22:17+00:00"}
+{"at": "2026-10-05T02:22:29+00:00", "run_id": "358609fd", "event": "downloading", "rhombus_output_file": "RhombusAI_output_1791166948755.csv", "output_detected_at": "2026-10-05T02:22:29+00:00", "seconds_to_output": 11.9}
+{"at": "2026-10-05T02:22:35+00:00", "run_id": "358609fd", "event": "finished", "status": "output_written", "finished_at": "2026-10-05T02:22:35+00:00", "local_copy": "outputs/06-semantic-cents__run1.csv", "output_md5": "43e417b4990720ad8ac2f2102355f465"}
+{"at": "2026-10-05T02:32:37+00:00", "run_id": "7ac3839e", "event": "started"}
+{"at": "2026-10-05T02:32:43+00:00", "run_id": "7ac3839e", "event": "source_ready", "source_md5": "10d97973201c787da5a5a789d54d9940", "source_generation": "1791160334670821", "uploaded": "no (already identical)"}
+{"at": "2026-10-05T02:32:46+00:00", "run_id": "7ac3839e", "event": "waiting_for_trigger"}
+{"at": "2026-10-05T02:32:53+00:00", "run_id": "7ac3839e", "event": "waiting_for_output", "triggered_at": "2026-10-05T02:32:52+00:00"}
+{"at": "2026-10-05T02:34:58+00:00", "run_id": "7ac3839e", "event": "finished", "status": "rhombus_failed", "finished_at": "2026-10-05T02:34:58+00:00", "rhombus_error": "", "error": "no output within 120s and no Rhombus error recorded"}
+{"at": "2026-10-05T02:38:23+00:00", "run_id": "9506920e", "event": "started"}
+{"at": "2026-10-05T02:38:28+00:00", "run_id": "9506920e", "event": "source_ready", "source_md5": "10d97973201c787da5a5a789d54d9940", "source_generation": "1791160334670821", "uploaded": "no (already identical)"}
+{"at": "2026-10-05T02:38:32+00:00", "run_id": "9506920e", "event": "waiting_for_trigger"}
+{"at": "2026-10-05T02:38:41+00:00", "run_id": "9506920e", "event": "waiting_for_output", "triggered_at": "2026-10-05T02:38:40+00:00"}
+{"at": "2026-10-05T02:39:01+00:00", "run_id": "9506920e", "event": "downloading", "rhombus_output_file": "RhombusAI_output_1791167932998.csv", "output_detected_at": "2026-10-05T02:39:01+00:00", "seconds_to_output": 12.9}
+{"at": "2026-10-05T02:39:05+00:00", "run_id": "9506920e", "event": "finished", "status": "output_written", "finished_at": "2026-10-05T02:39:05+00:00", "local_copy": "outputs/07-semantic-date-swap__run2.csv", "output_md5": "0d0c4719248e336a64300e35498c566f"}
+{"at": "2026-10-05T04:10:27+00:00", "run_id": "7ac3839e", "event": "attached", "output": "RhombusAI_output_1791167530500.csv"}
+{"at": "2026-10-05T04:23:51+00:00", "run_id": "a96847d4", "event": "started"}
+{"at": "2026-10-05T04:23:58+00:00", "run_id": "a96847d4", "event": "source_ready", "source_md5": "af01f8282c0866ca83a6ef9fd0ed3c01", "source_generation": "1791160334616390", "uploaded": "no (already identical)"}
+{"at": "2026-10-05T04:24:02+00:00", "run_id": "a96847d4", "event": "waiting_for_trigger"}
+{"at": "2026-10-05T04:24:06+00:00", "run_id": "a96847d4", "event": "waiting_for_output", "triggered_at": "2026-10-05T04:24:05+00:00"}
+{"at": "2026-10-05T04:24:36+00:00", "run_id": "a96847d4", "event": "downloading", "rhombus_output_file": "RhombusAI_output_1791174273460.csv", "output_detected_at": "2026-10-05T04:24:36+00:00", "seconds_to_output": 28.2}
+{"at": "2026-10-05T04:24:41+00:00", "run_id": "a96847d4", "event": "finished", "status": "output_written", "finished_at": "2026-10-05T04:24:41+00:00", "local_copy": "outputs/03-schema-type-change__run4.csv", "output_md5": "6ee5125efdfbd9299ed816460fa3fb63"}
+{"at": "2026-10-05T04:42:13+00:00", "run_id": "6086ee2b", "event": "started"}
+{"at": "2026-10-05T04:42:20+00:00", "run_id": "6086ee2b", "event": "source_ready", "source_md5": "af01f8282c0866ca83a6ef9fd0ed3c01", "source_generation": "1791160334616390", "uploaded": "no (already identical)"}
+{"at": "2026-10-05T04:42:23+00:00", "run_id": "6086ee2b", "event": "waiting_for_trigger"}
+{"at": "2026-10-05T04:42:52+00:00", "run_id": "6086ee2b", "event": "waiting_for_output", "triggered_at": "2026-10-05T04:42:51+00:00"}
+{"at": "2026-10-05T04:48:09+00:00", "run_id": "6086ee2b", "event": "finished", "status": "rhombus_failed", "finished_at": "2026-10-05T04:48:09+00:00", "rhombus_error": "", "error": "no output within 120s and no Rhombus error recorded"}
+{"at": "2026-10-05T04:48:14+00:00", "run_id": "6086ee2b", "event": "finished", "status": "aborted", "finished_at": "2026-10-05T04:48:14+00:00", "rhombus_error": "", "error": "stopped by user during finished"}
+{"at": "2026-10-05T04:48:19+00:00", "run_id": "2d734220", "event": "started"}
+{"at": "2026-10-05T04:48:24+00:00", "run_id": "2d734220", "event": "source_ready", "source_md5": "af01f8282c0866ca83a6ef9fd0ed3c01", "source_generation": "1791160334616390", "uploaded": "no (already identical)"}
+{"at": "2026-10-05T04:48:27+00:00", "run_id": "2d734220", "event": "waiting_for_trigger"}
+{"at": "2026-10-05T04:48:35+00:00", "run_id": "2d734220", "event": "waiting_for_output", "triggered_at": "2026-10-05T04:48:34+00:00"}
+{"at": "2026-10-05T04:49:55+00:00", "run_id": "2d734220", "event": "downloading", "rhombus_output_file": "RhombusAI_output_1791175779474.csv", "output_detected_at": "2026-10-05T04:49:55+00:00", "seconds_to_output": 65.2}
+{"at": "2026-10-05T04:50:03+00:00", "run_id": "2d734220", "event": "finished", "status": "output_written", "finished_at": "2026-10-05T04:50:03+00:00", "local_copy": "outputs/03-schema-type-change__run6.csv", "output_md5": "f1a7904a06a099d9097bc420e51a5ca9"}

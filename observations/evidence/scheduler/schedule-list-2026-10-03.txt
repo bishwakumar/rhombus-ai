@@ -1,0 +1,9 @@
+Schedule tab, 3 Oct 2026 (copied from the UI after the due times had passed)
+
+Schedule for hometask   Active   custom   Custom: */5 * * * *   Next run: (blank)
+Schedule for hometask   Active   custom   Custom: */2 * * * *   Next run: (blank)
+Schedule for hometask   Active   hourly   At minute 01           Next run: (blank; earlier showed "in 28 secs")
+
+Earlier states:
+  */2 * * * *  -> "Next run:" blank from creation            (schedule-active-next-run-blank.png)
+  */5 * * * *  -> "Next run: in 3 mins", then blank           (schedule-active-next-run-countdown.png)

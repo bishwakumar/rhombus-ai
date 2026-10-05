@@ -1,0 +1,8 @@
+{
+  "name": "rhombus-api-tests",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --env-file=.env --test --test-reporter=spec"
+  }
+}

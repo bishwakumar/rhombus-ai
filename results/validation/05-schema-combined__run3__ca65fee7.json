@@ -1,0 +1,18 @@
+{
+  "case_id": "05-schema-combined",
+  "output_file": "05-schema-combined__run3__ca65fee7",
+  "output_md5": "",
+  "validated_at": "2026-10-05T23:12:31+00:00",
+  "verdict": "STOPPED",
+  "run_status": "aborted",
+  "rhombus_error": "Pipeline failed at clean_orders: LLM execution failed (code_sha=3ca80b148200): 'email' --- Generated code --- import pandas as",
+  "checks": [
+    {
+      "check": "pipeline",
+      "status": "STOPPED",
+      "detail": "Pipeline produced no output (aborted); Rhombus error: Pipeline failed at clean_orders: LLM execution failed (code_sha=3ca80b148200): 'email' --- Generated code --- import pandas as",
+      "run_id": "ca65fee7",
+      "triggered_at": "2026-10-05T02:04:48+00:00"
+    }
+  ]
+}

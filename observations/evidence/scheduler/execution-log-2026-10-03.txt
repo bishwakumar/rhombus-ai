@@ -1,0 +1,13 @@
+Rhombus execution log, 3 Oct 2026 (AEST, UTC+10). Copied from the Logs panel.
+Three schedules were Active during this window: custom */2 * * * *, custom */5 * * * *, hourly at minute 01.
+
+05:02:06 PM  Applied transformation: Custom: code: "import re from datetime import datetime # Start with input dataframe df = in..." · mode: "code" · prompt: "Clean this orders dataset. Keep all original column names and order: order_id..." · visualise: false · output_columns: "". Impact: 242 row(s) affected, 406 cell(s) modified.
+05:02:06 PM  Pipeline completed successfully
+05:02:06 PM  Pipeline execution completed successfully.
+05:02:02 PM  Pipeline execution started.        <- manual run
+03:19:54 PM  Pipeline execution completed successfully.
+03:19:54 PM  Pipeline execution started.
+
+No entries between 03:19:54 PM and 05:02:02 PM.
+Expected scheduled runs in that window: 51 (*/2) + 21 (*/5) + 2 (hourly, 4:01 and 5:01) = 74. Actual: 0.
+Destination bucket: no output between 2:54:57 PM and 5:02:04 PM.

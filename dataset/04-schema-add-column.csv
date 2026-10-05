@@ -1,0 +1,501 @@
+order_id,customer_name,email,order_date,amount_usd,quantity,country,status,discount_code
+10001,,sophia.anderson33@example.com,03/09/2026,$ 1297.92,1,India,PENDING,SPRING10
+10002,james silva,james.silva34@example.com,03/08/2026,"$1,361.98",2,U.S.,Shipped,
+10003,ZOE smith,zoe.smith35@example.com,03/06/2026,733.45,4,AUS,pending,WELCOME5
+10004,Amelia Rossi,amelia.rossi36@example.com,01/10/2026,456.80,two,NEW ZEALAND,cancelled,WELCOME5
+10005,Yuki Ali,,02-09-2026,"$1,601.61",five,uk,Pending,
+10006,Harper Singh,harper.singh38@example.com,March 8 2026,1617.84 USD,5,UK,shipped,
+10007,RUBY novak,ruby.novak39@example.com,02/06/2026,-202.36,6,New Zealand,shipped,VIP20
+10008,WEI WILSON,WEI.WILSON40@EXAMPLE.COM,01/06/2026,1332.52,5,NZ,cancelled,WELCOME5
+10009,Mohammed Thompson,mohammed.thompson41@example.com,01/09/2026,free,4,AUS,xyz,SPRING10
+10010,Lucia Kim,lucia.kim42@example.com,03-03-2026,$316.24,,australia,delivered,SPRING10
+10011,HENRY CHEN,henry.chen43@example.com,03/11/2026,1756.86,-1,United Kingdom,Shipped,
+10012,   Isla Martin  ,isla.martin44@example.com,02/08/2026,$ 1998.49,1.5,Australia,shipped,SPRING10
+10013,SAMUEL ROSSI,samuel.rossi45@example.com,03/03/2026,1922.79,1.5,nz,shipped,
+10014,   Leo Brown  ,LEO.BROWN46@EXAMPLE.COM,2026-02-03,221.01,1,nz,DELIVERED,FREESHIP
+10015,Leo Patel,LEO.PATEL47@EXAMPLE.COM,01/01/2026,201.94,1,AUS,shipped,SPRING10
+10016,SOPHIA ali,,February 9 2026,1365.99,3,usa,Cancelled,WELCOME5
+10017,Arjun Nguyen,arjun.nguyen49@example.com,,1446.14 USD,1,aus,Shipped,VIP20
+10018,Oscar Murphy,OSCAR.MURPHY50@EXAMPLE.COM,01/03/2026,1090.42,,GB,DELIVERED,FREESHIP
+10019,ISLA TANAKA,isla.tanaka51@example.com,01/11/2026,1733.59,5,NZ,shipped,VIP20
+10019,ISLA TANAKA,isla.tanaka51@example.com,01/11/2026,1733.59,5,NZ,shipped,VIP20
+10020,   Yuki Khan  ,yuki.khan52@example.com,February 4 2026,1127.56,3,AUSTRALIA,shipped   ,
+10021,WEI SILVA,wei.silva53@example.com,March 12 2026,822.57,1,Great Britain,Shipped,SPRING10
+10021,WEI SILVA,wei.silva53@example.com,March 12 2026,563.10,1,Great Britain,delivered,SPRING10
+10022,hiroshi tanaka,hiroshi.tanaka54@example.com,March 11 2026,1326.92,5,AUS,shipped,
+10023,Hiroshi Nguyen,hiroshi.nguyen55@example.com,March 11 2026,28.80,5,Great Britain,CANCELLED,
+10024,DANIEL ALI,-,03/11/2026,1535.96,3,australia,Shipped,
+10025,ETHAN LARSEN,ethan.larsen57@example.com,02-02-2026,1115.63,two,NZ,DELIVERED,WELCOME5
+10026,Ella Anderson,ELLA.ANDERSON58@EXAMPLE.COM,02/12/2026,"$1,317.53",4,usa,shipped,SPRING10
+10027,RUBY ANDERSON,ruby.anderson59@example.com,January 6 2026,$540.25,4.0,aus,DELIVERED,VIP20
+10028,   Mohammed Anderson  ,MOHAMMED.ANDERSON60@EXAMPLE.COM,01/11/2026,1536.64,4,IN,PENDING,
+10029,Arjun Kim,arjun.kim61@example.com,,835.10,4,NEW ZEALAND,delivered,
+10030,Ella Khan,ella.khan62@example.com,01/09/2026,"$1,540.19",one,AUS,cancelled,
+10031,ella kelly,ella.kelly63@example.com,March 4 2026,1976.91,4,uk,shipped,FREESHIP
+10032,Lucia Nguyen,lucia.nguyen64@example.com,2026-02-30,1029.46,6,U.S.,SHIPPED,SPRING10
+10033,Priya Ali,priya.ali65@example.com,February 6 2026,370.51,5,,SHIPPED,WELCOME5
+10034,Amelia Wilson,amelia.wilson66@example.com,2026-03-04,1585.45,3,NZ,delivered,FREESHIP
+10035,emma rossi,emma.rossi67@example.com,March 1 2026,567.93,0,india,shipped,WELCOME5
+10036,OLIVIA WHITE,olivia.white68@example.com,01-09-2026,734.67,5,AUSTRALIA,delivered,
+10037,OLIVIA TAYLOR,olivia.taylor69@example.com,03/04/2026,"$1,739.49",1.0,usa,delivered,
+10038,CARLOS LARSEN,CARLOS.LARSEN70@EXAMPLE.COM,not known,968.80,2,UK,shipped,
+10039,   Mei Thompson  ,mei.thompson71@example.com,2026-01-08,1046.82,3,nz,delivered,SPRING10
+10040,,lucia.walker72@example.com,13/45/2026,TBC,1,New Zealand,SHIPPED,
+10041,   Olivia Brown  ,olivia.brown73@example.com,02/02/2026,344.67,3,aus,SHIPPED,VIP20
+10042,Chloe Thompson,chloe.thompson74@example.com,01/09/2026,$ 1723.76,3,US,Delivered,WELCOME5
+10043,lucia rossi,lucia.rossi75@example.com,01/05/2026,489.66,-3,AU,pending,SPRING10
+10044,Yuki Rossi,yuki.rossi76@example.com,2026-01-02,"$1,612.34",4,United States,SHIPPED,SPRING10
+10045,Ella Ali,ella.ali77@example.com,01/06/2026,,-3,United States,CANCELLED,
+10046,   Grace Smith  ,grace.smith78@example.com,02/10/2026,1296.24,4,IN,shipped,
+10047,CHLOE JONES,chloe.jones79@example.com,2026-01-07,$777.82,1,United States,Delivered,WELCOME5
+10048,AMELIA MURPHY,amelia.murphy80@example.com,01/08/2026,-1742.44,2,GB,shipped,
+10048,AMELIA MURPHY,amelia.murphy80@example.com,01/08/2026,-1742.44,2,GB,shipped,
+10049,OLIVIA LOPEZ,olivia.lopez81@example.com,02/04/2026,240.01,,IN,delivered,
+10050,ETHAN MURPHY,ethan.murphy82@example.com,,1909.46 USD,,usa,shipped,SPRING10
+10051,Sophia Brown,SOPHIA.BROWN83@EXAMPLE.COM,01-06-2026,$ 893.25,1,nz,cancelled,WELCOME5
+10052,Ella Smith,ella.smith84@,01-04-2026,1977.96,3.0,uk,PENDING,WELCOME5
+10053,SAMUEL THOMPSON,@example.com,,701.79,4,AUSTRALIA,delivered,WELCOME5
+10054,   Zoe Kelly  ,zoe.kelly86@example.com,01/10/2026,1032.54,5,AUS,delivered,
+10055,Mohammed Wang,mohammed.wang87@example.com,02/07/2026,$ 1249.40,,NEW ZEALAND,??,SPRING10
+10055,Mohammed Wang,mohammed.wang87@example.com,02/07/2026,$ 1249.40,,NEW ZEALAND,??,SPRING10
+10056,   Daniel Nguyen  ,daniel.nguyen88@example.com,02-01-2026,"$1,095.24",one,Australia,SHIPPED,FREESHIP
+10057,Arjun Ali,ARJUN.ALI0@EXAMPLE.COM,2026-01-08,1258.41,0,uk,xyz,WELCOME5
+10058,fatima murphy,n/a,01-02-2026,TBC,4,U.S.,cancelled,
+10059,wei taylor,wei.taylor2@example.com,01/03/2026,1208.99,3,australia,Pending,FREESHIP
+10060,zoe johnson,zoe.johnson3@example.com,03/10/2026,1052.27 USD,5,U.S.,Shipped,
+10061,Sophia Cohen,sophia.cohen4@example.com,March 4 2026,13.85,2,United Kingdom,shipped,FREESHIP
+10062,CARLOS kim,carlos.kim5@example.com,February 10 2026,$761.04,1,nz,shipped,
+10063,Arjun Patel,arjun.patel6@example.com,TBD,$607.06,6,australia,shipped,
+10064,Jack Brown,,not known,241.93,1,INDIA,pending   ,WELCOME5
+10065,CARLOS NGUYEN,carlos.nguyen8@example.com,2026-01-07,$ 630.15,3,UK,cancelled,FREESHIP
+10066,William Rossi,WILLIAM.ROSSI9@EXAMPLE.COM,2026-01-07,$391.47,6,USA,Delivered,FREESHIP
+10067,JAMES WALKER,james.walker10@example.com,2026-03-11,194.5,5,AU,SHIPPED,WELCOME5
+10068,LEO ali,leo.ali11@example.com,01/07/2026,510.24,6,U.S.,SHIPPED,FREESHIP
+10069,Oscar Kelly,oscar.kelly12@example.com,02-08-2026,1273.93,0,india,SHIPPED,
+10069,Oscar Kelly,oscar.kelly12@example.com,02-08-2026,962.28,0,india,delivered,
+10070,   Zoe Wilson  ,,2026-03-01,"$1,852.67",3,NEW ZEALAND,shipped,VIP20
+10071,Arjun Tanaka,-,03/10/2026,445.57,3,nz,delivered,VIP20
+10072,Olivia Patel,olivia.patel15@example.com,02/11/2026,$ 114.10,5,aus,SHIPPED,
+10073,Grace Singh,grace.singh16_at_example.com,2026-03-01,251.30,6,india,Delivered,WELCOME5
+10074,Fatima Nguyen,fatima.nguyen17@example.com,01/07/2026,758.05,3,INDIA,delivered,VIP20
+10075,RUBY taylor,ruby.taylor18@example.com,01/08/2026,359.86 USD,6,New Zealand,Cancelled,
+10076,Noah Murphy,noah.murphy19@example.com,02/09/2026,"$1,027.07",six,AUS,shipped,
+10077,THOMAS LARSEN,thomas.larsen20@example.com,01/10/2026,1860.97,4.0,,Cancelled,WELCOME5
+10078,Mei Thompson,mei.thompson21@example.com,,25.15,,australia,shipped,FREESHIP
+10079,Emma Nguyen,emma.nguyen22@example.com,2026-03-03,$990.57,2,AUSTRALIA,Delivered,
+10080,Zoe Thompson,,January 6 2026,,0,AU,shipped,SPRING10
+10081,HARPER brown,harper.brown24@example.com,02/06/2026,$364.79,five,AUS,shipped,WELCOME5
+10082,Lucas Nguyen,lucas.nguyen25@example.com,2026-03-09,144.41 USD,two,australia,shipped,
+10083,Harper Larsen,HARPER.LARSEN26@EXAMPLE.COM,January 11 2026,$ 811.20,3,australia,DELIVERED,WELCOME5
+10084,Lucia Nguyen,lucia.nguyen27@example,02/09/2026,1452.48,2.0,AU,delivered,WELCOME5
+10085,Olivia Ali,,03/03/2026,$39.52,6,india,cancelled,FREESHIP
+10086,MEI JONES,mei.jones29@,02/01/2026,1755.28,6,AU,CANCELLED,
+10087,Isla Thompson,@example.com,03/06/2026,1778.50 USD,4,Great Britain,shipped   ,
+10087,Isla Thompson,@example.com,03/06/2026,1778.50 USD,4,Great Britain,shipped   ,
+10088,William Nguyen,william.nguyen31@example.com,2026-03-06,$ 809.07,4,AU,shipped,FREESHIP
+10089,PRIYA cohen,priya.cohen32@example.com,02/01/2026,140.80,6,U.S.A.,SHIPPED,
+10090,   Chloe Lopez  ,chloe.lopez33@example.com,02/02/2026,$ 841.30,5,United States,DELIVERED,
+10091,Isla Walker,isla.walker34@example.com,2026-01-03,$226.43,2.0,australia,CANCELLED,FREESHIP
+10092,GRACE WANG,grace.wang35@example.com,2026-02-12,1276.77,2,U.S.,unknown,
+10093,THOMAS KHAN,@example.com,01/06/2026,$616.80,2,AUSTRALIA,shipped,
+10094,Carlos Thompson,CARLOS.THOMPSON37@EXAMPLE.COM,2026-02-01,559.07,2.5,United States,shipped,
+10094,Carlos Thompson,CARLOS.THOMPSON37@EXAMPLE.COM,2026-02-01,290.99,2.5,United States,cancelled,
+10095,   Fatima Martin  ,fatima.martin38@example.com,03/04/2026,$464.27,five,USA,Pending,FREESHIP
+10096,LIAM novak,liam.novak39@example.com,01/08/2026,$365.30,3,U.S.,shipped,
+10097,MOHAMMED kelly,mohammed.kelly40@example.com,02/09/2026,$125.66,,USA,SHIPPED,
+10098,SOPHIA SMITH,sophia.smith41@example.com,2026-01-10,1040.08 USD,4,usa,shipped,WELCOME5
+10099,amelia martin,AMELIA.MARTIN42@EXAMPLE.COM,02/03/2026,1978.53,five,aus,Delivered,VIP20
+10100,Grace Brown,GRACE.BROWN43@EXAMPLE.COM,February 12 2026,954.35,4,U.S.,shipped,SPRING10
+10101,Jack Lopez,jack.lopez44@example.com,2026-02-03,TBC,5,United States,PENDING,FREESHIP
+10102,Sophia Taylor,sophia.taylor45@example.com,03/05/2026,1489.36,4,AUS,DELIVERED,
+10103,Harper Kim,harper.kim46@example.com,March 4 2026,$ 944.40,4,,shipped,
+10104,Mei Garcia,mei.garcia47@example.com,02/07/2026,$75.06,,USA,SHIPPED,WELCOME5
+10105,SOPHIA SMITH,sophia.smith48@example.com,,1606.59,-1,NEW ZEALAND,SHIPPED,
+10106,EMMA BROWN,-,03/12/2026,"$1,918.88",3,UK,cancelled,VIP20
+10107,Lucas Walker,lucas.walker50@example.com,02/10/2026,1715.23,1,nz,DELIVERED,FREESHIP
+10108,Zoe Taylor,-,01/08/2026,1256.12,2,GB,Delivered,
+10109,Ruby Garcia,ruby.garcia52@example.com,03/01/2026,1468.07,-1,usa,PENDING,VIP20
+10110,Grace Martin,@example.com,January 11 2026,$ 694.97,1,AUSTRALIA,DELIVERED,SPRING10
+10111,Ava Larsen,ava.larsen54@example.com,February 4 2026,1389.72,4,AUS,delivered,
+10112,amelia patel,amelia.patel55@example.com,01/04/2026,1306.01,six,AUSTRALIA,cancelled,
+10113,YUKI murphy,yuki.murphy56@example.com,01-09-2026,-130.40,2.5,IN,shipped,
+10114,daniel silva,daniel.silva57@example.com,,$680.56,6,india,Pending,WELCOME5
+10115,leo kim,leo.kim58@example.com,03/10/2026,1924.38,6,AUS,delivered,FREESHIP
+10116,Mohammed Chen,mohammed.chen59@example.com,01-09-2026,"$1,096.95",4,US,shipped   ,
+10117,HENRY WILSON,henry.wilson60@example.com,00/00/0000,1137.91 USD,4,AUS,shipped,SPRING10
+10118,AVA SMITH,ava.smith61@example.com,01/07/2026,1169.00,5,AUSTRALIA,Delivered,FREESHIP
+10119,Sophia Brown,sophia.brown62@example.com,02-10-2026,424.38,6,US,SHIPPED,
+10120,JACK MURPHY,JACK.MURPHY63@EXAMPLE.COM,March 8 2026,962.60,,AU,Delivered,FREESHIP
+10121,SOPHIA WHITE,SOPHIA.WHITE64@EXAMPLE.COM,01/04/2026,680.20,1,INDIA,DELIVERED,WELCOME5
+10122,hiroshi thompson,hiroshi.thompson65@example,,948.04,2,U.S.,cancelled,WELCOME5
+10123,   Chloe Walker  ,chloe.walker66@example.com,03/10/2026,"$1,841.82",2,USA,Shipped,
+10123,   Chloe Walker  ,chloe.walker66@example.com,03/10/2026,1023.66,2,USA,cancelled,
+10124,Olivia Cohen,olivia.cohen67@example.com,March 1 2026,$911.70,-1,NZ,SHIPPED,
+10125,Liam Wang,liam.wang68@example.com,,350.58,2,U.S.,SHIPPED,
+10126,PRIYA JOHNSON,priya.johnson69@example.com,February 5 2026,1123.12,2,NZ,shipped,WELCOME5
+10127,SAMUEL WILLIAMS,samuel.williams70@example.com,2026-02-01,1519.26,2,GB,shipped,
+10128,PRIYA KELLY,PRIYA.KELLY71@EXAMPLE.COM,01/11/2026,$ 1610.69,5,aus,Delivered,SPRING10
+10129,LIAM kelly,liam.kelly72@example,March 8 2026,$392.46,5,AU,shipped   ,
+10130,GRACE BROWN,grace.brown73@example.com,January 5 2026,1390.28,one,usa,delivered,SPRING10
+10131,YUKI SINGH,yuki.singh74@example.com,03/06/2026,1325.40,2,IN,shipped,SPRING10
+10132,ETHAN JONES,ethan.jones75@example.com,03/02/2026,455.34,1,USA,delivered,WELCOME5
+10133,Chloe Chen,chloe.chen76@example,02-09-2026,free,1,usa,DELIVERED,VIP20
+10134,ELLA JOHNSON,ella.johnson77@example.com,February 6 2026,540.71 USD,4,AUSTRALIA,Shipped,
+10135,ZOE martin,zoe.martin78@,02/02/2026,"$1,121.96",1,AUS,DELIVERED,SPRING10
+10136,Daniel Chen,daniel.chen79@example.com,2026-01-08,1009.03,3,AU,cancelled,VIP20
+10137,Lucas Walker,lucas.walker80@example.com,February 11 2026,652.11 USD,six,US,Shipped,SPRING10
+10137,Lucas Walker,lucas.walker80@example.com,February 11 2026,652.11 USD,six,US,Shipped,SPRING10
+10138,LUCIA nguyen,@example.com,2026-02-30,1316.5,1.5,INDIA,delivered,WELCOME5
+10139,Grace Rossi,grace.rossi82@example.com,2026-03-08,"$1,136.41",four,australia,Shipped,SPRING10
+10140,Ella Taylor,ella.taylor83@example.com,02/10/2026,697.47,3,india,SHIPPED,
+10141,Samuel Larsen,samuel.larsen84@example.com,February 6 2026,TBC,1,Great Britain,pending,VIP20
+10142,William Thompson,,2026-01-11,277.79,4,GB,shipped,WELCOME5
+10143,leo khan,leo.khan86@example.com,February 3 2026,$274.68,6,AUS,SHIPPED,FREESHIP
+10144,CARLOS WILSON,carlos.wilson87@example.com,January 7 2026,1797.08,2,USA,pending,
+10145,Priya Silva,priya.silva88@example.com,January 5 2026,$962.17,4,USA,unknown,WELCOME5
+10146,Ava Jones,,2026-03-02,35.47,1,aus,CANCELLED,SPRING10
+10147,Fatima Taylor,FATIMA.TAYLOR1@EXAMPLE.COM,03/12/2026,$983.17,6,India,Shipped,FREESHIP
+10148,Henry Nguyen,henry.nguyen2@example.com,2026-02-07,"$1,618.74",1,Australia,shipped,WELCOME5
+10149,oscar khan,oscar.khan3@example.com,,$272.31,one,USA,delivered,VIP20
+10150,Ella Brown,ELLA.BROWN4@EXAMPLE.COM,01/05/2026,N/A,6,usa,PENDING,
+10150,Ella Brown,ELLA.BROWN4@EXAMPLE.COM,01/05/2026,N/A,6,usa,PENDING,
+10151,jack tanaka,jack.tanaka5@example.com,02/02/2026,84.24,1,AUS,shipped,
+10152,William Smith,william.smith6@example,03/04/2026,1791.93,-3,United States,pending,FREESHIP
+10153,ava murphy,ava.murphy7@example.com,January 7 2026,-1024.36,-1,AU,delivered,SPRING10
+10154,ELLA martin,ella.martin8@example.com,02/06/2026,703.03,0,INDIA,PENDING,WELCOME5
+10155,Noah Cohen,noah.cohen9@example.com,03-02-2026,"$1,187.21",,AUS,pending,WELCOME5
+10156,olivia walker,,03/04/2026,683.15,6.0,AU,DELIVERED,
+10157,LIAM MURPHY,liam.murphy11@example.com,02/07/2026,,3,Australia,DELIVERED,
+10158,Oscar Jones,oscar.jones12@example.com,February 1 2026,"$1,515.30",one,uk,DELIVERED,
+10159,Jack White,jack.white13@example.com,00/00/0000,"$1,659.22",5,Australia,PENDING,SPRING10
+10160,Ruby Kelly,ruby.kelly14@example.com,02/01/2026,$ 1266.06,1,USA,delivered,VIP20
+10161,wei novak,WEI.NOVAK15@EXAMPLE.COM,03/07/2026,1334.30 USD,6,usa,delivered,VIP20
+10162,PRIYA SILVA,PRIYA.SILVA16@EXAMPLE.COM,02/06/2026,1594.05,6,australia,shipped,
+10163,LIAM CHEN,N/A,February 8 2026,$399.66,1.5,AUSTRALIA,Pending,SPRING10
+10163,LIAM CHEN,N/A,February 8 2026,$399.66,1.5,AUSTRALIA,Pending,SPRING10
+10164,Arjun Brown,arjun.brown18@example.com,January 3 2026,1760.71,five,GB,Delivered,VIP20
+10165,Mohammed Wang,mohammed.wang19@example.com,13/45/2026,$ 1930.28,6,,shipped,
+10165,Mohammed Wang,mohammed.wang19@example.com,13/45/2026,$ 1930.28,6,,shipped,
+10166,AVA KELLY,ava.kelly20@example.com,02/01/2026,$ 453.35,6,Great Britain,Delivered,
+10167,,jack.silva21@example.com,2026-02-06,1586.65,3,US,pending,FREESHIP
+10168,Noah Johnson,noah.johnson22@example.com,01/08/2026,"$1,078.27",6.0,US,pending,FREESHIP
+10168,Noah Johnson,noah.johnson22@example.com,01/08/2026,740.95,6.0,US,delivered,FREESHIP
+10169,amelia anderson,amelia.anderson23@example.com,01/10/2026,$672.12,five,India,shipped   ,VIP20
+10170,jack singh,jack.singh24@example.com,2026-02-06,"$1,839.47",2.0,aus,Delivered,FREESHIP
+10171,Mohammed Wilson,@example.com,01/06/2026,$ 655.75,three,U.S.,Shipped,
+10171,Mohammed Wilson,@example.com,01/06/2026,$ 655.75,three,U.S.,Shipped,
+10172,PRIYA MURPHY,priya.murphy26@example.com,01/08/2026,1821.41,1,australia,shipped,SPRING10
+10173,Zoe Brown,zoe.brown27@,February 4 2026,$ 1290.26,three,usa,SHIPPED,
+10173,Zoe Brown,zoe.brown27@,February 4 2026,$ 1290.26,three,usa,SHIPPED,
+10174,James Anderson,james.anderson28_at_example.com,March 3 2026,"$1,805.81",,United States,SHIPPED,
+10175,Emma Anderson,emma.anderson29@example.com,02-05-2026,597.50,6,INDIA,Shipped,
+10176,Priya Johnson,,01/03/2026,687.36 USD,3,AUS,SHIPPED,
+10177,MOHAMMED tanaka,mohammed.tanaka31@example.com,2026-02-10,1261.90,1,GB,SHIPPED,SPRING10
+10178,sophia tanaka,sophia.tanaka32@example.com,03/07/2026,1980.59,3,india,Delivered,WELCOME5
+10179,HARPER kim,HARPER.KIM33@EXAMPLE.COM,02/02/2026,90.9,6,USA,delivered,WELCOME5
+10180,WILLIAM NGUYEN,william.nguyen34@example.com,2026-01-08,$ 1049.15,3,,SHIPPED,FREESHIP
+10181,Leo Novak,LEO.NOVAK35@EXAMPLE.COM,03/07/2026,"$1,487.23",6,aus,PENDING,
+10182,Sophia Garcia,sophia.garcia36@example.com,2026-01-04,"$1,479.39",2,U.S.A.,shipped,SPRING10
+10183,LIAM JOHNSON,-,03/07/2026,$536.22,6,US,shipped,
+10184,Sophia Brown,SOPHIA.BROWN38@EXAMPLE.COM,01/02/2026,"$1,004.82",1,NZ,DELIVERED,
+10185,Grace Martin,GRACE.MARTIN39@EXAMPLE.COM,March 3 2026,1757.41,1,Australia,PENDING,SPRING10
+10186,Ethan Kim,ETHAN.KIM40@EXAMPLE.COM,01/07/2026,358.67,1,australia,DELIVERED,WELCOME5
+10187,Emma Wang,emma.wang41@example.com,01/08/2026,458.37,4,AUSTRALIA,delivered   ,VIP20
+10188,mia kelly,,January 12 2026,1979.46,2.0,AUS,CANCELLED,
+10189,sophia khan,sophia.khan43@example.com,02/11/2026,1930.53,2,U.S.,shipped,VIP20
+10190,LUCAS WANG,lucas.wang44@example.com,2026-01-08,957.09 USD,1.5,U.S.A.,PENDING,SPRING10
+10191,priya taylor,priya.taylor45@example.com,01/10/2026,$88.61,2,AU,shipped,WELCOME5
+10192,Olivia Wang,,February 2 2026,1875.66,3,india,CANCELLED,FREESHIP
+10193,ava chen,ava.chen47@,March 5 2026,TBC,3,india,delivered,
+10194,SOPHIA BROWN,SOPHIA.BROWN48@EXAMPLE.COM,2026-02-01,-1284.99,4.0,australia,shipped,WELCOME5
+10195,NOAH PATEL,noah.patel49@example.com,02/08/2026,"$1,949.21",2,AU,1,
+10196,JAMES SILVA,james.silva50@example.com,02/03/2026,-1697.38,one,india,shipped,VIP20
+10197,MIA larsen,mia.larsen51@example.com,02/11/2026,1458.64,2,india,cancelled,
+10198,zoe taylor,zoe.taylor52@example.com,January 8 2026,1707.80,6,india,cancelled,SPRING10
+10199,Oscar Martin,N/A,02/09/2026,"$1,123.62",1.0,AUS,Shipped,
+10200,ISLA KIM,isla.kim54@example.com,02/12/2026,$451.89,1.0,AUSTRALIA,SHIPPED,
+10201,olivia williams,olivia.williams55@example.com,03/04/2026,782.17,2,USA,PENDING,FREESHIP
+10201,olivia williams,olivia.williams55@example.com,03/04/2026,782.17,2,USA,PENDING,FREESHIP
+10202,   Henry Kelly  ,henry.kelly56@example.com,2026-03-07,"$1,590.60",0,aus,shipped,FREESHIP
+10203,Jack Lopez,jack.lopez57@example.com,02/11/2026,,4,IN,shipped,
+10204,leo cohen,leo.cohen58@example.com,March 9 2026,1251.66,six,IN,pending,
+10205,ELLA KHAN,ella.khan59@example.com,February 12 2026,$950.83,4,United Kingdom,delivered,VIP20
+10206,yuki johnson,yuki.johnson60@example.com,03/08/2026,1933.52,4,AUS,Delivered,
+10207,JAMES MURPHY,james.murphy61@example.com,02/04/2026,1694.31,2.0,U.S.,shipped,FREESHIP
+10208,Priya Nguyen,priya.nguyen62@example.com,February 9 2026,1307.39,5,US,delivered,SPRING10
+10209,Lucas Silva,lucas.silva63@example.com,,1718.02,2,GB,CANCELLED,
+10210,Ava Silva,ava.silva64@example.com,January 4 2026,941.32,5,United States,pending,VIP20
+10211,Mohammed Wang,mohammed.wang65@example.com,,$ 1813.04,6,india,SHIPPED,
+10212,HARPER WHITE,n/a,03/09/2026,530.01,2.0,US,Shipped,
+10213,Harper Garcia,harper.garcia67@example.com,February 1 2026,$ 387.11,-1,uk,delivered,
+10214,MIA TANAKA,mia.tanaka68@example.com,02/11/2026,"$1,270.34",3,UK,Shipped,
+10215,william walker,william.walker69@example.com,February 7 2026,"$1,030.42",2,US,Delivered,VIP20
+10216,THOMAS NOVAK,thomas.novak70@example.com,01/12/2026,1904.85,4,AUSTRALIA,SHIPPED,VIP20
+10217,lucia patel,@example.com,February 12 2026,"$1,342.07",6,AU,shipped,FREESHIP
+10218,samuel johnson,samuel.johnson72@example.com,03/07/2026,$607.87,6,nz,delivered,FREESHIP
+10219,HARPER ALI,harper.ali73@example.com,2026-01-03,"$1,884.36",4,australia,Shipped,FREESHIP
+10220,HARPER SINGH,harper.singh74@example.com,03/06/2026,250.46 USD,1,U.S.A.,delivered   ,
+10221,SAMUEL MURPHY,samuel.murphy75@example.com,01/06/2026,62.38 USD,-3,US,Pending,
+10222,Wei Anderson,wei.anderson76@example.com,03/10/2026,1835.05 USD,2,nz,??,
+10223,Wei Patel,wei.patel77@example.com,03/08/2026,,5,U.S.A.,DELIVERED,
+10224,CARLOS CHEN,carlos.chen78@example.com,02/09/2026,898.10,-1,Great Britain,shipped,WELCOME5
+10225,AVA LOPEZ,,January 12 2026,-367.11,5,USA,shipped,
+10226,Emma Jones,emma.jones80@example.com,February 7 2026,N/A,six,AUS,pending,WELCOME5
+10227,Carlos Silva,carlos.silva81@example.com,02-01-2026,948.18 USD,1,US,DELIVERED,
+10228,   Yuki Larsen  ,yuki.larsen82@example.com,01-02-2026,$396.06,1.0,aus,cancelled   ,
+10229,Lucia Thompson,lucia.thompson83@example.com,03/05/2026,232.46,one,India,shipped,SPRING10
+10230,Priya Smith,priya.smith84@example.com,2026-03-08,"$1,977.25",4,Australia,shipped,SPRING10
+10230,Priya Smith,priya.smith84@example.com,2026-03-08,998.58,4,Australia,pending,SPRING10
+10231,,isla.tanaka85@example.com,01-01-2026,,2,usa,DELIVERED,SPRING10
+10232,CHLOE SINGH,chloe.singh86@example.com,2026-03-09,1284.70 USD,3,Australia,shipped,VIP20
+10233,ARJUN WILLIAMS,arjun.williams87@example.com,2026-02-11,113.19,two,United States,shipped,VIP20
+10234,WEI JOHNSON,wei.johnson88@example.com,March 1 2026,"$1,882.45",2,U.S.A.,delivered,FREESHIP
+10235,ella jones,ella.jones0@example.com,02/10/2026,"$1,862.39",3,INDIA,delivered,
+10235,ella jones,ella.jones0@example.com,02/10/2026,"$1,862.39",3,INDIA,delivered,
+10236,Harper Ali,n/a,02/05/2026,1474.30,1,NEW ZEALAND,DELIVERED,SPRING10
+10237,,,01/04/2026,"$1,086.80",4,IN,cancelled,
+10238,EMMA THOMPSON,emma.thompson3@example.com,2026-01-01,abc,3.0,AU,shipped,
+10239,ISLA WILLIAMS,isla.williams4@example.com,01/01/2026,1063.30,6,nz,shipped,FREESHIP
+10240,Liam Brown,LIAM.BROWN5@EXAMPLE.COM,2026-03-08,1088.62,,U.S.,SHIPPED,VIP20
+10241,ELLA kelly,ella.kelly6@example.com,03-10-2026,"$1,023.12",four,IN,delivered,WELCOME5
+10242,olivia jones,olivia.jones7@example.com,02/10/2026,$293.77,3,U.S.A.,xyz,WELCOME5
+10243,CHLOE CHEN,chloe.chen8@example.com,01/01/2026,$370.02,6,uk,shipped   ,WELCOME5
+10244,THOMAS KELLY,THOMAS.KELLY9@EXAMPLE.COM,01/07/2026,42.86,1,australia,DELIVERED,SPRING10
+10245,amelia johnson,AMELIA.JOHNSON10@EXAMPLE.COM,03/10/2026,$ 597.07,3,NZ,Shipped,FREESHIP
+10246,yuki ali,yuki.ali11@example.com,03/11/2026,218.49,1,GB,delivered,
+10246,yuki ali,yuki.ali11@example.com,03/11/2026,165.47,1,GB,shipped,
+10247,Isla Larsen,isla.larsen12@example.com,01/06/2026,$279.30,6,AUS,Pending,
+10248,Wei Smith,wei.smith13@example.com,02/05/2026,1944.37,two,AUSTRALIA,shipped,
+10249,LUCIA GARCIA,,2026-02-11,$487.24,5,GB,Shipped,WELCOME5
+10250,WILLIAM anderson,WILLIAM.ANDERSON15@EXAMPLE.COM,03/09/2026,1782.42,4,uk,Shipped,
+10251,Daniel Jones,DANIEL.JONES16@EXAMPLE.COM,2026-01-02,$382.81,5,NEW ZEALAND,shipped,FREESHIP
+10252,lucia ali,lucia.ali17@example.com,03/02/2026,691.03 USD,2,AUS,shipped   ,WELCOME5
+10253,lucia taylor,lucia.taylor18@example.com,01/09/2026,$ 1757.74,3,AUSTRALIA,delivered,
+10254,emma murphy,none,2026-02-11,"$1,434.44",2,Australia,pending,WELCOME5
+10255,Chloe White,chloe.white20@example.com,March 9 2026,$ 648.98,6,UK,delivered,WELCOME5
+10256,harper lopez,harper.lopez21@example.com,2026-03-12,552.02,6,US,pending,
+10257,ruby rossi,ruby.rossi22@example.com,03/07/2026,"$1,147.97",6,United States,shipped,
+10258,,mia.williams23@example.com,January 4 2026,$ 1261.04,1,india,delivered,FREESHIP
+10259,Sophia Nguyen,sophia.nguyen24@example.com,February 1 2026,-1540.38,4,United Kingdom,shipped,
+10260,Mia Anderson,MIA.ANDERSON25@EXAMPLE.COM,March 12 2026,274.26,4,nz,delivered,
+10261,SOPHIA LOPEZ,sophia.lopez26@example.com,01/06/2026,1890.56,three,United States,shipped,FREESHIP
+10261,SOPHIA LOPEZ,sophia.lopez26@example.com,01/06/2026,1890.56,three,United States,shipped,FREESHIP
+10262,Isla Chen,ISLA.CHEN27@EXAMPLE.COM,01/08/2026,-1320.33,3,IN,delivered,VIP20
+10263,JACK KELLY,JACK.KELLY28@EXAMPLE.COM,March 2 2026,861.53,2.0,USA,SHIPPED,
+10264,   Arjun Martin  ,arjun.martin29@example.com,01/08/2026,1458.79,3,australia,shipped,
+10265,Jack Taylor,jack.taylor30@example.com,03/02/2026,120.92 USD,6,uk,cancelled,SPRING10
+10266,OLIVIA SMITH,olivia.smith31@example.com,01/05/2026,,six,U.S.A.,DELIVERED,
+10267,AVA GARCIA,ava.garcia32@example.com,02/04/2026,$358.43,2.0,NEW ZEALAND,SHIPPED,VIP20
+10268,William Murphy,william.murphy33@example.com,03/08/2026,$ 54.06,6,Australia,delivered,WELCOME5
+10269,Harper Wilson,harper.wilson34@example.com,01/03/2026,810.46,3.0,australia,shipped,SPRING10
+10269,Harper Wilson,harper.wilson34@example.com,01/03/2026,810.46,3.0,australia,shipped,SPRING10
+10270,MEI TANAKA,mei.tanaka35@example.com,2026-03-10,"$1,497.01",3,AUSTRALIA,shipped,
+10271,Sophia Singh,SOPHIA.SINGH36@EXAMPLE.COM,01-10-2026,793.01,4,India,Delivered,FREESHIP
+10272,zoe garcia,zoe.garcia37@example.com,2026-03-10,1081.28,1,INDIA,shipped,
+10273,Carlos Williams,carlos.williams38@example.com,01/10/2026,1359.08,6,AUS,shipped,FREESHIP
+10274,RUBY NGUYEN,ruby.nguyen39@example.com,01/10/2026,936.91,0,uk,SHIPPED,
+10275,emma rossi,emma.rossi40@example.com,02-04-2026,"$1,644.27",6,United States,delivered,FREESHIP
+10276,WILLIAM PATEL,william.patel41@example.com,02/11/2026,1438.74,6.0,India,shipped,FREESHIP
+10277,ella murphy,ella.murphy42@example.com,,free,1.5,,CANCELLED,
+10278,EMMA WILSON,emma.wilson43@example.com,01/05/2026,abc,3,AU,delivered,SPRING10
+10279,Ava Chen,AVA.CHEN44@EXAMPLE.COM,02/03/2026,,,Australia,Shipped,VIP20
+10280,Oscar Nguyen,oscar.nguyen45@example.com,2026-02-01,$ 1751.79,6,AU,delivered,SPRING10
+10281,sophia chen,N/A,,846.58,6,U.S.,pending,
+10282,HENRY CHEN,henry.chen47@example.com,02/02/2026,"$1,944.02",3,U.S.A.,PENDING,WELCOME5
+10283,yuki smith,YUKI.SMITH48@EXAMPLE.COM,01/04/2026,"$1,487.46",five,aus,PENDING,FREESHIP
+10284,ARJUN kim,arjun.kim49@example.com,03-03-2026,"$1,394.32",five,UK,xyz,
+10285,liam johnson,liam.johnson50@example.com,March 2 2026,"$1,797.43",5,,shipped   ,
+10286,EMMA wang,emma.wang51@example.com,,463.74,4,New Zealand,shipped,
+10287,AMELIA WALKER,amelia.walker52@example.com,01/03/2026,1720.17,,NZ,delivered,SPRING10
+10288,OLIVIA singh,OLIVIA.SINGH53@EXAMPLE.COM,02/07/2026,1394.46,,AUS,delivered,SPRING10
+10289,JAMES wilson,james.wilson54@example.com,January 12 2026,830.07 USD,2,Australia,delivered,
+10290,chloe taylor,,January 6 2026,$ 1723.92,5,AU,SHIPPED,
+10291,Carlos White,carlos.white56@example.com,01/06/2026,1656.64,3,AUS,SHIPPED,VIP20
+10291,Carlos White,carlos.white56@example.com,01/06/2026,1656.64,3,AUS,SHIPPED,VIP20
+10292,,lucas.khan57@example,01/06/2026,$ 175.94,4,IN,PENDING,SPRING10
+10293,THOMAS BROWN,THOMAS.BROWN58@EXAMPLE.COM,February 4 2026,$ 1265.80,2,nz,SHIPPED,
+10294,Grace Chen,grace.chen59@example.com,01/12/2026,1687.98,1,US,delivered,FREESHIP
+10295,Hiroshi Rossi,none,03/12/2026,"$1,606.93",6,AUSTRALIA,shipped,FREESHIP
+10296,Jack Patel,jack.patel61@example.com,01/11/2026,1765.03,,GB,SHIPPED,
+10297,Wei Murphy,WEI.MURPHY62@EXAMPLE.COM,March 10 2026,$39.21,0,india,shipped,VIP20
+10298,Mia Silva,,01/06/2026,1385.19,5,usa,SHIPPED,
+10299,Thomas Cohen,thomas.cohen64@example.com,01/03/2026,$ 975.34,2,AUSTRALIA,delivered,FREESHIP
+10300,GRACE cohen,,01/11/2026,"$1,359.52",1,australia,shipped,SPRING10
+10301,leo brown,leo.brown66@example.com,02/06/2026,836.05,6,australia,delivered,FREESHIP
+10301,leo brown,leo.brown66@example.com,02/06/2026,598.09,6,australia,shipped,FREESHIP
+10302,WILLIAM rossi,william.rossi67@example.com,03/09/2026,"$1,231.46",6,US,shipped,
+10303,LIAM williams,LIAM.WILLIAMS68@EXAMPLE.COM,02/07/2026,-1412.78,four,AUS,Delivered,
+10304,ISLA JOHNSON,isla.johnson69@example,03-02-2026,1880.51,1,usa,cancelled,FREESHIP
+10305,Liam Singh,liam.singh70@example.com,January 9 2026,"$1,409.89",6,aus,shipped,FREESHIP
+10306,Zoe Garcia,zoe.garcia71@example.com,01/09/2026,"$1,088.66",4,AUSTRALIA,shipped,
+10307,OSCAR WANG,oscar.wang72@example.com,02/05/2026,$ 1666.55,1,,pending,FREESHIP
+10308,Ethan Thompson,ethan.thompson73@example.com,March 3 2026,1139.61,1,US,CANCELLED,FREESHIP
+10309,Carlos Novak,carlos.novak74@example.com,2026-02-02,141.21 USD,5,United Kingdom,xyz,
+10310,daniel singh,DANIEL.SINGH75@EXAMPLE.COM,01-11-2026,$567.07,-1,aus,delivered,
+10311,,ETHAN.WANG76@EXAMPLE.COM,01/03/2026,1791.86,2,australia,PENDING,FREESHIP
+10312,Fatima Williams,fatima.williams77@example,02-04-2026,1462.96 USD,5,UK,SHIPPED,
+10313,,amelia.taylor78@example.com,January 2 2026,724.19,1.0,usa,shipped   ,
+10314,JAMES ANDERSON,james.anderson79@example.com,02/10/2026,855.22,5,australia,xyz,
+10315,   William Jones  ,WILLIAM.JONES80@EXAMPLE.COM,March 10 2026,1045.60,3,IN,delivered   ,
+10316,EMMA THOMPSON,emma.thompson81@example.com,00/00/0000,1816.66,5,Great Britain,shipped,
+10317,Zoe Anderson,zoe.anderson82@example.com,02/11/2026,312.42,4,uk,Pending,
+10318,AVA NOVAK,ava.novak83_at_example.com,,"$1,138.71",4.0,Australia,shipped,SPRING10
+10319,Wei Brown,WEI.BROWN84@EXAMPLE.COM,01/07/2026,"$1,691.68",three,GB,delivered   ,VIP20
+10320,FATIMA TANAKA,fatima.tanaka85@example.com,February 1 2026,420.3,5.0,US,cancelled,SPRING10
+10321,Fatima Johnson,fatima.johnson86@example.com,2026-03-11,195.21,6,United Kingdom,shipped,
+10322,   Fatima Tanaka  ,FATIMA.TANAKA87@EXAMPLE.COM,03/01/2026,469.66,2,New Zealand,Delivered,SPRING10
+10323,Noah Wilson,noah.wilson88@example.com,January 5 2026,$966.77,two,INDIA,SHIPPED,FREESHIP
+10324,CARLOS BROWN,carlos.brown0@example.com,February 12 2026,427.04,4,usa,pending,
+10325,LUCAS COHEN,lucas.cohen1@example.com,02/03/2026,"$1,472.77",5,U.S.A.,shipped   ,
+10326,WEI BROWN,wei.brown2@example.com,03/03/2026,"$1,698.12",6,UK,shipped,VIP20
+10327,Daniel Novak,DANIEL.NOVAK3@EXAMPLE.COM,2026-02-01,1959.27,6,AU,DELIVERED,
+10328,chloe williams,chloe.williams4@example.com,,1279.81,3,U.S.,shipped,WELCOME5
+10329,Ella Novak,ella.novak5@example.com,2026-01-01,1561.93,six,USA,cancelled,
+10330,Hiroshi Jones,hiroshi.jones6@example.com,02/02/2026,$207.82,6,Australia,delivered,SPRING10
+10331,Amelia Khan,amelia.khan7@example.com,03/07/2026,1898.85,4,india,shipped,
+10332,Jack Singh,JACK.SINGH8@EXAMPLE.COM,TBD,625.35,2,GB,DELIVERED,WELCOME5
+10333,WEI NGUYEN,wei.nguyen9@example.com,2026-03-06,$913.62,2,United States,Shipped,
+10334,EMMA tanaka,emma.tanaka10@example.com,01/01/2026,680.68,3,aus,Cancelled,FREESHIP
+10335,carlos smith,CARLOS.SMITH11@EXAMPLE.COM,01/09/2026,1205.45,,AUSTRALIA,shipped,
+10336,Lucas Williams,LUCAS.WILLIAMS12@EXAMPLE.COM,01/09/2026,$ 602.84,6.0,usa,delivered,VIP20
+10337,Harper Tanaka,HARPER.TANAKA13@EXAMPLE.COM,01/06/2026,"$1,086.12",3,AUSTRALIA,cancelled   ,
+10338,SAMUEL JONES,samuel.jones14@,,1693.90 USD,6,GB,PENDING,
+10339,MEI THOMPSON,mei.thompson15@example.com,03/03/2026,1649.03,6,IN,pending,VIP20
+10339,MEI THOMPSON,mei.thompson15@example.com,03/03/2026,1649.03,6,IN,pending,VIP20
+10340,wei wilson,wei.wilson16_at_example.com,02/01/2026,$138.23,5,INDIA,Shipped,WELCOME5
+10341,carlos larsen,carlos.larsen17@example.com,03/10/2026,N/A,3.0,USA,SHIPPED,VIP20
+10342,JACK THOMPSON,jack.thompson18@example.com,02/11/2026,1268.59 USD,1,AUSTRALIA,delivered,
+10343,Lucia Johnson,lucia.johnson19@example.com,02/11/2026,$ 286.15,4,AUSTRALIA,SHIPPED,WELCOME5
+10344,WILLIAM COHEN,william.cohen20@example.com,01/06/2026,TBC,4,United States,unknown,FREESHIP
+10345,Leo Silva,leo.silva21@example.com,03/01/2026,1804.13,,AU,delivered,VIP20
+10346,Chloe Brown,chloe.brown22@example.com,02/07/2026,1052.46,-3,Great Britain,Delivered,
+10347,ETHAN silva,,02/07/2026,"$1,845.62",3.0,AUS,shipped,
+10348,Yuki Williams,yuki.williams24@example.com,02/09/2026,1083.63,3,NEW ZEALAND,SHIPPED,
+10349,NOAH PATEL,NOAH.PATEL25@EXAMPLE.COM,03/06/2026,1940.65,3,UK,Delivered,
+10350,JAMES rossi,,2026-02-12,-1742.16,4,UK,delivered,SPRING10
+10351,MIA chen,mia.chen27@,03-11-2026,1894.64,5.0,india,shipped,VIP20
+10352,Zoe Anderson,ZOE.ANDERSON28@EXAMPLE.COM,03/01/2026,479.50,2,AU,shipped,WELCOME5
+10353,   Mia Khan  ,,00/00/0000,343.84,3,U.S.A.,SHIPPED,VIP20
+10354,Hiroshi White,hiroshi.white30@example.com,02/10/2026,"$1,613.38",1,Australia,shipped,WELCOME5
+10355,MEI PATEL,mei.patel31@example.com,March 9 2026,"$1,550.13",1,NZ,delivered,
+10356,zoe williams,,02/12/2026,free,-1,australia,shipped,VIP20
+10357,SAMUEL patel,samuel.patel33@example.com,01/06/2026,767.81,6,nz,SHIPPED,VIP20
+10358,,,02/11/2026,"$1,173.91",1,Australia,cancelled,
+10358,,,02/11/2026,853.54,1,Australia,pending,
+10359,AVA BROWN,,03/02/2026,769.02,3,AU,delivered,
+10360,james nguyen,james.nguyen36@example.com,03-03-2026,TBC,6.0,GB,PENDING,VIP20
+10361,Chloe Ali,N/A,January 6 2026,N/A,two,,CANCELLED,
+10362,Mei Johnson,mei.johnson38@example.com,02/01/2026,$767.48,2.5,australia,shipped,FREESHIP
+10363,Hiroshi Tanaka,HIROSHI.TANAKA39@EXAMPLE.COM,03/09/2026,,5,AU,DELIVERED,SPRING10
+10364,olivia williams,olivia.williams40@example.com,00/00/0000,370.80,6,USA,Delivered,WELCOME5
+10365,thomas walker,thomas.walker41@example.com,2026-02-08,1674.94 USD,1,U.S.A.,??,
+10366,Leo Wang,none,2026-01-12,$223.21,0,uk,DELIVERED,VIP20
+10367,ELLA WALKER,ella.walker43@example.com,02/06/2026,1070.51,4,NEW ZEALAND,shipped,
+10368,Ruby Cohen,ruby.cohen44@example.com,February 4 2026,1006.10,6,UK,delivered   ,
+10369,mia tanaka,,01/05/2026,105.16 USD,5,australia,xyz,
+10369,mia tanaka,,01/05/2026,88.31,5,australia,shipped,
+10370,DANIEL COHEN,daniel.cohen46@example.com,02/09/2026,1827.07,5,AUSTRALIA,cancelled,VIP20
+10371,ETHAN KHAN,none,01/10/2026,"$1,490.63",,Australia,xyz,
+10372,Hiroshi Larsen,hiroshi.larsen48@example.com,02/09/2026,451.85,6,Australia,shipped,SPRING10
+10373,MOHAMMED KIM,MOHAMMED.KIM49@EXAMPLE.COM,2026-02-07,1320.89 USD,6,U.S.A.,shipped,FREESHIP
+10374,Lucas Tanaka,@example.com,03/02/2026,,0,United States,delivered,FREESHIP
+10375,oscar johnson,oscar.johnson51@example.com,02/06/2026,701.05,6,Australia,pending,
+10376,NOAH THOMPSON,noah.thompson52@example.com,03/01/2026,$ 1919.91,5,IN,Shipped,FREESHIP
+10377,MEI lopez,MEI.LOPEZ53@EXAMPLE.COM,01/07/2026,"$1,670.04",1.0,,shipped,
+10378,ETHAN TAYLOR,ethan.taylor54@example.com,02/01/2026,371.46,4,nz,shipped,FREESHIP
+10379,Amelia Garcia,AMELIA.GARCIA55@EXAMPLE.COM,13/45/2026,1742.57 USD,3,NZ,Delivered,FREESHIP
+10380,THOMAS MURPHY,thomas.murphy56@example.com,2026-01-07,32.46 USD,3.0,nz,Delivered,WELCOME5
+10381,LEO SILVA,leo.silva57_at_example.com,01-06-2026,1253.58,5,U.S.,shipped,FREESHIP
+10382,Amelia Johnson,amelia.johnson58@example.com,March 12 2026,779.08 USD,2,australia,pending,FREESHIP
+10383,harper anderson,harper.anderson59@example.com,02/11/2026,223.77,3,usa,Delivered,FREESHIP
+10384,Ethan Garcia,ethan.garcia60@,03/01/2026,1860.64,six,U.S.,DELIVERED,WELCOME5
+10385,arjun wang,arjun.wang61@example.com,March 5 2026,$ 85.51,1,U.S.A.,delivered,WELCOME5
+10386,MEI garcia,mei.garcia62@example.com,01/08/2026,686.42,6,India,shipped,
+10387,JACK COHEN,JACK.COHEN63@EXAMPLE.COM,02/04/2026,569.21,2,GB,shipped,
+10388,WILLIAM ALI,william.ali64@example.com,03/07/2026,-128.44,5,US,pending,
+10389,LIAM TAYLOR,liam.taylor65@example.com,03-07-2026,591.24,1,nz,DELIVERED,VIP20
+10390,Sophia Rossi,sophia.rossi66@example.com,03/12/2026,490.02,6,usa,delivered,VIP20
+10391,Jack Nguyen,JACK.NGUYEN67@EXAMPLE.COM,03/08/2026,abc,3,aus,Delivered,SPRING10
+10392,Jack Jones,JACK.JONES68@EXAMPLE.COM,2026-02-07,535.75,2,NEW ZEALAND,Shipped,SPRING10
+10393,Mei Larsen,mei.larsen69@example.com,March 10 2026,$ 1100.06,2,usa,Shipped,SPRING10
+10394,ELLA thompson,none,2026-03-05,566.68,4,United Kingdom,delivered,
+10395,HARPER BROWN,@example.com,01-12-2026,1092.98,1,IN,SHIPPED,
+10396,ethan patel,ethan.patel72@example.com,2026-01-06,1208.64,4,aus,unknown,
+10397,   Liam Johnson  ,LIAM.JOHNSON73@EXAMPLE.COM,2026-01-09,$958.90,6,U.S.,shipped,SPRING10
+10398,MOHAMMED SINGH,MOHAMMED.SINGH74@EXAMPLE.COM,2026-03-05,1803.80,two,nz,shipped,FREESHIP
+10399,AMELIA taylor,amelia.taylor75@example.com,01/02/2026,"$1,648.55",6,NEW ZEALAND,Delivered,VIP20
+10400,JACK WILSON,jack.wilson76@example.com,02-05-2026,97.24,1,GB,Pending,
+10401,Fatima White,fatima.white77@example.com,02/11/2026,"$1,467.74",4.0,AUSTRALIA,shipped,VIP20
+10402,mohammed chen,MOHAMMED.CHEN78@EXAMPLE.COM,01/11/2026,387.53,-1,USA,SHIPPED,SPRING10
+10403,OLIVIA WILSON,olivia.wilson79@example.com,02/05/2026,$693.71,,india,DELIVERED,
+10404,FATIMA PATEL,fatima.patel80@example.com,2026-02-05,"$1,086.74",4,INDIA,shipped,
+10405,YUKI TANAKA,yuki.tanaka81@example.com,January 4 2026,,5,NZ,shipped,VIP20
+10406,Henry Jones,henry.jones82@example.com,February 5 2026,"$1,925.64",6,U.S.A.,shipped,WELCOME5
+10407,Ruby Lopez,RUBY.LOPEZ83@EXAMPLE.COM,March 12 2026,"$1,717.66",4,Australia,shipped   ,SPRING10
+10408,mia novak,mia.novak84@example.com,00/00/0000,1259.48,-1,US,shipped,
+10409,Ava Anderson,,02/12/2026,$ 245.06,2,GB,cancelled,
+10410,Lucia Khan,lucia.khan86@example.com,January 3 2026,$ 1498.77,1,australia,shipped,SPRING10
+10411,Fatima Anderson,fatima.anderson87@example.com,02/05/2026,1772.04,3,nz,shipped,SPRING10
+10412,LIAM PATEL,liam.patel88@example.com,,64.37,-3,india,PENDING,SPRING10
+10413,,,00/00/0000,1363.97,-1,GB,DELIVERED,
+10413,,,00/00/0000,1363.97,-1,GB,DELIVERED,
+10414,WILLIAM MARTIN,,02/08/2026,"$1,460.13",1.0,nz,shipped,SPRING10
+10415,Ruby Nguyen,ruby.nguyen2@example.com,02-02-2026,$696.58,6,USA,cancelled   ,VIP20
+10416,   Grace Brown  ,-,03/09/2026,699.38,two,United States,shipped,
+10417,Zoe Wang,zoe.wang4@example.com,01/11/2026,"$1,402.73",5,aus,shipped,
+10418,,harper.taylor5@,01-03-2026,468.45,3,aus,delivered,
+10419,Olivia Martin,olivia.martin6@example.com,02/03/2026,1271.82,3,india,SHIPPED,SPRING10
+10420,Thomas Taylor,thomas.taylor7@example.com,01/08/2026,816.58,1,NEW ZEALAND,shipped,WELCOME5
+10421,   Oscar Singh  ,oscar.singh8@example.com,01/10/2026,127.46,3,U.S.,CANCELLED,VIP20
+10422,THOMAS COHEN,THOMAS.COHEN9@EXAMPLE.COM,02/11/2026,"$1,370.03",three,United Kingdom,delivered,
+10423,SAMUEL MURPHY,n/a,02/07/2026,163.14,,U.S.,delivered,FREESHIP
+10424,ELLA KIM,ella.kim11@example.com,January 2 2026,218.86 USD,2,U.S.A.,delivered,
+10425,   James Cohen  ,james.cohen12@example.com,03/10/2026,"$1,984.09",-3,AUSTRALIA,unknown,
+10426,daniel singh,daniel.singh13@example.com,January 1 2026,$ 1345.17,4,AUS,delivered,
+10427,Lucas Nguyen,LUCAS.NGUYEN14@EXAMPLE.COM,01/01/2026,$695.67,1.5,NEW ZEALAND,shipped,
+10428,Liam Khan,liam.khan15@example.com,01/10/2026,617.90,five,U.S.,delivered,SPRING10
+10429,FATIMA LARSEN,n/a,,1333.77 USD,5,IN,Shipped,VIP20
+10430,isla kelly,isla.kelly17@example.com,01-12-2026,1502.11,6,AUS,Pending,FREESHIP
+10431,LUCIA GARCIA,lucia.garcia18@,03/01/2026,941.91,5,australia,Pending,
+10432,Sophia Murphy,sophia.murphy19@example.com,03/03/2026,1277.39,3,aus,PENDING,VIP20
+10433,ZOE LARSEN,zoe.larsen20@example.com,01/05/2026,1265.75,5,usa,shipped,VIP20
+10434,Liam Jones,liam.jones21@example.com,02/09/2026,$812.01,1,india,shipped,VIP20
+10434,Liam Jones,liam.jones21@example.com,02/09/2026,$812.01,1,india,shipped,VIP20
+10435,ELLA LOPEZ,ella.lopez22@example.com,03/11/2026,"$1,490.01",4,,Delivered,
+10436,OSCAR murphy,oscar.murphy23@example.com,01/10/2026,384.61,4,australia,pending,WELCOME5
+10437,Oscar Williams,oscar.williams24@example.com,,$ 857.40,3,Australia,PENDING,
+10438,YUKI singh,,03/08/2026,abc,five,Australia,Delivered,
+10438,YUKI singh,,03/08/2026,abc,five,Australia,Delivered,
+10439,AMELIA WILSON,AMELIA.WILSON26@EXAMPLE.COM,02/01/2026,-88.05,1,New Zealand,delivered,FREESHIP
+10440,LIAM martin,liam.martin27@example.com,01/02/2026,856.15,two,india,delivered,
+10441,,lucas.larsen28@example.com,03/08/2026,"$1,416.51",5,United Kingdom,Delivered,
+10442,,ELLA.GARCIA29@EXAMPLE.COM,2026-01-12,1668.31,1,United Kingdom,delivered,SPRING10
+10443,Zoe Rossi,zoe.rossi30@example.com,January 5 2026,$11.87,,aus,delivered,
+10443,Zoe Rossi,zoe.rossi30@example.com,January 5 2026,$11.87,,aus,delivered,
+10444,Lucas Ali,,02/02/2026,1125.48,3,U.S.A.,delivered,SPRING10
+10445,harper johnson,harper.johnson32@example.com,02/12/2026,314.04 USD,six,New Zealand,Pending,FREESHIP
+10446,Ethan Ali,ethan.ali33@example.com,03/10/2026,118.52,1,uk,delivered,SPRING10
+10447,Liam Anderson,liam.anderson34@example,February 3 2026,"$1,041.39",1,U.S.A.,delivered,SPRING10
+10448,William Novak,william.novak35@example.com,February 10 2026,1276.02 USD,3,Australia,delivered,
+10449,CHLOE ROSSI,chloe.rossi36@example.com,01/04/2026,$ 1274.49,5,IN,SHIPPED,VIP20
+10450,sophia chen,sophia.chen37@example.com,January 4 2026,1622.74,3,aus,Cancelled,WELCOME5
+10451,,isla.white38@example.com,02-03-2026,97.81,4,NEW ZEALAND,DELIVERED,
+10452,Oscar Johnson,oscar.johnson39@example.com,March 6 2026,593.84,2,GB,cancelled   ,SPRING10
+10453,chloe white,,February 9 2026,1101.35,,Australia,SHIPPED,
+10454,,ARJUN.SILVA41@EXAMPLE.COM,03/11/2026,"$1,420.35",,US,shipped,
+10455,Chloe Walker,chloe.walker42_at_example.com,March 3 2026,$491.89,5,US,shipped,
+10456,,william.johnson43@example.com,,120.31,,usa,pending,
+10457,Mia Anderson,mia.anderson44@example.com,01/12/2026,752.33,2,NEW ZEALAND,pending,
+10458,FATIMA lopez,fatima.lopez45@example.com,01-06-2026,32.45,1,australia,shipped   ,VIP20
+10459,Samuel Tanaka,SAMUEL.TANAKA46@EXAMPLE.COM,,540.52,2,United States,Shipped,
+10460,Mei Khan,n/a,,387.39,1,AUSTRALIA,Cancelled,VIP20
+10461,EMMA WALKER,emma.walker48@example.com,02/06/2026,116.57,6,aus,Delivered,
+10462,Mei Chen,mei.chen49@example.com,March 4 2026,"$1,382.19",6,United Kingdom,PENDING,FREESHIP
+10463,WEI WHITE,,2026-01-10,1610.23,1,usa,DELIVERED,
+10464,SOPHIA LOPEZ,sophia.lopez51@example.com,,69.46,2,Australia,delivered,
+10465,LIAM TAYLOR,LIAM.TAYLOR52@EXAMPLE.COM,03/01/2026,702.55,3,Great Britain,DELIVERED,
+10466,Hiroshi Williams,hiroshi.williams53@example.com,01/04/2026,1753.76,1,usa,shipped,
+10467,WILLIAM TAYLOR,william.taylor54@example.com,January 2 2026,1930.21,3,NZ,delivered,WELCOME5
+10468,LUCIA LARSEN,lucia.larsen55@example.com,February 6 2026,869.55,5,US,pending,
+10469,MOHAMMED rossi,MOHAMMED.ROSSI56@EXAMPLE.COM,02/06/2026,TBC,,AUS,Shipped,
+10470,MIA PATEL,mia.patel57@example.com,03/11/2026,-229.84,1,INDIA,Shipped,VIP20

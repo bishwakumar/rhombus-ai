@@ -1,0 +1,18 @@
+{
+  "case_id": "05-schema-combined",
+  "output_file": "05-schema-combined__run2__380eb18f",
+  "output_md5": "",
+  "validated_at": "2026-10-05T23:12:31+00:00",
+  "verdict": "STOPPED",
+  "run_status": "aborted",
+  "rhombus_error": "",
+  "checks": [
+    {
+      "check": "pipeline",
+      "status": "STOPPED",
+      "detail": "Pipeline produced no output (aborted); no Rhombus error recorded (runner note: stopped by user during waiting_for_output)",
+      "run_id": "380eb18f",
+      "triggered_at": "2026-10-05T01:21:37+00:00"
+    }
+  ]
+}

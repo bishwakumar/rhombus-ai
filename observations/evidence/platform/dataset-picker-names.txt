@@ -1,0 +1,21 @@
+Data Input dataset picker, 5 Oct 2026 ~10:53 AEDT. The picker showed ten entries, all labelled "placeholder_file"
+(see dataset-picker-placeholder-names.png). Their names in the dataset list:
+
+account            1.6 KB   Initial setup
+connection         4.2 KB   Initial setup
+connector_type     2.4 KB   Initial setup
+destination        3.0 KB   Initial setup
+incremental_mar    2.6 KB   Initial setup   <- the Data Input node was pointed at this
+log                5.7 KB   Initial setup
+resource_membership 2.9 KB  Initial setup
+role               2.9 KB   Initial setup
+role_permission    1.7 KB   Initial setup
+user               2.5 KB   Initial setup
+
+None of these exist in the bucket; the connection itself reported "1 Files" (single-gcs-connection.png).
+The names match the metadata tables of a data-sync service. Contents were not opened beyond what was needed.
+
+After uploading the case files to input/, View Files listed:
+_03_schema_type_change 38.6 KB, _04_schema_add_column 40.8 KB, _05_schema_combined 30.0 KB,
+_06_semantic_cents 38.0 KB, _07_semantic_date_swap 38.2 KB, orders 40.8 KB
+(file names rewritten: hyphens -> underscores, extension dropped, leading underscore added).

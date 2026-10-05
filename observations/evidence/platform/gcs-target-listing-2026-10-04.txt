@@ -1,0 +1,14 @@
+GCS console, gs://rhombus-target/ (4 Oct 2026, AEDT). All files 37.7 KB.
+
+RhombusAI_output_1791084242105.csv   14:24:02   <- after reconnecting the source (no run pressed)
+RhombusAI_output_1791084243257.csv   14:24:04   <- after reconnecting the source (no run pressed)
+RhombusAI_output_1791084275110.csv   14:24:35   baseline run 1 (runner)
+RhombusAI_output_1791084371994.csv   14:26:12   baseline run 2 (runner)
+RhombusAI_output_1791084443986.csv   14:27:24   baseline run 3 (runner)
+RhombusAI_output_1791085746529.csv   14:49:07   case 01 run 1 (stale data)
+RhombusAI_output_1791090282905.csv   16:04:43   <- after reconnecting
+RhombusAI_output_1791090285932.csv   16:04:46   <- after reconnecting
+RhombusAI_output_1791090290096.csv   16:04:50   <- after reconnecting
+RhombusAI_output_1791091312497.csv   16:21:53   <- deliberate test: reconnect only, no run pressed
+RhombusAI_output_1791091315103.csv   16:21:55   <- deliberate test
+RhombusAI_output_1791091316130.csv   16:21:56   <- deliberate test

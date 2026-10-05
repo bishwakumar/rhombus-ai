@@ -1,0 +1,56 @@
+
+> test
+> node --env-file=.env --test --test-reporter=spec
+
+▶ Datasets and chat: positive
+  ✔ every dataset belongs to this project and has an id and title (279.806167ms)
+  ℹ 1 dataset(s): orders
+  ✔ no credential fields carry values (158.858ms)
+  ℹ client_id and client_secret present but empty
+  ✔ dataset preview respects the limit and describes every column (547.263916ms)
+  ℹ 5 of 500 rows, 9 columns
+  ✔ chat artifacts live inside rhombus_output and have sizes (77.703417ms)
+  ℹ 7 artifact(s)
+✔ Datasets and chat: positive (1064.68125ms)
+▶ Datasets and chat: negative (security)
+  ✔ dataset list without a login is refused, no storage locations leaked (14.509084ms)
+  ℹ refused with 401
+  ✔ dataset preview without a login is refused, no rows leaked (177.514584ms)
+  ℹ refused with 401
+✔ Datasets and chat: negative (security) (192.701167ms)
+▶ Datasets and chat: known issues (confirmed still present)
+  ✔ F15: datasets are named "placeholder_file" instead of their real file name (129.092625ms)
+  ℹ 1 of 1 dataset(s) named placeholder_file
+✔ Datasets and chat: known issues (confirmed still present) (129.877916ms)
+▶ Project and pipeline: positive
+  ✔ project context returns this project and your roles (143.464459ms)
+  ℹ 200 in 142 ms; project 5248, role admin
+  ✔ pipeline is Data Input → AI cleaning step → output, connected in order (100.495958ms)
+  ℹ nodes: input → llm → output; AI step "Clean orders v6"
+  ✔ last run kept the 8 cleaned columns (86.147958ms)
+  ℹ columns: order_id, customer_name, email, order_date, amount_usd, quantity, country, status
+✔ Project and pipeline: positive (330.859834ms)
+▶ Project and pipeline: negative (security)
+  ✔ project context without a login is refused, nothing leaked (14.769375ms)
+  ℹ refused with 401
+  ✔ project context with an invalid token is refused, nothing leaked (16.950375ms)
+  ℹ refused with 401
+  ✔ pipeline without a login is refused, no code leaked (15.086333ms)
+  ℹ refused with 401
+  ✔ a project you don't belong to is refused (79.830125ms)
+  ℹ project 1: refused with 404
+✔ Project and pipeline: negative (security) (126.927334ms)
+▶ Project and pipeline: known issues
+  ✔ F10: amount_usd and quantity stored as numbers, though the code makes them text (128.115416ms)
+  ℹ code: .astype(str); stored as amount_usd=float64, quantity=float64
+  ✔ F30: output node has lost its GCS destination settings (98.845583ms)
+  ℹ output settings: {"org_id":666,"user_id":662}
+✔ Project and pipeline: known issues (227.515458ms)
+ℹ tests 16
+ℹ suites 6
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1449.487792

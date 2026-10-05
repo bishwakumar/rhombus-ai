@@ -1,0 +1,13 @@
+{
+  "kind": "pipeline_summary",
+  "status": "error",
+  "failure": {
+    "message": "Pipeline failed at clean_orders: LLM execution failed (code_sha=3ca80b148200): 'amount_usd'\n--- Generated code ---\nimport pandas as pd\nimport numpy as np\ndef _safe_to_timedelta_wrapper(arg, *args, **kwargs):\n    try:\n        arg_series = pd.Series(arg)\n    except Exception:\n        arg_serie…",
+    "reason": "LLM execution failed (code_sha=3ca80b148200): 'amount_usd'\n--- Generated code ---\nimport pandas as pd\nimport numpy as np\ndef _safe_to_timedelta_wrapper(arg, *args, **kwargs):\n    try:\n        arg_series = pd.Series(arg)\n    except Exception:\n        arg_serie…",
+    "nodeId": "llm_node_1",
+    "nodeLabel": "clean_orders",
+    "nodeRef": "llm_992fda5833c3ad0fef26b20e89f4c292"
+  },
+  "nodeId": "llm_node_1",
+  "nodeName": "clean_orders"
+}

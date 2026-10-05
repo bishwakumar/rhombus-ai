@@ -1,0 +1,23 @@
+cd ~/Desktop/rhombus-ai
+cat > .gitignore << 'EOF'
+# --- Secrets: never commit ---
+.env
+**/.env
+**/.auth/
+*key*.json
+*-key.json
+*service-account*.json
+keys/
+
+# --- Dependencies and environments ---
+node_modules/
+.venv/
+__pycache__/
+
+# --- Generated test artefacts (regenerated on every run) ---
+ui-tests/test-results/
+ui-tests/playwright-report/
+results-backup/
+
+# --- System files ---
+.DS_Store

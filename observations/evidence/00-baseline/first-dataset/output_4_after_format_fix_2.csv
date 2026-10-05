@@ -1,0 +1,266 @@
+order_id,customer_name,email,order_date,amount_usd,quantity,country,status
+10001,Priya Brown,,2026-01-12,500.85,,Australia,shipped
+10002,Priya Khan,priya.khan11@example.com,2026-03-07,403.03,5.0,Australia,pending
+10003,Fatima Walker,fatima.walker12@example.com,2026-03-05,,6.0,United States,shipped
+10004,Sophia Kelly,sophia.kelly13@example.com,2026-02-02,1540.73,1.0,Australia,delivered
+10005,Oscar Thompson,oscar.thompson14@example.com,2026-02-11,1241.19,2.0,United Kingdom,pending
+10006,Lucas Nguyen,lucas.nguyen15@example.com,2026-03-08,716.97,6.0,United States,shipped
+10007,Leo Chen,leo.chen16@example.com,2026-01-01,,2.0,United States,
+10008,Arjun Tanaka,arjun.tanaka17@example.com,2026-02-11,617.59,3.0,United States,delivered
+10009,Leo Garcia,,2026-01-03,,2.0,United States,pending
+10010,Liam Williams,liam.williams19@example.com,2026-03-08,1470.31,5.0,United Kingdom,shipped
+10011,William Khan,,2026-02-07,1791.31,6.0,Australia,pending
+10012,Olivia Johnson,olivia.johnson21@example.com,2026-01-01,1548.47,1.0,United States,shipped
+10013,Emma Brown,emma.brown22@example.com,2026-03-07,642.9,4.0,United States,delivered
+10014,Ava Martin,ava.martin23@example.com,2026-02-04,,1.0,United States,pending
+10015,Henry Jones,henry.jones24@example.com,2026-01-07,11.86,4.0,Australia,pending
+10016,Thomas O'Brien,thomas.obrien25@example.com,2026-03-01,1348.37,1.0,Australia,delivered
+10017,Henry Brown,henry.brown26@example.com,2026-03-04,1045.42,1.0,United States,delivered
+10018,Lucas Kelly,lucas.kelly27@example.com,2026-01-01,829.25,5.0,India,shipped
+10019,Wei White,,2026-03-11,955.86,6.0,New Zealand,shipped
+10020,Arjun Lopez,arjun.lopez29@example.com,2026-02-09,,1.0,Australia,delivered
+10021,Emma Williams,emma.williams30@example.com,2026-03-03,985.7,3.0,United States,shipped
+10022,Isla Kelly,isla.kelly31@example.com,2026-03-07,1753.12,,Australia,cancelled
+10023,Fatima O'Brien,fatima.obrien32@example.com,2026-01-05,293.28,6.0,Australia,pending
+10024,Lucas Martin,lucas.martin33@example.com,2026-01-05,637.25,5.0,Australia,cancelled
+10025,Mei Anderson,mei.anderson34@example.com,2026-02-10,1771.75,1.0,Australia,delivered
+10026,Lucia Anderson,lucia.anderson35@example.com,2026-03-06,1196.79,,United Kingdom,shipped
+10027,Thomas White,thomas.white36@example.com,2026-02-09,1502.04,3.0,Australia,delivered
+10028,Ava Ali,ava.ali37@example.com,2026-01-05,931.69,6.0,United States,shipped
+10029,Hiroshi Williams,,2026-02-07,1595.96,5.0,Australia,delivered
+10030,Wei Wang,wei.wang39@example.com,2026-02-01,1006.87,1.0,United States,pending
+10031,Mohammed Tanaka,mohammed.tanaka40@example.com,2026-02-03,1340.63,4.0,United States,pending
+10032,Lucas Anderson,lucas.anderson41@example.com,2026-03-02,255.97,2.0,Australia,shipped
+10033,James Kelly,james.kelly42@example.com,2026-03-07,862.75,3.0,Australia,shipped
+10034,James Thompson,james.thompson43@example.com,2026-02-11,1225.02,4.0,United Kingdom,pending
+10035,Oscar Taylor,oscar.taylor44@example.com,2026-01-05,687.35,2.0,,shipped
+10036,Sophia Lopez,sophia.lopez45@example.com,,80.14,1.0,India,shipped
+10037,Zoe O'Brien,zoe.obrien46@example.com,,1401.8,2.0,India,shipped
+10038,Priya Johnson,priya.johnson47@example.com,2026-01-12,1392.29,6.0,United States,
+10039,,chloe.brown48@example.com,2026-02-06,1146.97,4.0,United Kingdom,delivered
+10040,Jack Anderson,jack.anderson49@example.com,2026-01-02,507.84,4.0,Australia,delivered
+10041,Carlos Garcia,carlos.garcia50@example.com,2026-03-05,1003.98,5.0,India,
+10042,Henry Khan,henry.khan51@example.com,2026-01-05,1197.82,3.0,United States,delivered
+10043,Emma O'Brien,emma.obrien52@example.com,2026-03-12,339.79,2.0,United Kingdom,shipped
+10044,Noah Martin,noah.martin53@example.com,2026-01-01,,6.0,India,delivered
+10045,Chloe Brown,chloe.brown54@example.com,2026-01-07,889.21,,United States,shipped
+10046,Leo Thompson,leo.thompson55@example.com,2026-02-08,540.86,5.0,India,shipped
+10047,,ava.tanaka56@example.com,,12.79,4.0,United Kingdom,delivered
+10048,Thomas Ali,thomas.ali57@example.com,2026-01-07,,2.0,United States,cancelled
+10049,Wei Thompson,,2026-02-09,975.65,4.0,Australia,
+10050,Jack Kim,jack.kim59@example.com,2026-01-03,851.14,6.0,United States,shipped
+10051,Ava Anderson,ava.anderson60@example.com,2026-02-12,895.88,6.0,India,pending
+10052,Arjun Tanaka,arjun.tanaka61@example.com,2026-02-07,105.13,5.0,Australia,pending
+10053,Yuki Johnson,,2026-03-03,564.86,1.0,United States,shipped
+10054,Chloe Chen,chloe.chen63@example.com,2026-01-08,995.87,4.0,Australia,delivered
+10055,James White,james.white64@example.com,2026-03-05,1508.76,5.0,India,delivered
+10056,Sophia Kim,sophia.kim65@example.com,2026-02-04,1541.98,4.0,Australia,
+10057,Lucas Brown,lucas.brown66@example.com,2026-02-02,950.5,4.0,Australia,shipped
+10058,Lucas Ali,lucas.ali67@example.com,2026-03-07,,6.0,United Kingdom,pending
+10059,Hiroshi Lopez,,2026-03-02,,6.0,Australia,shipped
+10060,Henry Garcia,henry.garcia69@example.com,2026-03-04,899.82,5.0,Australia,delivered
+10061,Thomas White,thomas.white70@example.com,2026-03-07,1245.04,4.0,New Zealand,shipped
+10062,Henry Martin,henry.martin71@example.com,2026-01-10,1558.2,6.0,India,cancelled
+10063,Mei Kelly,mei.kelly72@example.com,,1510.3,6.0,Australia,delivered
+10064,Noah Tanaka,noah.tanaka73@example.com,2026-02-09,907.22,3.0,New Zealand,shipped
+10065,Sophia Ali,sophia.ali74@example.com,,1764.06,5.0,Australia,pending
+10066,Emma Ali,emma.ali75@example.com,2026-01-08,52.84,5.0,Australia,delivered
+10067,Chloe Brown,chloe.brown76@example.com,2026-01-04,1597.97,2.0,Australia,shipped
+10068,Grace Martin,grace.martin77@example.com,2026-01-12,671.99,4.0,United States,shipped
+10069,Mohammed Singh,,2026-01-11,388.09,6.0,United States,shipped
+10070,Lucas Kelly,,2026-01-10,,2.0,India,
+10071,Noah O'Brien,noah.obrien80@example.com,2026-02-09,,1.0,United States,pending
+10072,Olivia Chen,olivia.chen81@example.com,2026-02-07,1237.49,4.0,United Kingdom,delivered
+10073,Oscar Wang,oscar.wang82@example.com,2026-03-07,185.73,6.0,Australia,delivered
+10074,Mei Brown,,2026-02-07,,3.0,Australia,shipped
+10075,Ruby Anderson,ruby.anderson84@example.com,2026-03-02,,6.0,India,delivered
+10076,Emma Walker,emma.walker85@example.com,2026-03-06,213.87,3.0,United States,pending
+10077,Jack Smith,,2026-01-05,1267.24,3.0,India,shipped
+10078,Grace Singh,,2026-02-03,671.14,,Australia,cancelled
+10079,William Kelly,william.kelly88@example.com,2026-03-02,626.55,1.0,Australia,delivered
+10080,Noah Kelly,noah.kelly89@example.com,2026-02-05,596.0,1.0,United States,delivered
+10081,Grace Smith,grace.smith90@example.com,2026-02-02,1552.9,5.0,United States,delivered
+10082,Liam Patel,,2026-01-04,788.73,4.0,United States,shipped
+10083,Mohammed Lopez,mohammed.lopez92@example.com,2026-01-04,192.23,3.0,Australia,delivered
+10084,Priya Lopez,priya.lopez93@example.com,2026-03-06,1556.73,6.0,Australia,delivered
+10085,Isla White,isla.white94@example.com,2026-01-11,1556.74,1.0,United States,delivered
+10086,Leo Wilson,leo.wilson95@example.com,2026-01-08,,3.0,India,shipped
+10087,,henry.patel96@example.com,2026-02-11,1079.41,6.0,United States,shipped
+10088,Arjun Wilson,arjun.wilson0@example.com,2026-02-05,,6.0,United Kingdom,shipped
+10089,Arjun Wang,arjun.wang1@example.com,2026-01-11,1209.46,5.0,Australia,shipped
+10090,Emma Wang,emma.wang2@example.com,2026-03-12,1591.56,1.0,United Kingdom,pending
+10091,Arjun O'Brien,arjun.obrien3@example.com,2026-01-08,1102.19,6.0,United Kingdom,shipped
+10092,Hiroshi Thompson,hiroshi.thompson4@example.com,2026-03-09,758.24,2.0,New Zealand,pending
+10093,Mia Williams,mia.williams5@example.com,2026-01-05,813.18,,Australia,delivered
+10094,,liam.walker6@example.com,2026-01-01,579.08,1.0,New Zealand,delivered
+10095,,james.williams7@example.com,2026-01-05,394.45,2.0,United States,delivered
+10096,Emma Chen,emma.chen8@example.com,2026-03-09,,5.0,United States,delivered
+10097,Ruby Wang,,2026-03-09,44.44,4.0,Australia,shipped
+10098,Noah Jones,noah.jones10@example.com,2026-02-09,614.68,,Australia,pending
+10099,Carlos Jones,,2026-02-05,931.57,5.0,United States,shipped
+10100,Mei Singh,mei.singh12@example.com,2026-02-06,1752.91,4.0,United Kingdom,shipped
+10101,Lucas Ali,lucas.ali13@example.com,2026-02-05,,6.0,United States,delivered
+10102,Liam Ali,,2026-03-07,659.05,,United Kingdom,cancelled
+10103,Zoe Wilson,zoe.wilson15@example.com,2026-03-08,1708.29,3.0,United States,shipped
+10104,Lucia Tanaka,,2026-01-05,1396.74,6.0,United States,cancelled
+10105,Lucas Ali,lucas.ali17@example.com,2026-02-12,124.37,5.0,Australia,shipped
+10106,Sophia Chen,sophia.chen18@example.com,2026-01-06,1000.81,3.0,United States,cancelled
+10107,Thomas Williams,thomas.williams19@example.com,2026-01-06,1159.07,4.0,United States,delivered
+10108,Mohammed Brown,mohammed.brown20@example.com,2026-03-03,552.99,2.0,Australia,delivered
+10109,Ruby Williams,ruby.williams21@example.com,2026-03-11,310.2,5.0,Australia,delivered
+10110,Thomas Martin,thomas.martin22@example.com,2026-03-04,1382.39,4.0,United States,shipped
+10111,Ava Singh,ava.singh23@example.com,2026-02-08,840.28,3.0,United States,shipped
+10112,Jack Singh,jack.singh24@example.com,2026-01-03,181.49,3.0,India,pending
+10113,Leo Singh,,2026-02-05,899.29,1.0,India,delivered
+10114,Fatima Brown,fatima.brown26@example.com,,,6.0,Australia,delivered
+10115,Arjun Garcia,arjun.garcia27@example.com,2026-01-03,1755.35,4.0,Australia,cancelled
+10116,Leo Singh,leo.singh28@example.com,2026-01-10,1608.49,2.0,Australia,delivered
+10117,Chloe Smith,chloe.smith29@example.com,2026-02-06,1215.46,4.0,United States,pending
+10118,Chloe Taylor,,,1300.36,4.0,Australia,delivered
+10119,Hiroshi Garcia,hiroshi.garcia31@example.com,2026-02-12,1311.5,6.0,Australia,shipped
+10120,Fatima O'Brien,fatima.obrien32@example.com,2026-03-11,1448.15,3.0,United States,shipped
+10121,Lucas Chen,lucas.chen33@example.com,2026-02-09,1681.19,6.0,Australia,shipped
+10122,,,2026-02-11,467.55,4.0,Australia,pending
+10123,Priya Johnson,,2026-01-02,748.64,6.0,United States,delivered
+10124,Priya Jones,priya.jones36@example.com,,1036.85,5.0,United Kingdom,pending
+10125,Ava O'Brien,ava.obrien37@example.com,2026-02-01,24.61,5.0,United States,cancelled
+10126,Yuki Brown,yuki.brown38@example.com,2026-02-03,1318.17,6.0,Australia,shipped
+10127,Henry Ali,henry.ali39@example.com,2026-01-03,1767.18,4.0,,shipped
+10128,Sophia Jones,,2026-03-02,841.99,2.0,United States,delivered
+10129,Zoe Walker,zoe.walker41@example.com,2026-02-12,992.23,4.0,United Kingdom,pending
+10130,Lucia Kim,lucia.kim42@example.com,2026-01-01,1493.16,5.0,Australia,delivered
+10131,Olivia Singh,olivia.singh43@example.com,2026-01-09,752.44,5.0,Australia,delivered
+10132,Liam Tanaka,liam.tanaka44@example.com,2026-01-02,1775.16,4.0,Australia,delivered
+10133,Henry Williams,henry.williams45@example.com,2026-03-11,1575.2,2.0,United Kingdom,shipped
+10134,Arjun O'Brien,,2026-03-07,961.23,2.0,Australia,shipped
+10135,Olivia Singh,olivia.singh47@example.com,2026-03-11,1268.29,1.0,Australia,shipped
+10136,Lucas Kim,,2026-03-11,1474.54,2.0,Australia,shipped
+10137,Olivia Walker,olivia.walker49@example.com,2026-03-11,691.03,5.0,Australia,delivered
+10138,Ruby Patel,,2026-02-09,957.75,4.0,Australia,shipped
+10139,Olivia Williams,olivia.williams51@example.com,2026-01-10,1305.95,5.0,Australia,shipped
+10140,Wei Garcia,wei.garcia52@example.com,2026-03-04,718.76,2.0,United States,pending
+10141,Chloe Kelly,chloe.kelly53@example.com,2026-02-04,,4.0,Australia,pending
+10142,Thomas Johnson,thomas.johnson54@example.com,2026-02-09,1181.06,6.0,Australia,pending
+10143,Ava Tanaka,ava.tanaka55@example.com,2026-03-01,946.91,1.0,India,delivered
+10144,Zoe Lopez,zoe.lopez56@example.com,2026-03-10,,6.0,United States,shipped
+10145,Yuki Taylor,yuki.taylor57@example.com,2026-01-02,947.7,2.0,Australia,delivered
+10146,Arjun Williams,,2026-03-11,1369.18,1.0,United States,shipped
+10147,Carlos Wang,carlos.wang59@example.com,,,,,delivered
+10148,Hiroshi Khan,hiroshi.khan60@example.com,2026-02-02,544.3,5.0,Australia,pending
+10149,,emma.patel61@example.com,2026-01-02,,5.0,India,shipped
+10150,Arjun Kim,arjun.kim62@example.com,,161.56,5.0,Australia,shipped
+10151,Oscar Walker,oscar.walker63@example.com,2026-02-02,,2.0,United States,
+10152,Hiroshi Williams,hiroshi.williams64@example.com,2026-03-09,1630.13,2.0,United States,shipped
+10153,Liam Walker,liam.walker65@example.com,2026-02-04,1299.85,4.0,United States,shipped
+10154,Fatima Lopez,fatima.lopez66@example.com,2026-03-03,546.38,5.0,India,shipped
+10155,Henry Martin,henry.martin67@example.com,2026-02-06,212.09,5.0,Australia,cancelled
+10156,Liam Patel,liam.patel68@example.com,2026-03-08,257.41,3.0,Australia,delivered
+10157,Wei Patel,wei.patel69@example.com,2026-03-01,1424.97,3.0,United Kingdom,pending
+10158,Arjun Lopez,arjun.lopez70@example.com,2026-02-06,1738.56,4.0,Australia,shipped
+10159,Wei Wang,,2026-01-06,1795.88,4.0,Australia,delivered
+10160,Oscar O'Brien,oscar.obrien72@example.com,,579.49,3.0,Australia,delivered
+10161,Ruby Patel,ruby.patel73@example.com,2026-02-04,1543.22,6.0,,delivered
+10162,Hiroshi Khan,hiroshi.khan74@example.com,2026-01-10,190.34,5.0,Australia,shipped
+10163,Isla Walker,isla.walker75@example.com,2026-02-10,,6.0,United Kingdom,shipped
+10164,Thomas Thompson,,2026-02-03,880.11,5.0,United Kingdom,delivered
+10165,Chloe Wilson,,2026-01-07,1735.18,5.0,United Kingdom,delivered
+10166,Mia Taylor,mia.taylor78@example.com,2026-02-10,1338.59,4.0,United States,shipped
+10167,Grace Brown,grace.brown79@example.com,2026-03-11,1354.41,3.0,New Zealand,shipped
+10168,Fatima Khan,fatima.khan80@example.com,2026-03-11,,5.0,Australia,shipped
+10169,Leo Ali,leo.ali81@example.com,2026-01-03,1733.29,4.0,India,cancelled
+10170,Noah Kim,noah.kim82@example.com,2026-03-05,,4.0,United States,delivered
+10171,James Kelly,james.kelly83@example.com,2026-03-02,1317.83,4.0,United States,delivered
+10172,Ruby Kim,,,1535.54,3.0,New Zealand,
+10173,Wei Wilson,,2026-03-05,292.89,3.0,Australia,shipped
+10174,James Nguyen,james.nguyen86@example.com,,245.8,2.0,United States,delivered
+10175,Emma Anderson,emma.anderson87@example.com,,253.74,2.0,United States,delivered
+10176,Liam Brown,liam.brown88@example.com,2026-01-02,1064.52,4.0,Australia,delivered
+10177,Fatima Ali,fatima.ali89@example.com,2026-02-04,935.81,5.0,Australia,shipped
+10178,Carlos Smith,,2026-02-06,244.51,5.0,United States,
+10179,Henry Wang,,2026-02-11,1285.03,4.0,United States,delivered
+10180,Hiroshi Lopez,,2026-03-11,126.48,6.0,United States,cancelled
+10181,Emma Smith,emma.smith93@example.com,2026-03-03,1265.09,2.0,United States,shipped
+10182,Yuki Patel,yuki.patel94@example.com,2026-02-09,122.46,6.0,India,delivered
+10183,Emma Johnson,emma.johnson95@example.com,2026-03-09,12.6,1.0,Australia,delivered
+10184,Lucas Martin,lucas.martin96@example.com,2026-01-10,676.07,5.0,United Kingdom,shipped
+10185,Ruby Singh,ruby.singh0@example.com,2026-01-06,367.6,5.0,United Kingdom,delivered
+10186,Lucia Patel,lucia.patel1@example.com,2026-01-04,,6.0,New Zealand,pending
+10187,Chloe Jones,chloe.jones2@example.com,2026-01-12,509.45,,India,pending
+10188,Thomas Kim,thomas.kim3@example.com,2026-01-07,1195.1,2.0,Australia,shipped
+10189,Hiroshi Kelly,hiroshi.kelly4@example.com,2026-03-02,286.5,2.0,United States,shipped
+10190,Mohammed Khan,mohammed.khan5@example.com,2026-03-10,80.27,3.0,Australia,delivered
+10191,Ruby O'Brien,,,177.75,1.0,New Zealand,shipped
+10192,Jack Williams,,2026-01-02,362.37,6.0,United States,shipped
+10193,Henry Chen,henry.chen8@example.com,2026-01-07,1232.32,2.0,Australia,cancelled
+10194,Liam Martin,liam.martin9@example.com,2026-02-03,759.27,6.0,New Zealand,delivered
+10195,,lucia.kim10@example.com,,703.98,2.0,Australia,delivered
+10196,Emma Johnson,emma.johnson11@example.com,2026-03-04,485.62,6.0,Australia,cancelled
+10197,Mei Khan,mei.khan12@example.com,2026-02-10,58.55,6.0,Australia,delivered
+10198,Olivia Johnson,olivia.johnson13@example.com,2026-03-04,43.71,4.0,Australia,cancelled
+10199,Hiroshi Brown,hiroshi.brown14@example.com,2026-03-06,1729.32,3.0,United Kingdom,delivered
+10200,Lucas Taylor,lucas.taylor15@example.com,2026-03-09,1250.86,5.0,United Kingdom,shipped
+10201,Olivia Taylor,olivia.taylor16@example.com,2026-03-06,1658.5,5.0,Australia,delivered
+10202,Wei Ali,wei.ali17@example.com,2026-03-12,1596.88,4.0,Australia,shipped
+10203,Chloe Thompson,chloe.thompson18@example.com,2026-02-09,355.59,,United Kingdom,shipped
+10204,Lucas Taylor,lucas.taylor19@example.com,2026-02-03,1319.72,5.0,India,cancelled
+10205,,olivia.brown20@example.com,2026-02-04,1754.12,4.0,United Kingdom,delivered
+10206,Isla Smith,isla.smith21@example.com,2026-02-02,535.83,6.0,United States,delivered
+10207,Carlos Ali,carlos.ali22@example.com,2026-02-02,1158.22,4.0,Australia,pending
+10208,Liam Ali,liam.ali23@example.com,2026-02-09,749.86,5.0,Australia,shipped
+10209,Henry Khan,henry.khan24@example.com,2026-01-09,1031.63,5.0,New Zealand,delivered
+10210,Grace Nguyen,grace.nguyen25@example.com,2026-03-03,,3.0,Australia,delivered
+10211,Wei Garcia,wei.garcia26@example.com,2026-03-09,1408.78,1.0,United States,shipped
+10212,Carlos Patel,carlos.patel27@example.com,2026-02-07,1181.38,,United States,shipped
+10213,Lucia Martin,lucia.martin28@example.com,2026-02-01,613.46,3.0,Australia,pending
+10214,Grace Garcia,,2026-03-02,344.78,2.0,India,delivered
+10215,Hiroshi Wang,hiroshi.wang30@example.com,2026-03-01,319.34,2.0,New Zealand,shipped
+10216,James Johnson,james.johnson31@example.com,2026-02-08,1072.53,2.0,India,delivered
+10217,Fatima Kim,fatima.kim32@example.com,2026-01-04,1168.1,6.0,Australia,delivered
+10218,Sophia Martin,sophia.martin33@example.com,2026-03-05,1285.23,6.0,United States,delivered
+10219,Mohammed Walker,mohammed.walker34@example.com,,1072.04,3.0,Australia,shipped
+10220,Carlos Jones,carlos.jones35@example.com,2026-03-07,1191.67,6.0,Australia,shipped
+10221,Lucas O'Brien,lucas.obrien36@example.com,2026-03-04,1237.88,6.0,United Kingdom,cancelled
+10222,Jack O'Brien,jack.obrien37@example.com,2026-03-03,1704.89,3.0,United Kingdom,shipped
+10223,Olivia Lopez,olivia.lopez38@example.com,2026-03-10,1700.19,1.0,United States,shipped
+10224,Thomas Singh,,2026-01-06,1553.41,2.0,United Kingdom,delivered
+10225,Liam Wilson,liam.wilson40@example.com,,1143.21,4.0,United States,delivered
+10226,Mei Johnson,mei.johnson41@example.com,2026-01-12,1579.56,3.0,Australia,shipped
+10227,Noah Anderson,,2026-02-06,1352.21,2.0,India,cancelled
+10228,Olivia Thompson,olivia.thompson43@example.com,2026-03-05,1390.08,5.0,Australia,cancelled
+10229,Noah Nguyen,noah.nguyen44@example.com,2026-03-11,1137.52,3.0,United States,shipped
+10230,Chloe Nguyen,chloe.nguyen45@example.com,2026-03-04,1402.1,5.0,India,
+10231,Lucia Brown,lucia.brown46@example.com,2026-03-11,893.43,1.0,United Kingdom,shipped
+10232,Fatima Jones,,2026-02-06,1444.46,3.0,United States,shipped
+10233,Liam Walker,liam.walker48@example.com,2026-02-03,211.99,4.0,India,shipped
+10234,Ava Brown,ava.brown49@example.com,2026-02-10,872.95,5.0,United Kingdom,shipped
+10235,Oscar Jones,oscar.jones50@example.com,2026-01-05,1201.37,1.0,United Kingdom,cancelled
+10236,Emma Patel,emma.patel51@example.com,2026-03-12,252.08,,United Kingdom,pending
+10237,Fatima Taylor,fatima.taylor52@example.com,2026-01-08,582.58,3.0,India,shipped
+10238,Lucas Brown,lucas.brown53@example.com,2026-02-12,1178.84,1.0,United States,shipped
+10239,Lucas Walker,,2026-01-04,1521.02,3.0,United States,delivered
+10240,Mia Tanaka,mia.tanaka55@example.com,2026-03-06,1266.16,1.0,New Zealand,delivered
+10241,Mohammed Nguyen,mohammed.nguyen56@example.com,2026-03-06,201.12,4.0,Australia,delivered
+10242,Mei Jones,,2026-03-07,1511.16,4.0,India,pending
+10243,Lucia Khan,lucia.khan58@example.com,2026-01-05,720.98,3.0,India,delivered
+10244,Lucia Tanaka,lucia.tanaka59@example.com,2026-03-04,367.99,5.0,United Kingdom,delivered
+10245,Hiroshi Walker,hiroshi.walker60@example.com,2026-03-08,1052.39,,,delivered
+10246,Jack Kelly,jack.kelly61@example.com,2026-01-05,1232.64,,New Zealand,delivered
+10247,Ruby Thompson,ruby.thompson62@example.com,2026-01-09,1413.48,6.0,Australia,delivered
+10248,Zoe Kelly,zoe.kelly63@example.com,2026-02-04,1641.38,6.0,United Kingdom,shipped
+10249,Olivia Patel,olivia.patel64@example.com,2026-02-09,481.52,2.0,United States,shipped
+10250,Thomas Tanaka,thomas.tanaka65@example.com,2026-02-02,1412.98,3.0,United States,cancelled
+10251,William Kelly,william.kelly66@example.com,,858.94,5.0,New Zealand,
+10252,Lucia Brown,lucia.brown67@example.com,2026-02-05,976.11,3.0,Australia,delivered
+10253,Ava Kelly,ava.kelly68@example.com,2026-03-09,21.14,1.0,Australia,delivered
+10254,Arjun Wilson,arjun.wilson69@example.com,2026-01-08,1292.63,1.0,Australia,shipped
+10255,James Thompson,james.thompson70@example.com,2026-03-02,,6.0,United Kingdom,shipped
+10256,Mia Kelly,mia.kelly71@example.com,2026-02-07,716.04,6.0,Australia,shipped
+10257,Fatima O'Brien,fatima.obrien72@example.com,2026-03-06,,1.0,United States,delivered
+10258,Isla Nguyen,isla.nguyen73@example.com,2026-02-11,1533.81,2.0,Australia,shipped
+10259,Arjun Williams,arjun.williams74@example.com,2026-02-02,361.77,5.0,United States,shipped
+10260,Mia Khan,mia.khan75@example.com,2026-03-03,1021.47,3.0,New Zealand,cancelled
+10261,Oscar Singh,oscar.singh76@example.com,2026-02-05,880.65,1.0,Australia,delivered
+10262,Leo Lopez,leo.lopez77@example.com,2026-01-10,1045.39,5.0,Australia,shipped
+10263,Fatima White,fatima.white78@example.com,2026-01-08,906.01,1.0,Australia,delivered
+10264,Arjun Wilson,arjun.wilson79@example.com,2026-03-12,874.44,3.0,Australia,pending
+10265,Olivia Lopez,olivia.lopez80@example.com,2026-02-02,1269.1,5.0,United States,shipped

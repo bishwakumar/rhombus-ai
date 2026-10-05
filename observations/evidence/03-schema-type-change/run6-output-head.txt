@@ -1,0 +1,9 @@
+$ head -5 outputs/03-schema-type-change__run6.csv   (after the chatbot's v4 fix)
+order_id,customer_name,email,order_date,amount_usd,quantity,country,status
+10001,,sophia.anderson33@example.com,2026-03-09,1297.92,1.0,India,pending
+10002,James Silva,james.silva34@example.com,2026-03-08,1361.98,2.0,United States,shipped
+10003,Zoe Smith,zoe.smith35@example.com,2026-03-06,733.45,4.0,Australia,pending
+10004,Amelia Rossi,amelia.rossi36@example.com,2026-01-10,456.8,2.0,New Zealand,cancelled
+
+Dates are correct (e.g. 1773014400 -> 2026-03-09). Quantities still 1.0/2.0 and amounts still 456.8,
+although the prompt says "never 5.0" and "force text dtype".

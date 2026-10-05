@@ -1,0 +1,1746 @@
+{
+  "generated_at": "2026-10-05T23:24:17Z",
+  "source": "results/runs.csv + results/validation/*.json + outputs/*.csv + observations/",
+  "pipeline": "Data Input \u2192 Custom (clean_orders) \u2192 Data Output (gs://rhombus-target)",
+  "code_sha_original": "3ca80b148200",
+  "suites": {
+    "ui": {
+      "pass": 5,
+      "total": 8,
+      "note": "5 of 8 pass; S3 expected-failure not confirmed; 2 opt-in tests not run"
+    },
+    "api": {
+      "pass": 16,
+      "known_issues": 3,
+      "total": 16,
+      "note": "16 of 16 pass: 7 positive, 6 negative (security), 3 known issues confirmed still present (F10, F15, F30)"
+    }
+  },
+  "kpis": {
+    "scenarios": 8,
+    "runner_rows": 22,
+    "captured_outputs": 12,
+    "rhombus_success_rate": 63.2,
+    "silent_fail_scenarios": 3,
+    "true_clean_pass": 1,
+    "median_success_seconds": 27.9
+  },
+  "scenarios": [
+    {
+      "id": "00-baseline",
+      "label": "Baseline",
+      "group": "baseline",
+      "drift": "None \u2014 messy but expected schema",
+      "capability": "handled",
+      "headline": "handled",
+      "detail": "Cleaning is accurate on the original file. 470/470 rows match the answer key aside from export formatting (5.0 vs 5, trailing zeros).",
+      "rhombus": "Success (correct)",
+      "severity": "low",
+      "runs": [
+        {
+          "run_id": "legacy-00-baseline-1",
+          "case_id": "00-baseline",
+          "run": 1,
+          "runner_status": "output_written",
+          "pipeline": "success",
+          "seconds": 58.7,
+          "triggered_at": "2026-10-04T03:23:36+00:00",
+          "output_file": "00-baseline__run1.csv",
+          "output_md5": "f1a7904a06a099d9097bc420e51a5ca9",
+          "rhombus_error": null,
+          "notes": null,
+          "verdict": "PASS (with warnings)",
+          "checks": {
+            "schema": "PASS",
+            "freshness": "PASS",
+            "rows": "PASS",
+            "correct": "WARN",
+            "rules": "WARN",
+            "blanks": "PASS",
+            "semantics": "PASS",
+            "determinism": "PASS"
+          }
+        },
+        {
+          "run_id": "legacy-00-baseline-2",
+          "case_id": "00-baseline",
+          "run": 2,
+          "runner_status": "output_written",
+          "pipeline": "success",
+          "seconds": 27.9,
+          "triggered_at": "2026-10-04T03:25:44+00:00",
+          "output_file": "00-baseline__run2.csv",
+          "output_md5": "f1a7904a06a099d9097bc420e51a5ca9",
+          "rhombus_error": null,
+          "notes": null,
+          "verdict": "PASS (with warnings)",
+          "checks": {
+            "schema": "PASS",
+            "freshness": "PASS",
+            "rows": "PASS",
+            "correct": "WARN",
+            "rules": "WARN",
+            "blanks": "PASS",
+            "semantics": "PASS",
+            "determinism": "PASS"
+          }
+        },
+        {
+          "run_id": "legacy-00-baseline-3",
+          "case_id": "00-baseline",
+          "run": 3,
+          "runner_status": "output_written",
+          "pipeline": "success",
+          "seconds": 9.0,
+          "triggered_at": "2026-10-04T03:27:15+00:00",
+          "output_file": "00-baseline__run3.csv",
+          "output_md5": "f1a7904a06a099d9097bc420e51a5ca9",
+          "rhombus_error": null,
+          "notes": null,
+          "verdict": "PASS (with warnings)",
+          "checks": {
+            "schema": "PASS",
+            "freshness": "PASS",
+            "rows": "PASS",
+            "correct": "WARN",
+            "rules": "WARN",
+            "blanks": "PASS",
+            "semantics": "PASS",
+            "determinism": "PASS"
+          }
+        },
+        {
+          "run_id": "legacy-00-baseline-4",
+          "case_id": "00-baseline",
+          "run": 4,
+          "runner_status": "no_output",
+          "pipeline": "stopped",
+          "seconds": null,
+          "triggered_at": "2026-10-04T05:00:48+00:00",
+          "output_file": null,
+          "output_md5": null,
+          "rhombus_error": null,
+          "notes": "No new output within 300s; check Rhombus logs",
+          "verdict": "STOPPED",
+          "checks": {
+            "pipeline": "STOPPED"
+          }
+        },
+        {
+          "run_id": "legacy-00-baseline-4",
+          "case_id": "00-baseline",
+          "run": 4,
+          "runner_status": "no_output",
+          "pipeline": "stopped",
+          "seconds": null,
+          "triggered_at": "2026-10-04T05:09:35+00:00",
+          "output_file": null,
+          "output_md5": null,
+          "rhombus_error": null,
+          "notes": "No new output within 300s; check Rhombus logs",
+          "verdict": "STOPPED",
+          "checks": {
+            "pipeline": "STOPPED"
+          }
+        },
+        {
+          "run_id": "legacy-00-baseline-4",
+          "case_id": "00-baseline",
+          "run": 4,
+          "runner_status": "output_written",
+          "pipeline": "success",
+          "seconds": 124.7,
+          "triggered_at": "2026-10-04T05:57:43+00:00",
+          "output_file": "00-baseline__run4.csv",
+          "output_md5": "f1a7904a06a099d9097bc420e51a5ca9",
+          "rhombus_error": null,
+          "notes": null,
+          "verdict": "PASS (with warnings)",
+          "checks": {
+            "schema": "PASS",
+            "freshness": "PASS",
+            "rows": "PASS",
+            "correct": "WARN",
+            "rules": "WARN",
+            "blanks": "PASS",
+            "semantics": "PASS",
+            "determinism": "PASS"
+          }
+        }
+      ],
+      "material_runs": 6,
+      "rhombus_successes": 4,
+      "rhombus_stops": 2,
+      "aborted": 0,
+      "validator_pass": 4,
+      "validator_fail": 0,
+      "validator_stopped": 2,
+      "success_rate_rhombus": 66.7,
+      "pass_rate_validator": 66.7,
+      "times": [
+        58.7,
+        27.9,
+        9.0,
+        124.7
+      ],
+      "times_to_output": [
+        58.7,
+        27.9,
+        9.0,
+        124.7
+      ],
+      "median_seconds": 58.7,
+      "output_files": [
+        "00-baseline__run1.csv",
+        "00-baseline__run2.csv",
+        "00-baseline__run3.csv",
+        "00-baseline__run4.csv"
+      ],
+      "output_md5s": [
+        "f1a7904a06a099d9097bc420e51a5ca9"
+      ],
+      "output_bytes": [
+        37652,
+        37652,
+        37652,
+        37652
+      ],
+      "consistency": {
+        "protocol_n": 3,
+        "captured_outputs": 4,
+        "protocol_complete": true,
+        "unique_md5s": 1,
+        "identical": true,
+        "variance": false,
+        "note": "Byte-identical across captured outputs.",
+        "comparisons": [
+          {
+            "left": "00-baseline__run1.csv",
+            "right": "00-baseline__run2.csv",
+            "rows_left": 470,
+            "rows_right": 470,
+            "differing_rows": 0,
+            "identical": true,
+            "samples": []
+          },
+          {
+            "left": "00-baseline__run1.csv",
+            "right": "00-baseline__run3.csv",
+            "rows_left": 470,
+            "rows_right": 470,
+            "differing_rows": 0,
+            "identical": true,
+            "samples": []
+          },
+          {
+            "left": "00-baseline__run1.csv",
+            "right": "00-baseline__run4.csv",
+            "rows_left": 470,
+            "rows_right": 470,
+            "differing_rows": 0,
+            "identical": true,
+            "samples": []
+          }
+        ]
+      },
+      "oracle_examples": [],
+      "latest_verdict": "PASS (with warnings)",
+      "latest_detail": "amount_usd: 45 format-only; quantity: 405 format-only"
+    },
+    {
+      "id": "01-schema-drop-column",
+      "label": "Drop column",
+      "group": "schema",
+      "drift": "email column removed",
+      "capability": "breaks",
+      "headline": "breaks (stale, then stop)",
+      "detail": "First run completed on a snapshot that still had email (383 emails not in the new input). After reconnect it stopped on KeyError 'email'. Chatbot claimed a fix; code_sha did not change.",
+      "rhombus": "Stale success, then stopped",
+      "severity": "high",
+      "runs": [
+        {
+          "run_id": "legacy-01-schema-drop-column-1",
+          "case_id": "01-schema-drop-column",
+          "run": 1,
+          "runner_status": "output_written",
+          "pipeline": "success",
+          "seconds": 12.9,
+          "triggered_at": "2026-10-04T03:48:54+00:00",
+          "output_file": "01-schema-drop-column__run1.csv",
+          "output_md5": "f1a7904a06a099d9097bc420e51a5ca9",
+          "rhombus_error": null,
+          "notes": null,
+          "verdict": "FAIL",
+          "checks": {
+            "schema": "FAIL",
+            "freshness": "FAIL",
+            "rows": "PASS",
+            "correct": "FAIL",
+            "rules": "WARN",
+            "blanks": "PASS",
+            "semantics": "PASS",
+            "determinism": "PASS"
+          }
+        }
+      ],
+      "material_runs": 1,
+      "rhombus_successes": 1,
+      "rhombus_stops": 0,
+      "aborted": 0,
+      "validator_pass": 0,
+      "validator_fail": 1,
+      "validator_stopped": 0,
+      "success_rate_rhombus": 100.0,
+      "pass_rate_validator": 0.0,
+      "times": [
+        12.9
+      ],
+      "times_to_output": [
+        12.9
+      ],
+      "median_seconds": 12.9,
+      "output_files": [
+        "01-schema-drop-column__run1.csv"
+      ],
+      "output_md5s": [
+        "f1a7904a06a099d9097bc420e51a5ca9"
+      ],
+      "output_bytes": [
+        37652
+      ],
+      "consistency": {
+        "protocol_n": 3,
+        "captured_outputs": 1,
+        "protocol_complete": false,
+        "unique_md5s": 1,
+        "identical": false,
+        "variance": false,
+        "note": "Fewer than two captured outputs; consistency not established.",
+        "comparisons": [],
+        "capture_note": "Runner captured only the stale success. Observation: after reconnect, a second run stopped at 15:09 with KeyError 'email' and wrote nothing."
+      },
+      "oracle_examples": [
+        {
+          "order_id": "10001",
+          "column": "email",
+          "expected": "",
+          "actual": "sophia.anderson33@example.com"
+        },
+        {
+          "order_id": "10002",
+          "column": "email",
+          "expected": "",
+          "actual": "james.silva34@example.com"
+        },
+        {
+          "order_id": "10003",
+          "column": "email",
+          "expected": "",
+          "actual": "zoe.smith35@example.com"
+        },
+        {
+          "order_id": "10004",
+          "column": "email",
+          "expected": "",
+          "actual": "amelia.rossi36@example.com"
+        },
+        {
+          "order_id": "10006",
+          "column": "email",
+          "expected": "",
+          "actual": "harper.singh38@example.com"
+        },
+        {
+          "order_id": "10007",
+          "column": "email",
+          "expected": "",
+          "actual": "ruby.novak39@example.com"
+        }
+      ],
+      "latest_verdict": "FAIL",
+      "latest_detail": "email: 383 wrong; amount_usd: 45 format-only; quantity: 405 format-only (not recoverable from this input: email)"
+    },
+    {
+      "id": "02-schema-rename-column",
+      "label": "Rename column",
+      "group": "schema",
+      "drift": "amount_usd \u2192 total_amount",
+      "capability": "handled",
+      "headline": "handled (stops)",
+      "detail": "Pipeline stopped on missing amount_usd. Correct to refuse, but the log does not recognise the rename \u2014 it only says the old name is missing.",
+      "rhombus": "Stopped ('amount_usd')",
+      "severity": "medium",
+      "runs": [
+        {
+          "run_id": "legacy-02-schema-rename-column-1",
+          "case_id": "02-schema-rename-column",
+          "run": 1,
+          "runner_status": "no_output",
+          "pipeline": "stopped",
+          "seconds": null,
+          "triggered_at": "2026-10-04T06:01:03+00:00",
+          "output_file": null,
+          "output_md5": null,
+          "rhombus_error": null,
+          "notes": "No new output within 300s; check Rhombus logs",
+          "verdict": "STOPPED",
+          "checks": {
+            "pipeline": "STOPPED"
+          }
+        }
+      ],
+      "material_runs": 1,
+      "rhombus_successes": 0,
+      "rhombus_stops": 1,
+      "aborted": 0,
+      "validator_pass": 0,
+      "validator_fail": 0,
+      "validator_stopped": 1,
+      "success_rate_rhombus": 0.0,
+      "pass_rate_validator": 0.0,
+      "times": [],
+      "times_to_output": [],
+      "median_seconds": null,
+      "output_files": [],
+      "output_md5s": [],
+      "output_bytes": [],
+      "consistency": {
+        "protocol_n": 3,
+        "captured_outputs": 0,
+        "protocol_complete": false,
+        "unique_md5s": 0,
+        "identical": false,
+        "variance": false,
+        "note": "Fewer than two captured outputs; consistency not established.",
+        "comparisons": []
+      },
+      "oracle_examples": [],
+      "latest_verdict": "STOPPED",
+      "latest_detail": null
+    },
+    {
+      "id": "03-schema-type-change",
+      "label": "Type change",
+      "group": "schema",
+      "drift": "order_date as Unix timestamps",
+      "capability": "missed",
+      "headline": "missed (silent blanks)",
+      "detail": "Reported success while wiping every date (100% blank vs 8.7% baseline). Two identical failing runs; a later chatbot code patch produced a third, different output that matched the baseline.",
+      "rhombus": "Success",
+      "severity": "high",
+      "runs": [
+        {
+          "run_id": "legacy-03-schema-type-change-1",
+          "case_id": "03-schema-type-change",
+          "run": 1,
+          "runner_status": "no_output",
+          "pipeline": "stopped",
+          "seconds": null,
+          "triggered_at": "2026-10-04T06:18:40+00:00",
+          "output_file": null,
+          "output_md5": null,
+          "rhombus_error": null,
+          "notes": "No new output within 90s; check Rhombus logs",
+          "verdict": "STOPPED",
+          "checks": {
+            "pipeline": "STOPPED"
+          }
+        },
+        {
+          "run_id": "7f5168d3",
+          "case_id": "03-schema-type-change",
+          "run": 2,
+          "runner_status": "rhombus_failed",
+          "pipeline": "stopped",
+          "seconds": 524.0,
+          "triggered_at": "2026-10-05T00:49:14+00:00",
+          "output_file": null,
+          "output_md5": null,
+          "rhombus_error": null,
+          "notes": "ignored outputs not from this run: RhombusAI_output_1791161346159.csv",
+          "verdict": "STOPPED",
+          "checks": {
+            "pipeline": "STOPPED"
+          }
+        },
+        {
+          "run_id": "5150636f",
+          "case_id": "03-schema-type-change",
+          "run": 3,
+          "runner_status": "output_written",
+          "pipeline": "success",
+          "seconds": 34.9,
+          "triggered_at": "2026-10-05T00:57:58+00:00",
+          "output_file": "03-schema-type-change__run3.csv",
+          "output_md5": "6ee5125efdfbd9299ed816460fa3fb63",
+          "rhombus_error": null,
+          "notes": null,
+          "verdict": "FAIL",
+          "checks": {
+            "schema": "PASS",
+            "freshness": "PASS",
+            "rows": "PASS",
+            "correct": "FAIL",
+            "rules": "WARN",
+            "blanks": "FAIL",
+            "semantics": "PASS",
+            "determinism": "WARN"
+          }
+        },
+        {
+          "run_id": "a96847d4",
+          "case_id": "03-schema-type-change",
+          "run": 4,
+          "runner_status": "output_written",
+          "pipeline": "success",
+          "seconds": 28.2,
+          "triggered_at": "2026-10-05T04:24:05+00:00",
+          "output_file": "03-schema-type-change__run4.csv",
+          "output_md5": "6ee5125efdfbd9299ed816460fa3fb63",
+          "rhombus_error": null,
+          "notes": null,
+          "verdict": "FAIL",
+          "checks": {
+            "schema": "PASS",
+            "freshness": "PASS",
+            "rows": "PASS",
+            "correct": "FAIL",
+            "rules": "WARN",
+            "blanks": "FAIL",
+            "semantics": "PASS",
+            "determinism": "WARN"
+          }
+        },
+        {
+          "run_id": "6086ee2b",
+          "case_id": "03-schema-type-change",
+          "run": 5,
+          "runner_status": "aborted",
+          "pipeline": "aborted",
+          "seconds": 361.0,
+          "triggered_at": "2026-10-05T04:42:51+00:00",
+          "output_file": null,
+          "output_md5": null,
+          "rhombus_error": null,
+          "notes": null,
+          "verdict": "STOPPED",
+          "checks": {
+            "pipeline": "STOPPED"
+          }
+        },
+        {
+          "run_id": "2d734220",
+          "case_id": "03-schema-type-change",
+          "run": 6,
+          "runner_status": "output_written",
+          "pipeline": "success",
+          "seconds": 65.2,
+          "triggered_at": "2026-10-05T04:48:34+00:00",
+          "output_file": "03-schema-type-change__run6.csv",
+          "output_md5": "f1a7904a06a099d9097bc420e51a5ca9",
+          "rhombus_error": null,
+          "notes": "outputs before Enter (not this run): RhombusAI_output_1791175712720.csv",
+          "verdict": "PASS (with warnings)",
+          "checks": {
+            "schema": "PASS",
+            "freshness": "WARN",
+            "rows": "PASS",
+            "correct": "WARN",
+            "rules": "WARN",
+            "blanks": "PASS",
+            "semantics": "PASS",
+            "determinism": "WARN"
+          }
+        }
+      ],
+      "material_runs": 5,
+      "rhombus_successes": 3,
+      "rhombus_stops": 2,
+      "aborted": 1,
+      "validator_pass": 1,
+      "validator_fail": 2,
+      "validator_stopped": 3,
+      "success_rate_rhombus": 60.0,
+      "pass_rate_validator": 16.7,
+      "times": [
+        524.0,
+        34.9,
+        28.2,
+        361.0,
+        65.2
+      ],
+      "times_to_output": [
+        34.9,
+        28.2,
+        65.2
+      ],
+      "median_seconds": 34.9,
+      "output_files": [
+        "03-schema-type-change__run3.csv",
+        "03-schema-type-change__run4.csv",
+        "03-schema-type-change__run6.csv"
+      ],
+      "output_md5s": [
+        "6ee5125efdfbd9299ed816460fa3fb63",
+        "f1a7904a06a099d9097bc420e51a5ca9"
+      ],
+      "output_bytes": [
+        33362,
+        33362,
+        37652
+      ],
+      "consistency": {
+        "protocol_n": 3,
+        "captured_outputs": 3,
+        "protocol_complete": true,
+        "unique_md5s": 2,
+        "identical": false,
+        "variance": true,
+        "note": "Outputs differ between runs \u2014 see side-by-side diffs.",
+        "comparisons": [
+          {
+            "left": "03-schema-type-change__run3.csv",
+            "right": "03-schema-type-change__run4.csv",
+            "rows_left": 470,
+            "rows_right": 470,
+            "differing_rows": 0,
+            "identical": true,
+            "samples": []
+          },
+          {
+            "left": "03-schema-type-change__run3.csv",
+            "right": "03-schema-type-change__run6.csv",
+            "rows_left": 470,
+            "rows_right": 470,
+            "differing_rows": 429,
+            "identical": false,
+            "samples": [
+              {
+                "order_id": "10001",
+                "cells": [
+                  {
+                    "col": "order_date",
+                    "left": "",
+                    "right": "2026-03-09"
+                  }
+                ]
+              },
+              {
+                "order_id": "10002",
+                "cells": [
+                  {
+                    "col": "order_date",
+                    "left": "",
+                    "right": "2026-03-08"
+                  }
+                ]
+              },
+              {
+                "order_id": "10003",
+                "cells": [
+                  {
+                    "col": "order_date",
+                    "left": "",
+                    "right": "2026-03-06"
+                  }
+                ]
+              },
+              {
+                "order_id": "10004",
+                "cells": [
+                  {
+                    "col": "order_date",
+                    "left": "",
+                    "right": "2026-01-10"
+                  }
+                ]
+              },
+              {
+                "order_id": "10005",
+                "cells": [
+                  {
+                    "col": "order_date",
+                    "left": "",
+                    "right": "2026-02-09"
+                  }
+                ]
+              },
+              {
+                "order_id": "10006",
+                "cells": [
+                  {
+                    "col": "order_date",
+                    "left": "",
+                    "right": "2026-03-08"
+                  }
+                ]
+              },
+              {
+                "order_id": "10007",
+                "cells": [
+                  {
+                    "col": "order_date",
+                    "left": "",
+                    "right": "2026-02-06"
+                  }
+                ]
+              },
+              {
+                "order_id": "10008",
+                "cells": [
+                  {
+                    "col": "order_date",
+                    "left": "",
+                    "right": "2026-01-06"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "capture_note": "Runs 3 and 4 are byte-identical (dates blank). Run 6 differs because the chatbot patched the code between runs, not because of non-determinism."
+      },
+      "oracle_examples": [
+        {
+          "order_id": "10001",
+          "column": "order_date",
+          "expected": "2026-03-09",
+          "actual": ""
+        },
+        {
+          "order_id": "10002",
+          "column": "order_date",
+          "expected": "2026-03-08",
+          "actual": ""
+        },
+        {
+          "order_id": "10003",
+          "column": "order_date",
+          "expected": "2026-03-06",
+          "actual": ""
+        },
+        {
+          "order_id": "10004",
+          "column": "order_date",
+          "expected": "2026-01-10",
+          "actual": ""
+        },
+        {
+          "order_id": "10005",
+          "column": "order_date",
+          "expected": "2026-02-09",
+          "actual": ""
+        },
+        {
+          "order_id": "10006",
+          "column": "order_date",
+          "expected": "2026-03-08",
+          "actual": ""
+        }
+      ],
+      "latest_verdict": "FAIL",
+      "latest_detail": "order_date: 429 wrong; amount_usd: 45 format-only; quantity: 405 format-only"
+    },
+    {
+      "id": "04-schema-add-column",
+      "label": "Add column",
+      "group": "schema",
+      "drift": "discount_code added",
+      "capability": "silent_drop",
+      "headline": "silent drop",
+      "detail": "Completed successfully. Values stay correct; the new column is discarded with no warning. Output is byte-identical to baseline.",
+      "rhombus": "Success",
+      "severity": "medium",
+      "runs": [
+        {
+          "run_id": "legacy-04-schema-add-column-1",
+          "case_id": "04-schema-add-column",
+          "run": 1,
+          "runner_status": "no_output",
+          "pipeline": "stopped",
+          "seconds": null,
+          "triggered_at": "2026-10-04T06:45:58+00:00",
+          "output_file": null,
+          "output_md5": null,
+          "rhombus_error": null,
+          "notes": "No new output within 90s; check Rhombus logs",
+          "verdict": "STOPPED",
+          "checks": {
+            "pipeline": "STOPPED"
+          }
+        },
+        {
+          "run_id": "35d257a2",
+          "case_id": "04-schema-add-column",
+          "run": 2,
+          "runner_status": "output_written",
+          "pipeline": "success",
+          "seconds": 16.1,
+          "triggered_at": "2026-10-05T01:01:08+00:00",
+          "output_file": "04-schema-add-column__run2.csv",
+          "output_md5": "f1a7904a06a099d9097bc420e51a5ca9",
+          "rhombus_error": null,
+          "notes": "extra outputs after Enter: RhombusAI_output_1791162088429.csv",
+          "verdict": "PASS (with warnings)",
+          "checks": {
+            "schema": "WARN",
+            "freshness": "WARN",
+            "rows": "PASS",
+            "correct": "WARN",
+            "rules": "WARN",
+            "blanks": "PASS",
+            "semantics": "PASS",
+            "determinism": "PASS"
+          }
+        }
+      ],
+      "material_runs": 2,
+      "rhombus_successes": 1,
+      "rhombus_stops": 1,
+      "aborted": 0,
+      "validator_pass": 1,
+      "validator_fail": 0,
+      "validator_stopped": 1,
+      "success_rate_rhombus": 50.0,
+      "pass_rate_validator": 50.0,
+      "times": [
+        16.1
+      ],
+      "times_to_output": [
+        16.1
+      ],
+      "median_seconds": 16.1,
+      "output_files": [
+        "04-schema-add-column__run2.csv"
+      ],
+      "output_md5s": [
+        "f1a7904a06a099d9097bc420e51a5ca9"
+      ],
+      "output_bytes": [
+        37652
+      ],
+      "consistency": {
+        "protocol_n": 3,
+        "captured_outputs": 1,
+        "protocol_complete": false,
+        "unique_md5s": 1,
+        "identical": false,
+        "variance": false,
+        "note": "Fewer than two captured outputs; consistency not established.",
+        "comparisons": []
+      },
+      "oracle_examples": [],
+      "latest_verdict": "PASS (with warnings)",
+      "latest_detail": "amount_usd: 45 format-only; quantity: 405 format-only"
+    },
+    {
+      "id": "05-schema-combined",
+      "label": "Combined schema",
+      "group": "combined",
+      "drift": "Drop + rename + type change + add column",
+      "capability": "breaks",
+      "headline": "breaks (first error only)",
+      "detail": "Stopped on 'email' only. Chatbot said it regenerated code; run 3 failed with the same code_sha. The other three drifts would never be reported.",
+      "rhombus": "Stopped ('email')",
+      "severity": "high",
+      "runs": [
+        {
+          "run_id": "5d7191b7",
+          "case_id": "05-schema-combined",
+          "run": 1,
+          "runner_status": "rhombus_failed",
+          "pipeline": "stopped",
+          "seconds": 180.0,
+          "triggered_at": "2026-10-05T01:08:20+00:00",
+          "output_file": null,
+          "output_md5": null,
+          "rhombus_error": "Pipeline failed at clean_orders: LLM execution failed (code_sha=3ca80b148200): 'email' --- Generated code --- import pandas as pd import numpy as np def _safe_to_timedelta_wrapper(arg, *args, **kwargs): try: arg_series = pd.Series(arg) except Exception: arg_series = a\u2026",
+          "notes": null,
+          "verdict": "STOPPED",
+          "checks": {
+            "pipeline": "STOPPED"
+          }
+        },
+        {
+          "run_id": "380eb18f",
+          "case_id": "05-schema-combined",
+          "run": 2,
+          "runner_status": "aborted",
+          "pipeline": "aborted",
+          "seconds": 80.0,
+          "triggered_at": "2026-10-05T01:21:37+00:00",
+          "output_file": null,
+          "output_md5": null,
+          "rhombus_error": null,
+          "notes": null,
+          "verdict": "STOPPED",
+          "checks": {
+            "pipeline": "STOPPED"
+          }
+        },
+        {
+          "run_id": "ca65fee7",
+          "case_id": "05-schema-combined",
+          "run": 3,
+          "runner_status": "aborted",
+          "pipeline": "aborted",
+          "seconds": 225.0,
+          "triggered_at": "2026-10-05T02:04:48+00:00",
+          "output_file": null,
+          "output_md5": null,
+          "rhombus_error": "Pipeline failed at clean_orders: LLM execution failed (code_sha=3ca80b148200): 'email' --- Generated code --- import pandas as",
+          "notes": null,
+          "verdict": "STOPPED",
+          "checks": {
+            "pipeline": "STOPPED"
+          }
+        }
+      ],
+      "material_runs": 1,
+      "rhombus_successes": 0,
+      "rhombus_stops": 1,
+      "aborted": 2,
+      "validator_pass": 0,
+      "validator_fail": 0,
+      "validator_stopped": 3,
+      "success_rate_rhombus": 0.0,
+      "pass_rate_validator": 0.0,
+      "times": [
+        180.0,
+        80.0,
+        225.0
+      ],
+      "times_to_output": [],
+      "median_seconds": null,
+      "output_files": [],
+      "output_md5s": [],
+      "output_bytes": [],
+      "consistency": {
+        "protocol_n": 3,
+        "captured_outputs": 0,
+        "protocol_complete": false,
+        "unique_md5s": 0,
+        "identical": false,
+        "variance": false,
+        "note": "Fewer than two captured outputs; consistency not established.",
+        "comparisons": []
+      },
+      "oracle_examples": [],
+      "latest_verdict": "STOPPED",
+      "latest_detail": null
+    },
+    {
+      "id": "06-semantic-cents",
+      "label": "Semantic: cents",
+      "group": "semantic",
+      "drift": "Dollars written as cents in amount_usd",
+      "capability": "missed",
+      "headline": "missed (100\u00d7 amounts)",
+      "detail": "Completed successfully. 425 amounts 100\u00d7 too high (max 199,849.00). Schema, rows and blank-rate checks all passed; only the range check caught it.",
+      "rhombus": "Success",
+      "severity": "high",
+      "runs": [
+        {
+          "run_id": "358609fd",
+          "case_id": "06-semantic-cents",
+          "run": 1,
+          "runner_status": "output_written",
+          "pipeline": "success",
+          "seconds": 11.9,
+          "triggered_at": "2026-10-05T02:22:17+00:00",
+          "output_file": "06-semantic-cents__run1.csv",
+          "output_md5": "43e417b4990720ad8ac2f2102355f465",
+          "rhombus_error": null,
+          "notes": null,
+          "verdict": "FAIL",
+          "checks": {
+            "schema": "PASS",
+            "freshness": "PASS",
+            "rows": "PASS",
+            "correct": "FAIL",
+            "rules": "WARN",
+            "blanks": "PASS",
+            "semantics": "FAIL",
+            "determinism": "PASS"
+          }
+        }
+      ],
+      "material_runs": 1,
+      "rhombus_successes": 1,
+      "rhombus_stops": 0,
+      "aborted": 0,
+      "validator_pass": 0,
+      "validator_fail": 1,
+      "validator_stopped": 0,
+      "success_rate_rhombus": 100.0,
+      "pass_rate_validator": 0.0,
+      "times": [
+        11.9
+      ],
+      "times_to_output": [
+        11.9
+      ],
+      "median_seconds": 11.9,
+      "output_files": [
+        "06-semantic-cents__run1.csv"
+      ],
+      "output_md5s": [
+        "43e417b4990720ad8ac2f2102355f465"
+      ],
+      "output_bytes": [
+        38122
+      ],
+      "consistency": {
+        "protocol_n": 3,
+        "captured_outputs": 1,
+        "protocol_complete": false,
+        "unique_md5s": 1,
+        "identical": false,
+        "variance": false,
+        "note": "Fewer than two captured outputs; consistency not established.",
+        "comparisons": [],
+        "capture_note": "One dataset selection produced two outputs ~40s apart; one file is saved."
+      },
+      "oracle_examples": [
+        {
+          "order_id": "10001",
+          "column": "amount_usd",
+          "expected": "1297.92",
+          "actual": "129792.0"
+        },
+        {
+          "order_id": "10002",
+          "column": "amount_usd",
+          "expected": "1361.98",
+          "actual": "136198.0"
+        },
+        {
+          "order_id": "10003",
+          "column": "amount_usd",
+          "expected": "733.45",
+          "actual": "73345.0"
+        },
+        {
+          "order_id": "10004",
+          "column": "amount_usd",
+          "expected": "456.80",
+          "actual": "45680.0"
+        },
+        {
+          "order_id": "10005",
+          "column": "amount_usd",
+          "expected": "1601.61",
+          "actual": "160161.0"
+        },
+        {
+          "order_id": "10006",
+          "column": "amount_usd",
+          "expected": "1617.84",
+          "actual": "161784.0"
+        }
+      ],
+      "latest_verdict": "FAIL",
+      "latest_detail": "amount_usd: 425 wrong; quantity: 405 format-only"
+    },
+    {
+      "id": "07-semantic-date-swap",
+      "label": "Semantic: date swap",
+      "group": "semantic",
+      "drift": "MM/DD written as DD/MM",
+      "capability": "missed",
+      "headline": "missed (252 wrong dates)",
+      "detail": "Completed successfully. 252 dates changed meaning; 208 fall outside Jan\u2013Mar, 44 swap into another valid date and cannot be seen from the output.",
+      "rhombus": "Success",
+      "severity": "high",
+      "runs": [
+        {
+          "run_id": "7ac3839e",
+          "case_id": "07-semantic-date-swap",
+          "run": 1,
+          "runner_status": "output_written",
+          "pipeline": "success",
+          "seconds": null,
+          "triggered_at": "2026-10-05T02:32:52+00:00",
+          "output_file": "07-semantic-date-swap__run1.csv",
+          "output_md5": "0d0c4719248e336a64300e35498c566f",
+          "rhombus_error": null,
+          "notes": "outputs before Enter (not this run): RhombusAI_output_1791167566165.csv; output attached manually with --attach (RhombusAI_output_1791167530500.csv)",
+          "verdict": "FAIL",
+          "checks": {
+            "schema": "PASS",
+            "freshness": "PASS",
+            "rows": "PASS",
+            "correct": "FAIL",
+            "rules": "WARN",
+            "blanks": "PASS",
+            "semantics": "FAIL",
+            "determinism": "PASS"
+          }
+        },
+        {
+          "run_id": "9506920e",
+          "case_id": "07-semantic-date-swap",
+          "run": 2,
+          "runner_status": "output_written",
+          "pipeline": "success",
+          "seconds": 12.9,
+          "triggered_at": "2026-10-05T02:38:40+00:00",
+          "output_file": "07-semantic-date-swap__run2.csv",
+          "output_md5": "0d0c4719248e336a64300e35498c566f",
+          "rhombus_error": null,
+          "notes": null,
+          "verdict": "FAIL",
+          "checks": {
+            "schema": "PASS",
+            "freshness": "PASS",
+            "rows": "PASS",
+            "correct": "FAIL",
+            "rules": "WARN",
+            "blanks": "PASS",
+            "semantics": "FAIL",
+            "determinism": "PASS"
+          }
+        }
+      ],
+      "material_runs": 2,
+      "rhombus_successes": 2,
+      "rhombus_stops": 0,
+      "aborted": 0,
+      "validator_pass": 0,
+      "validator_fail": 2,
+      "validator_stopped": 0,
+      "success_rate_rhombus": 100.0,
+      "pass_rate_validator": 0.0,
+      "times": [
+        12.9
+      ],
+      "times_to_output": [
+        12.9
+      ],
+      "median_seconds": 12.9,
+      "output_files": [
+        "07-semantic-date-swap__run1.csv",
+        "07-semantic-date-swap__run2.csv"
+      ],
+      "output_md5s": [
+        "0d0c4719248e336a64300e35498c566f"
+      ],
+      "output_bytes": [
+        37652,
+        37652
+      ],
+      "consistency": {
+        "protocol_n": 3,
+        "captured_outputs": 2,
+        "protocol_complete": false,
+        "unique_md5s": 1,
+        "identical": true,
+        "variance": false,
+        "note": "Byte-identical across captured outputs.",
+        "comparisons": [
+          {
+            "left": "07-semantic-date-swap__run1.csv",
+            "right": "07-semantic-date-swap__run2.csv",
+            "rows_left": 470,
+            "rows_right": 470,
+            "differing_rows": 0,
+            "identical": true,
+            "samples": []
+          }
+        ],
+        "capture_note": "Observation records three byte-identical successes; two are saved under outputs/."
+      },
+      "oracle_examples": [
+        {
+          "order_id": "10001",
+          "column": "order_date",
+          "expected": "2026-03-09",
+          "actual": "2026-09-03"
+        },
+        {
+          "order_id": "10002",
+          "column": "order_date",
+          "expected": "2026-03-08",
+          "actual": "2026-08-03"
+        },
+        {
+          "order_id": "10003",
+          "column": "order_date",
+          "expected": "2026-03-06",
+          "actual": "2026-06-03"
+        },
+        {
+          "order_id": "10004",
+          "column": "order_date",
+          "expected": "2026-01-10",
+          "actual": "2026-10-01"
+        },
+        {
+          "order_id": "10005",
+          "column": "order_date",
+          "expected": "2026-02-09",
+          "actual": "2026-09-02"
+        },
+        {
+          "order_id": "10007",
+          "column": "order_date",
+          "expected": "2026-02-06",
+          "actual": "2026-06-02"
+        }
+      ],
+      "latest_verdict": "FAIL",
+      "latest_detail": "order_date: 252 wrong; amount_usd: 45 format-only; quantity: 405 format-only"
+    }
+  ],
+  "runs": [
+    {
+      "run_id": "legacy-00-baseline-1",
+      "case_id": "00-baseline",
+      "run": 1,
+      "runner_status": "output_written",
+      "pipeline": "success",
+      "seconds": 58.7,
+      "triggered_at": "2026-10-04T03:23:36+00:00",
+      "output_file": "00-baseline__run1.csv",
+      "output_md5": "f1a7904a06a099d9097bc420e51a5ca9",
+      "rhombus_error": null,
+      "notes": null,
+      "verdict": "PASS (with warnings)",
+      "checks": {
+        "schema": "PASS",
+        "freshness": "PASS",
+        "rows": "PASS",
+        "correct": "WARN",
+        "rules": "WARN",
+        "blanks": "PASS",
+        "semantics": "PASS",
+        "determinism": "PASS"
+      }
+    },
+    {
+      "run_id": "legacy-00-baseline-2",
+      "case_id": "00-baseline",
+      "run": 2,
+      "runner_status": "output_written",
+      "pipeline": "success",
+      "seconds": 27.9,
+      "triggered_at": "2026-10-04T03:25:44+00:00",
+      "output_file": "00-baseline__run2.csv",
+      "output_md5": "f1a7904a06a099d9097bc420e51a5ca9",
+      "rhombus_error": null,
+      "notes": null,
+      "verdict": "PASS (with warnings)",
+      "checks": {
+        "schema": "PASS",
+        "freshness": "PASS",
+        "rows": "PASS",
+        "correct": "WARN",
+        "rules": "WARN",
+        "blanks": "PASS",
+        "semantics": "PASS",
+        "determinism": "PASS"
+      }
+    },
+    {
+      "run_id": "legacy-00-baseline-3",
+      "case_id": "00-baseline",
+      "run": 3,
+      "runner_status": "output_written",
+      "pipeline": "success",
+      "seconds": 9.0,
+      "triggered_at": "2026-10-04T03:27:15+00:00",
+      "output_file": "00-baseline__run3.csv",
+      "output_md5": "f1a7904a06a099d9097bc420e51a5ca9",
+      "rhombus_error": null,
+      "notes": null,
+      "verdict": "PASS (with warnings)",
+      "checks": {
+        "schema": "PASS",
+        "freshness": "PASS",
+        "rows": "PASS",
+        "correct": "WARN",
+        "rules": "WARN",
+        "blanks": "PASS",
+        "semantics": "PASS",
+        "determinism": "PASS"
+      }
+    },
+    {
+      "run_id": "legacy-01-schema-drop-column-1",
+      "case_id": "01-schema-drop-column",
+      "run": 1,
+      "runner_status": "output_written",
+      "pipeline": "success",
+      "seconds": 12.9,
+      "triggered_at": "2026-10-04T03:48:54+00:00",
+      "output_file": "01-schema-drop-column__run1.csv",
+      "output_md5": "f1a7904a06a099d9097bc420e51a5ca9",
+      "rhombus_error": null,
+      "notes": null,
+      "verdict": "FAIL",
+      "checks": {
+        "schema": "FAIL",
+        "freshness": "FAIL",
+        "rows": "PASS",
+        "correct": "FAIL",
+        "rules": "WARN",
+        "blanks": "PASS",
+        "semantics": "PASS",
+        "determinism": "PASS"
+      }
+    },
+    {
+      "run_id": "legacy-00-baseline-4",
+      "case_id": "00-baseline",
+      "run": 4,
+      "runner_status": "no_output",
+      "pipeline": "stopped",
+      "seconds": null,
+      "triggered_at": "2026-10-04T05:00:48+00:00",
+      "output_file": null,
+      "output_md5": null,
+      "rhombus_error": null,
+      "notes": "No new output within 300s; check Rhombus logs",
+      "verdict": "STOPPED",
+      "checks": {
+        "pipeline": "STOPPED"
+      }
+    },
+    {
+      "run_id": "legacy-00-baseline-4",
+      "case_id": "00-baseline",
+      "run": 4,
+      "runner_status": "no_output",
+      "pipeline": "stopped",
+      "seconds": null,
+      "triggered_at": "2026-10-04T05:09:35+00:00",
+      "output_file": null,
+      "output_md5": null,
+      "rhombus_error": null,
+      "notes": "No new output within 300s; check Rhombus logs",
+      "verdict": "STOPPED",
+      "checks": {
+        "pipeline": "STOPPED"
+      }
+    },
+    {
+      "run_id": "legacy-00-baseline-4",
+      "case_id": "00-baseline",
+      "run": 4,
+      "runner_status": "output_written",
+      "pipeline": "success",
+      "seconds": 124.7,
+      "triggered_at": "2026-10-04T05:57:43+00:00",
+      "output_file": "00-baseline__run4.csv",
+      "output_md5": "f1a7904a06a099d9097bc420e51a5ca9",
+      "rhombus_error": null,
+      "notes": null,
+      "verdict": "PASS (with warnings)",
+      "checks": {
+        "schema": "PASS",
+        "freshness": "PASS",
+        "rows": "PASS",
+        "correct": "WARN",
+        "rules": "WARN",
+        "blanks": "PASS",
+        "semantics": "PASS",
+        "determinism": "PASS"
+      }
+    },
+    {
+      "run_id": "legacy-02-schema-rename-column-1",
+      "case_id": "02-schema-rename-column",
+      "run": 1,
+      "runner_status": "no_output",
+      "pipeline": "stopped",
+      "seconds": null,
+      "triggered_at": "2026-10-04T06:01:03+00:00",
+      "output_file": null,
+      "output_md5": null,
+      "rhombus_error": null,
+      "notes": "No new output within 300s; check Rhombus logs",
+      "verdict": "STOPPED",
+      "checks": {
+        "pipeline": "STOPPED"
+      }
+    },
+    {
+      "run_id": "legacy-03-schema-type-change-1",
+      "case_id": "03-schema-type-change",
+      "run": 1,
+      "runner_status": "no_output",
+      "pipeline": "stopped",
+      "seconds": null,
+      "triggered_at": "2026-10-04T06:18:40+00:00",
+      "output_file": null,
+      "output_md5": null,
+      "rhombus_error": null,
+      "notes": "No new output within 90s; check Rhombus logs",
+      "verdict": "STOPPED",
+      "checks": {
+        "pipeline": "STOPPED"
+      }
+    },
+    {
+      "run_id": "legacy-04-schema-add-column-1",
+      "case_id": "04-schema-add-column",
+      "run": 1,
+      "runner_status": "no_output",
+      "pipeline": "stopped",
+      "seconds": null,
+      "triggered_at": "2026-10-04T06:45:58+00:00",
+      "output_file": null,
+      "output_md5": null,
+      "rhombus_error": null,
+      "notes": "No new output within 90s; check Rhombus logs",
+      "verdict": "STOPPED",
+      "checks": {
+        "pipeline": "STOPPED"
+      }
+    },
+    {
+      "run_id": "7f5168d3",
+      "case_id": "03-schema-type-change",
+      "run": 2,
+      "runner_status": "rhombus_failed",
+      "pipeline": "stopped",
+      "seconds": 524.0,
+      "triggered_at": "2026-10-05T00:49:14+00:00",
+      "output_file": null,
+      "output_md5": null,
+      "rhombus_error": null,
+      "notes": "ignored outputs not from this run: RhombusAI_output_1791161346159.csv",
+      "verdict": "STOPPED",
+      "checks": {
+        "pipeline": "STOPPED"
+      }
+    },
+    {
+      "run_id": "5150636f",
+      "case_id": "03-schema-type-change",
+      "run": 3,
+      "runner_status": "output_written",
+      "pipeline": "success",
+      "seconds": 34.9,
+      "triggered_at": "2026-10-05T00:57:58+00:00",
+      "output_file": "03-schema-type-change__run3.csv",
+      "output_md5": "6ee5125efdfbd9299ed816460fa3fb63",
+      "rhombus_error": null,
+      "notes": null,
+      "verdict": "FAIL",
+      "checks": {
+        "schema": "PASS",
+        "freshness": "PASS",
+        "rows": "PASS",
+        "correct": "FAIL",
+        "rules": "WARN",
+        "blanks": "FAIL",
+        "semantics": "PASS",
+        "determinism": "WARN"
+      }
+    },
+    {
+      "run_id": "35d257a2",
+      "case_id": "04-schema-add-column",
+      "run": 2,
+      "runner_status": "output_written",
+      "pipeline": "success",
+      "seconds": 16.1,
+      "triggered_at": "2026-10-05T01:01:08+00:00",
+      "output_file": "04-schema-add-column__run2.csv",
+      "output_md5": "f1a7904a06a099d9097bc420e51a5ca9",
+      "rhombus_error": null,
+      "notes": "extra outputs after Enter: RhombusAI_output_1791162088429.csv",
+      "verdict": "PASS (with warnings)",
+      "checks": {
+        "schema": "WARN",
+        "freshness": "WARN",
+        "rows": "PASS",
+        "correct": "WARN",
+        "rules": "WARN",
+        "blanks": "PASS",
+        "semantics": "PASS",
+        "determinism": "PASS"
+      }
+    },
+    {
+      "run_id": "5d7191b7",
+      "case_id": "05-schema-combined",
+      "run": 1,
+      "runner_status": "rhombus_failed",
+      "pipeline": "stopped",
+      "seconds": 180.0,
+      "triggered_at": "2026-10-05T01:08:20+00:00",
+      "output_file": null,
+      "output_md5": null,
+      "rhombus_error": "Pipeline failed at clean_orders: LLM execution failed (code_sha=3ca80b148200): 'email' --- Generated code --- import pandas as pd import numpy as np def _safe_to_timedelta_wrapper(arg, *args, **kwargs): try: arg_series = pd.Series(arg) except Exception: arg_series = a\u2026",
+      "notes": null,
+      "verdict": "STOPPED",
+      "checks": {
+        "pipeline": "STOPPED"
+      }
+    },
+    {
+      "run_id": "380eb18f",
+      "case_id": "05-schema-combined",
+      "run": 2,
+      "runner_status": "aborted",
+      "pipeline": "aborted",
+      "seconds": 80.0,
+      "triggered_at": "2026-10-05T01:21:37+00:00",
+      "output_file": null,
+      "output_md5": null,
+      "rhombus_error": null,
+      "notes": null,
+      "verdict": "STOPPED",
+      "checks": {
+        "pipeline": "STOPPED"
+      }
+    },
+    {
+      "run_id": "ca65fee7",
+      "case_id": "05-schema-combined",
+      "run": 3,
+      "runner_status": "aborted",
+      "pipeline": "aborted",
+      "seconds": 225.0,
+      "triggered_at": "2026-10-05T02:04:48+00:00",
+      "output_file": null,
+      "output_md5": null,
+      "rhombus_error": "Pipeline failed at clean_orders: LLM execution failed (code_sha=3ca80b148200): 'email' --- Generated code --- import pandas as",
+      "notes": null,
+      "verdict": "STOPPED",
+      "checks": {
+        "pipeline": "STOPPED"
+      }
+    },
+    {
+      "run_id": "358609fd",
+      "case_id": "06-semantic-cents",
+      "run": 1,
+      "runner_status": "output_written",
+      "pipeline": "success",
+      "seconds": 11.9,
+      "triggered_at": "2026-10-05T02:22:17+00:00",
+      "output_file": "06-semantic-cents__run1.csv",
+      "output_md5": "43e417b4990720ad8ac2f2102355f465",
+      "rhombus_error": null,
+      "notes": null,
+      "verdict": "FAIL",
+      "checks": {
+        "schema": "PASS",
+        "freshness": "PASS",
+        "rows": "PASS",
+        "correct": "FAIL",
+        "rules": "WARN",
+        "blanks": "PASS",
+        "semantics": "FAIL",
+        "determinism": "PASS"
+      }
+    },
+    {
+      "run_id": "7ac3839e",
+      "case_id": "07-semantic-date-swap",
+      "run": 1,
+      "runner_status": "output_written",
+      "pipeline": "success",
+      "seconds": null,
+      "triggered_at": "2026-10-05T02:32:52+00:00",
+      "output_file": "07-semantic-date-swap__run1.csv",
+      "output_md5": "0d0c4719248e336a64300e35498c566f",
+      "rhombus_error": null,
+      "notes": "outputs before Enter (not this run): RhombusAI_output_1791167566165.csv; output attached manually with --attach (RhombusAI_output_1791167530500.csv)",
+      "verdict": "FAIL",
+      "checks": {
+        "schema": "PASS",
+        "freshness": "PASS",
+        "rows": "PASS",
+        "correct": "FAIL",
+        "rules": "WARN",
+        "blanks": "PASS",
+        "semantics": "FAIL",
+        "determinism": "PASS"
+      }
+    },
+    {
+      "run_id": "9506920e",
+      "case_id": "07-semantic-date-swap",
+      "run": 2,
+      "runner_status": "output_written",
+      "pipeline": "success",
+      "seconds": 12.9,
+      "triggered_at": "2026-10-05T02:38:40+00:00",
+      "output_file": "07-semantic-date-swap__run2.csv",
+      "output_md5": "0d0c4719248e336a64300e35498c566f",
+      "rhombus_error": null,
+      "notes": null,
+      "verdict": "FAIL",
+      "checks": {
+        "schema": "PASS",
+        "freshness": "PASS",
+        "rows": "PASS",
+        "correct": "FAIL",
+        "rules": "WARN",
+        "blanks": "PASS",
+        "semantics": "FAIL",
+        "determinism": "PASS"
+      }
+    },
+    {
+      "run_id": "a96847d4",
+      "case_id": "03-schema-type-change",
+      "run": 4,
+      "runner_status": "output_written",
+      "pipeline": "success",
+      "seconds": 28.2,
+      "triggered_at": "2026-10-05T04:24:05+00:00",
+      "output_file": "03-schema-type-change__run4.csv",
+      "output_md5": "6ee5125efdfbd9299ed816460fa3fb63",
+      "rhombus_error": null,
+      "notes": null,
+      "verdict": "FAIL",
+      "checks": {
+        "schema": "PASS",
+        "freshness": "PASS",
+        "rows": "PASS",
+        "correct": "FAIL",
+        "rules": "WARN",
+        "blanks": "FAIL",
+        "semantics": "PASS",
+        "determinism": "WARN"
+      }
+    },
+    {
+      "run_id": "6086ee2b",
+      "case_id": "03-schema-type-change",
+      "run": 5,
+      "runner_status": "aborted",
+      "pipeline": "aborted",
+      "seconds": 361.0,
+      "triggered_at": "2026-10-05T04:42:51+00:00",
+      "output_file": null,
+      "output_md5": null,
+      "rhombus_error": null,
+      "notes": null,
+      "verdict": "STOPPED",
+      "checks": {
+        "pipeline": "STOPPED"
+      }
+    },
+    {
+      "run_id": "2d734220",
+      "case_id": "03-schema-type-change",
+      "run": 6,
+      "runner_status": "output_written",
+      "pipeline": "success",
+      "seconds": 65.2,
+      "triggered_at": "2026-10-05T04:48:34+00:00",
+      "output_file": "03-schema-type-change__run6.csv",
+      "output_md5": "f1a7904a06a099d9097bc420e51a5ca9",
+      "rhombus_error": null,
+      "notes": "outputs before Enter (not this run): RhombusAI_output_1791175712720.csv",
+      "verdict": "PASS (with warnings)",
+      "checks": {
+        "schema": "PASS",
+        "freshness": "WARN",
+        "rows": "PASS",
+        "correct": "WARN",
+        "rules": "WARN",
+        "blanks": "PASS",
+        "semantics": "PASS",
+        "determinism": "WARN"
+      }
+    }
+  ],
+  "heat": [
+    {
+      "id": "00-baseline",
+      "label": "Baseline",
+      "group": "baseline",
+      "capability": "handled",
+      "headline": "handled",
+      "stops": null,
+      "silent_success": false,
+      "data_correct": true,
+      "validator_caught": false
+    },
+    {
+      "id": "01-schema-drop-column",
+      "label": "Drop column",
+      "group": "schema",
+      "capability": "breaks",
+      "headline": "breaks (stale, then stop)",
+      "stops": true,
+      "silent_success": true,
+      "data_correct": false,
+      "validator_caught": true
+    },
+    {
+      "id": "02-schema-rename-column",
+      "label": "Rename column",
+      "group": "schema",
+      "capability": "handled",
+      "headline": "handled (stops)",
+      "stops": true,
+      "silent_success": false,
+      "data_correct": false,
+      "validator_caught": false
+    },
+    {
+      "id": "03-schema-type-change",
+      "label": "Type change",
+      "group": "schema",
+      "capability": "missed",
+      "headline": "missed (silent blanks)",
+      "stops": false,
+      "silent_success": true,
+      "data_correct": false,
+      "validator_caught": true,
+      "patched_later": true
+    },
+    {
+      "id": "04-schema-add-column",
+      "label": "Add column",
+      "group": "schema",
+      "capability": "silent_drop",
+      "headline": "silent drop",
+      "stops": false,
+      "silent_success": true,
+      "data_correct": true,
+      "validator_caught": true
+    },
+    {
+      "id": "05-schema-combined",
+      "label": "Combined schema",
+      "group": "combined",
+      "capability": "breaks",
+      "headline": "breaks (first error only)",
+      "stops": true,
+      "silent_success": false,
+      "data_correct": false,
+      "validator_caught": false
+    },
+    {
+      "id": "06-semantic-cents",
+      "label": "Semantic: cents",
+      "group": "semantic",
+      "capability": "missed",
+      "headline": "missed (100\u00d7 amounts)",
+      "stops": false,
+      "silent_success": true,
+      "data_correct": false,
+      "validator_caught": true
+    },
+    {
+      "id": "07-semantic-date-swap",
+      "label": "Semantic: date swap",
+      "group": "semantic",
+      "capability": "missed",
+      "headline": "missed (252 wrong dates)",
+      "stops": false,
+      "silent_success": true,
+      "data_correct": false,
+      "validator_caught": true
+    }
+  ]
+}

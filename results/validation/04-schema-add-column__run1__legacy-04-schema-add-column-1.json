@@ -1,0 +1,18 @@
+{
+  "case_id": "04-schema-add-column",
+  "output_file": "04-schema-add-column__run1__legacy-04-schema-add-column-1",
+  "output_md5": "",
+  "validated_at": "2026-10-05T23:12:29+00:00",
+  "verdict": "STOPPED",
+  "run_status": "no_output",
+  "rhombus_error": "",
+  "checks": [
+    {
+      "check": "pipeline",
+      "status": "STOPPED",
+      "detail": "Pipeline produced no output (no_output); no Rhombus error recorded (runner note: No new output within 90s; check Rhombus logs)",
+      "run_id": "legacy-04-schema-add-column-1",
+      "triggered_at": "2026-10-04T06:45:58+00:00"
+    }
+  ]
+}
