@@ -1,8 +1,12 @@
 # Rhombus AI: ETL pipeline under drift
 
-Testing Rhombus AI the way a customer uses it: an AI-built cleaning pipeline from a cloud source to Google Cloud Storage, then breaking its input on purpose to see how the platform, its logs and its chatbot respond.
+Testing Rhombus AI the way a customer uses it: an AI-built pipeline that cleans a messy orders file from cloud storage and delivers it to Google Cloud Storage, followed by deliberate changes to the input to see how the platform, its logs and its AI chatbot respond. Eight cases were run: a baseline, four schema changes (column dropped, renamed, retyped and added) and all four combined, and two semantic changes (dollars written as cents, and day/month swapped). Every output was checked by an independent validator against the known correct answer and every result was cross-checked against Rhombus's own logs and the storage bucket.
 
-**In short:** the cleaning Rhombus generates is accurate, and the pipeline stops when a column goes **missing**. Every other change passes **silently**: blank dates, a dropped column, amounts 100× too high, and wrong dates were all delivered as "completed successfully". The chatbot repeatedly reported fixes that never reached the code that runs. And the pipeline can't run unattended: schedules never fired, and a changed source file is ignored until it's manually reconnected.
+**What works:** the cleaning code Rhombus generates from a plain-language brief is accurate, cleaning all 470 baseline orders correctly across eight rules and the same input always produces the same output. When a required column goes missing, the pipeline stops instead of writing bad data. The backend API refuses every request without a valid login or for another customer's project.
+
+**What doesn't:** every other change passes silently. Retyped dates came out entirely blank, a new column was dropped, amounts arrived too high and dates changed meaning, all reported as "completed successfully". The chatbot six times reported fixes that never reached the code that runs (its edits changed the instructions, not the code), applied changes without asking, and offers no undo. And the pipeline can't run unattended on changing data: schedules showed "Active" but never ran, a changed source file is ignored until it's manually reconnected, and each reconnect starts runs nobody asked for.
+
+**Live dashboard: [rhombusai.netlify.app](https://rhombusai.netlify.app/)**: pipeline health, output consistency, capability heat map, time and resources, test videos and walkthroughs.
 
 ## Architecture
 
@@ -15,39 +19,14 @@ Testing Rhombus AI the way a customer uses it: an AI-built cleaning pipeline fro
 3. The **validator** checks the output independently of Rhombus, against the known correct answer.
 4. Every result was **cross-checked** against Rhombus's own notification log and the bucket listing. This found and corrected one mis-recorded run (case 07, run 1).
 
-## UI test videos
+## Demo videos
 
-Each Playwright test is recorded (files in [`ui-tests/videos/`](ui-tests/videos/)).
+| | Video | Shows |
+|---|---|---|
+| ▶ | **[UI tests walkthrough](https://storage.googleapis.com/rhombus-test-videos/ui-test-video.mp4)** | The Playwright journey: source connection, AI-built pipeline, a manual run that lands a cleaned file in GCS, the destination, the schedule, and the known issues confirmed |
+| ▶ | **[API tests walkthrough](https://storage.googleapis.com/rhombus-test-videos/api-test-video.mp4)** | The API tests against the live backend: positive checks, the six security (negative) tests, and the three known issues confirmed through the API |
 
-### 1 · Source connection: GCS source bucket is connected
-
-<!-- In GitHub's editor, drag ui-tests/videos/1-source-connection-gcs-source-bucket-is-connected.webm onto this line, so it plays here. -->
-[Video file](ui-tests/videos/1-source-connection-gcs-source-bucket-is-connected.webm)
-
-### 2 · AI-built pipeline: Canvas has Data Input → Custom (AI cleaning step) → Data Output
-
-<!-- In GitHub's editor, drag ui-tests/videos/2-ai-built-pipeline-canvas-has-data-input-custom-ai-cleaning-step-data-output.webm onto this line, so it plays here. -->
-[Video file](ui-tests/videos/2-ai-built-pipeline-canvas-has-data-input-custom-ai-cleaning-step-data-output.webm)
-
-### 2 · AI-built pipeline: Manual run writes a new cleaned file to GCS
-
-<!-- In GitHub's editor, drag ui-tests/videos/2-ai-built-pipeline-manual-run-succeeds-and-writes-a-new-cleaned-file-to-gcs.webm onto this line, so it plays here. -->
-[Video file](ui-tests/videos/2-ai-built-pipeline-manual-run-succeeds-and-writes-a-new-cleaned-file-to-gcs.webm)
-
-### 3 · GCS destination: Data Output exports to the GCS destination bucket
-
-<!-- In GitHub's editor, drag ui-tests/videos/3-gcs-destination-data-output-node-exports-to-the-gcs-destination-bucket.webm onto this line, so it plays here. -->
-[Video file](ui-tests/videos/3-gcs-destination-data-output-node-exports-to-the-gcs-destination-bucket.webm)
-
-### 4 · Schedule: Hourly schedule shows Active with a next run time
-
-<!-- In GitHub's editor, drag ui-tests/videos/4-schedule-an-hourly-schedule-can-be-created-and-shows-active-with-a-next-run-time.webm onto this line, so it plays here. -->
-[Video file](ui-tests/videos/4-schedule-an-hourly-schedule-can-be-created-and-shows-active-with-a-next-run-time.webm)
-
-### 5 · Known issues: F8: S3 connection still rejected with the generated policy
-
-<!-- In GitHub's editor, drag ui-tests/videos/5-known-issues-confirmed-still-present-f8-s3-connection-is-still-rejected-with-the-generated-bucket-policy.webm onto this line, so it plays here. -->
-[Video file](ui-tests/videos/5-known-issues-confirmed-still-present-f8-s3-connection-is-still-rejected-with-the-generated-bucket-policy.webm)
+The videos open in the browser. Recordings of each individual UI test also play in the dashboard's [Test videos](https://rhombusai.netlify.app/) tab; the files are in [`ui-tests/videos/`](ui-tests/videos/).
 
 ---
 
@@ -87,8 +66,8 @@ Buckets used: `rhombus-source` (input), `rhombus-target` (Rhombus output), `rhom
 | [`ui-tests/`](ui-tests/) | Playwright tests of the pipeline journey in the web app |
 | [`api-tests/`](api-tests/) | Tests that call the Rhombus backend directly |
 | [`observations/`](observations/) | One file per case, the chatbot evaluation, all findings, and evidence |
-| `outputs/`, `results/` | Every Rhombus output and run record (generated) |
-| [`dashboard/`](dashboard/) | Observability dashboard (bonus): a single page built from the run and validation records |
+| `outputs/`, `results/` | Every Rhombus output and run record |
+| [`dashboard/`](dashboard/) | Observability dashboard : a single page built from the run and validation records |
 | `docs/` | Architecture diagram |
 
 ### Datasets
@@ -143,7 +122,7 @@ No dependencies: Node's built-in test runner and `fetch`.
 
 ### Observability dashboard (bonus)
 
-**Live: [DASHBOARD LINK](LINK)**
+**Live: [rhombusai.netlify.app](https://rhombusai.netlify.app/)**
 
 ```bash
 python3 dashboard/serve.py        # open locally at http://127.0.0.1:8765/ (uses the stored data.json)
@@ -152,7 +131,7 @@ python3 dashboard/build.py        # only after new test runs: regenerate dashboa
 
 The data is stored in [`dashboard/data.json`](dashboard/data.json) and committed with the repo, so the page (locally or hosted) needs no build step.
 
-One self-contained page (`index.html` + `data.json`, no external scripts) with the four views the brief asks for: **pipeline health** by scenario, **output consistency** (the 3-run protocol, with side-by-side diffs where outputs differ), a **capability heat map** (which drift types Rhombus handles, breaks or misses), and **time and resources** per scenario.
+One self-contained page (`index.html` + `data.json`, no external scripts) with the four views the brief asks for: **pipeline health** by scenario, **output consistency** (the 3-run protocol, with side-by-side diffs where outputs differ), a **capability heat map** (which drift types Rhombus handles, breaks or misses), and **time and resources** per scenario, plus a **Test videos** tab that plays the UI test recordings. `build.py` copies the videos from `ui-tests/videos/` into `dashboard/videos/`, so the whole `dashboard` folder can be hosted as it is.
 
 ---
 
@@ -193,7 +172,8 @@ Automated tests: [UI tests](observations/ui-tests.md) (5 of 8 pass, including a 
 
 ## 4. Demo video
 
-**[Demo video](LINK)**: walkthrough of the UI tests, API tests and data validation.
+- **[UI tests walkthrough](https://storage.googleapis.com/rhombus-test-videos/ui-test-video.mp4)**
+- **[API tests walkthrough](https://storage.googleapis.com/rhombus-test-videos/api-test-video.mp4)**
 
 ---
 
