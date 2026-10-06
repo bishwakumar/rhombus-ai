@@ -324,6 +324,29 @@
       font-size: 12px;
       color: var(--muted);
     }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+      gap: 16px;
+    }
+
+    .video-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 12px 14px;
+    }
+
+    .video-card h3 {
+      margin: 2px 0 2px;
+      font-size: 17px;
+    }
+
+    .video-card video {
+      width: 100%;
+      margin-top: 8px;
+      background: #000;
+    }
   </style>
 </head>
 
@@ -340,12 +363,14 @@
     <button data-tab="consistency">Output consistency</button>
     <button data-tab="heat">Capability heat map</button>
     <button data-tab="time">Time &amp; resources</button>
+    <button data-tab="videos">Test videos</button>
   </nav>
   <main>
     <section id="health" class="active"></section>
     <section id="consistency"></section>
     <section id="heat"></section>
     <section id="time"></section>
+    <section id="videos"></section>
   </main>
   <!-- <footer>Data is rebuilt from <code>results/</code> and <code>outputs/</code>. Run <code>python3 dashboard/serve.py</code> to refresh and host.</footer> -->
   <dialog id="dlg">
@@ -353,6 +378,17 @@
   </dialog>
   <script>
     const $ = (id) => document.getElementById(id);
+    // Walkthrough videos, hosted publicly on Google Cloud Storage
+    const WALKTHROUGHS = [
+      {
+        title: "UI tests walkthrough", about: "The Playwright journey: source, AI-built pipeline, GCS destination, schedule and known issues.",
+        url: "https://storage.googleapis.com/rhombus-test-videos/ui-test-video.mp4"
+      },
+      {
+        title: "API tests walkthrough", about: "The backend tests: positive checks, security (negative) checks and known issues confirmed through the API.",
+        url: "https://storage.googleapis.com/rhombus-test-videos/api-test-video.mp4"
+      },
+    ];
     const dlg = $("dlg");
     let DATA = null;
     let filter = "all";
@@ -409,7 +445,16 @@
                 <td class="muted">${r.output_md5 ? r.output_md5.slice(0, 12) : (r.rhombus_error || r.notes || "—")}</td>
               </tr>`).join("")}
           </tbody>
-        </table>`;
+        </table>
+        <h2>Walkthrough videos</h2>
+        <div class="video-grid">${WALKTHROUGHS.map(v => `
+          <div class="video-card">
+            <h3>${v.title}</h3>
+            <div class="muted">${v.about}</div>
+            <video controls preload="metadata" src="${v.url}"></video>
+            <div class="muted"><a href="${v.url}" target="_blank" rel="noopener">open in a new tab</a></div>
+          </div>`).join("")}
+        </div>`;
       $("health").querySelectorAll(".filters button").forEach(b => {
         b.onclick = () => { filter = b.dataset.g; renderHealth(); };
       });
@@ -513,6 +558,25 @@
         <p class="muted">Output size is the saved CSV. Rhombus does not expose CPU/memory; file size and elapsed seconds are the measurable resources from this harness.</p>`;
     }
 
+    function renderVideos() {
+      const vids = DATA.videos || [];
+      if (!vids.length) {
+        $("videos").innerHTML = `<p class="muted">No videos yet. Run the UI tests (they save to <code>ui-tests/videos/</code>), then <code>python3 dashboard/build.py</code>.</p>`;
+        return;
+      }
+      $("videos").innerHTML = `
+        <p class="lede">Recordings of the Playwright UI tests, one per test. Each test checks a real outcome; the known-issue tests confirm the problem is still present.</p>
+        <div class="video-grid">${vids.map(v => `
+          <div class="video-card">
+            <span class="muted">${v.group}</span>
+            <h3>${v.title}</h3>
+            <div class="muted">${v.about}</div>
+            <video controls preload="metadata" src="${v.file}"></video>
+            <div class="muted">${(v.bytes / 1e6).toFixed(1)} MB · <a href="${v.file}" download>download</a></div>
+          </div>`).join("")}
+        </div>`;
+    }
+
     function bindTabs() {
       document.querySelectorAll("nav button").forEach(btn => {
         btn.onclick = () => {
@@ -531,6 +595,7 @@
         renderConsistency();
         renderHeat();
         renderTime();
+        renderVideos();
         bindTabs();
       })
       .catch(err => {

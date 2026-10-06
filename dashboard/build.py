@@ -5,6 +5,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+import shutil
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -14,6 +15,49 @@ OUTPUTS = ROOT / "outputs"
 RUNS = ROOT / "results" / "runs.csv"
 VALIDATION = ROOT / "results" / "validation"
 OUT = Path(__file__).resolve().parent / "data.json"
+UI_VIDEOS = ROOT / "ui-tests" / "videos"
+DASH_VIDEOS = Path(__file__).resolve().parent / "videos"
+
+# Video file → (group, test title, what it shows). File names come from ui-tests/helpers/fixtures.ts.
+VIDEO_INFO = {
+    "1-source-connection-gcs-source-bucket-is-connected":
+        ("1 · Source connection", "GCS source bucket is connected",
+         "Opens the Data Input node's sources and finds rhombus-source marked Connected."),
+    "2-ai-built-pipeline-canvas-has-data-input-custom-ai-cleaning-step-data-output":
+        ("2 · AI-built pipeline", "Canvas has Data Input → Custom → Data Output",
+         "The AI-built pipeline is in place on the canvas."),
+    "2-ai-built-pipeline-manual-run-succeeds-and-writes-a-new-cleaned-file-to-gcs":
+        ("2 · AI-built pipeline", "Manual run writes a new cleaned file to GCS",
+         "Clicks Run, waits for success in the logs, then confirms a new file with the cleaned header in rhombus-target."),
+    "3-gcs-destination-data-output-node-exports-to-the-gcs-destination-bucket":
+        ("3 · GCS destination", "Data Output exports to the GCS bucket",
+         "The output node is configured for rhombus-target."),
+    "4-schedule-an-hourly-schedule-can-be-created-and-shows-active-with-a-next-run-time":
+        ("4 · Schedule", "Hourly schedule shows Active with a next run time",
+         "Creates a schedule and checks it shows Active with a real next-run time."),
+    "5-known-issues-confirmed-still-present-f8-s3-connection-is-still-rejected-with-the-generated-bucket-policy":
+        ("5 · Known issues", "F8: S3 connection still rejected",
+         "Fills in the S3 connection with the generated policy applied; Rhombus still denies access."),
+    "5-known-issues-confirmed-still-present-f4-an-active-5-schedule-still-produces-no-run-within-7-minutes":
+        ("5 · Known issues", "F4: Active */5 schedule produces no run",
+         "Creates a */5 schedule and watches the bucket for 7 minutes; no run happens."),
+}
+
+
+def collect_videos():
+    """Copy the UI test videos next to the dashboard (so the hosted page can play them) and list them."""
+    if not UI_VIDEOS.exists():
+        return []
+    DASH_VIDEOS.mkdir(exist_ok=True)
+    videos = []
+    for src in sorted(UI_VIDEOS.glob("*.webm")):
+        dest = DASH_VIDEOS / src.name
+        if not dest.exists() or dest.stat().st_size != src.stat().st_size or dest.stat().st_mtime < src.stat().st_mtime:
+            shutil.copy2(src, dest)
+        group, title, about = VIDEO_INFO.get(src.stem, ("UI tests", src.stem.replace("-", " "), ""))
+        videos.append({"file": f"videos/{src.name}", "group": group, "title": title, "about": about,
+                       "bytes": src.stat().st_size})
+    return videos
 
 CASES = [
     {
@@ -391,6 +435,7 @@ def main():
         },
         "scenarios": scenarios,
         "runs": run_rows,
+        "videos": collect_videos(),
         "heat": [
             {
                 "id": s["id"],

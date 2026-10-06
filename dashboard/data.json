@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T23:24:17Z",
+  "generated_at": "2026-10-05T23:53:52Z",
   "source": "results/runs.csv + results/validation/*.json + outputs/*.csv + observations/",
   "pipeline": "Data Input \u2192 Custom (clean_orders) \u2192 Data Output (gs://rhombus-target)",
   "code_sha_original": "3ca80b148200",
@@ -1650,6 +1650,43 @@
         "semantics": "PASS",
         "determinism": "WARN"
       }
+    }
+  ],
+  "videos": [
+    {
+      "file": "videos/1-source-connection-gcs-source-bucket-is-connected.webm",
+      "group": "1 \u00b7 Source connection",
+      "title": "GCS source bucket is connected",
+      "about": "Opens the Data Input node's sources and finds rhombus-source marked Connected.",
+      "bytes": 198084
+    },
+    {
+      "file": "videos/2-ai-built-pipeline-manual-run-succeeds-and-writes-a-new-cleaned-file-to-gcs.webm",
+      "group": "2 \u00b7 AI-built pipeline",
+      "title": "Manual run writes a new cleaned file to GCS",
+      "about": "Clicks Run, waits for success in the logs, then confirms a new file with the cleaned header in rhombus-target.",
+      "bytes": 4268796
+    },
+    {
+      "file": "videos/3-gcs-destination-data-output-node-exports-to-the-gcs-destination-bucket.webm",
+      "group": "3 \u00b7 GCS destination",
+      "title": "Data Output exports to the GCS bucket",
+      "about": "The output node is configured for rhombus-target.",
+      "bytes": 162053
+    },
+    {
+      "file": "videos/4-schedule-an-hourly-schedule-can-be-created-and-shows-active-with-a-next-run-time.webm",
+      "group": "4 \u00b7 Schedule",
+      "title": "Hourly schedule shows Active with a next run time",
+      "about": "Creates a schedule and checks it shows Active with a real next-run time.",
+      "bytes": 308564
+    },
+    {
+      "file": "videos/5-known-issues-s3-connection-is-rejected-with-the-generated-bucket-policy.webm",
+      "group": "UI tests",
+      "title": "5 known issues s3 connection is rejected with the generated bucket policy",
+      "about": "",
+      "bytes": 1753704
     }
   ],
   "heat": [
